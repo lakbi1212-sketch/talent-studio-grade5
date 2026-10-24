@@ -1,0 +1,84 @@
+(function(){
+var R=[
+{id:'comp',en:'Short adjectives: comparing two',ar:'مقارنة شيئين بصفة قصيرة',c:'#2f7de1',
+ rule:'نضيف er في آخر الصفة القصيرة، ثم نكتب than بعدها. للمقارنة بين اثنين فقط.',
+ form:'adjective + er + than',
+ sp:'تغيير الهجاء: tidy ← tidier (نحذف y ونكتب ier). big ← bigger (نكرر الحرف الأخير).',
+ ex:[['My mum is shorter than me.','أمي أقصر مني.','g_c1'],['Zaid is kinder than Qais.','زيد ألطف من قيس.','g_c2'],['Zainab is tidier than Hazim.','زينب أكثر ترتيبًا من حازم.','g_c3'],["My room is bigger than my sister's room.",'غرفتي أكبر من غرفة أختي.','g_c4']],
+ pr:[['Hamed is ___ than Salim.',['taller','tall','tallest'],0],['My bag is ___ than your bag.',['big','bigger','biggest'],1],['Her room is ___ than his room.',['tidier','tidiest','tidyer'],0]]},
+{id:'sup',en:'Short adjectives: the best of many',ar:'الأفضل بين عدة أشياء',c:'#e8573c',
+ rule:'نستعمل the قبل الصفة ونضيف est في آخرها. نقارن شخصًا أو شيئًا بالباقين كلهم.',
+ form:'the + adjective + est',
+ sp:'shy ← shier ← the shiest. big ← bigger ← the biggest. tidy ← the tidiest.',
+ ex:[["She's the shortest person in our family!",'هي أقصر شخص في عائلتنا!','g_s1'],['My friends are the quietest students in the library.','أصدقائي أهدأ الطلاب في المكتبة.','g_s2'],["Hazim's room is the tidiest room in the house.",'غرفة حازم أكثر الغرف ترتيبًا في البيت.','g_s3'],['This is the biggest cat ever!','هذه أكبر قطة على الإطلاق!','g_s4'],['shy, shier, the shiest','خجول، أكثر خجلًا، الأكثر خجلًا','g_s5']],
+ pr:[['She is the ___ girl in the class.',['shortest','shorter','short'],0],['This is the ___ cat I know.',['biggest','bigger','bigest'],0],['Who is the ___ student in your class?',['kindest','kinder','more kind'],0]]},
+{id:'long',en:'Long adjectives: more and the most',ar:'الصفات الطويلة: more و the most',c:'#8a52c9',
+ rule:'الصفة الطويلة مثل hard-working وconfident لا نضيف لها er أو est. نكتب more قبلها للمقارنة بين اثنين، و the most للأفضل بين كثيرين.',
+ form:'more + adjective + than   /   the most + adjective',
+ sp:'',
+ ex:[["I'm more hard-working than my best friend.",'أنا أكثر اجتهادًا من أعز أصدقائي.','g_l1'],["I'm the most hard-working person in the class!",'أنا أكثر شخص مجتهد في الفصل!','g_l2'],['My brother is more confident than my sister.','أخي أكثر ثقة بنفسه من أختي.','g_l3'],['Sabah is the most confident student in the class.','صباح أكثر طالبة ثقة بنفسها في الفصل.','g_l4']],
+ pr:[['Rahaf is ___ than anyone else.',['more hard-working','hard-workinger','most hard-working'],0],['He is the ___ student in class.',['most confident','more confident','confidenter'],0],['My brother is ___ than me at school.',['more hard-working','hard-workinger','most hard-working'],0]]},
+{id:'irr',en:'Irregular: good and bad',ar:'صفات شاذة: good و bad',c:'#2aa86a',
+ rule:'good وbad لهما أشكال خاصة. نحفظها كما هي ولا نضيف er أو est.',
+ form:'good, better, the best   /   bad, worse, the worst',
+ sp:'',
+ ex:[['good, better, the best','جيد، أفضل، الأفضل','g_i1'],['bad, worse, the worst','سيئ، أسوأ، الأسوأ','g_i2'],['Laila is better than Marwa at maths.','ليلى أفضل من مروة في الرياضيات.','g_i3'],['Noora is the best at juggling.','نورة هي الأفضل في التلاعب بالكرات.','g_i4'],['Basil is worse than Faris. He is the worst boy in the street!','باسل أسوأ من فارس. هو أسوأ ولد في الشارع!','g_i5']],
+ pr:[['She is ___ than me at spelling.',['better','gooder','more good'],0],['That was the ___ film ever!',['worst','baddest','worse'],0],['My team played ___ than your team.',['worse','worst','badder'],0]]},
+{id:'goodat',en:'Good at ... + verb-ing',ar:'التعبير عن المهارة: good at',c:'#f26a21',
+ rule:'نقول ما نتقنه أو لا نتقنه بهذه العبارات. بعد at نكتب الفعل مع ing، أو نكتب اسمًا مثل Maths.',
+ form:'great at / good at / not very good at / terrible at + verb-ing  or  noun',
+ sp:'bake ← baking. make ← making. juggle ← juggling.',
+ ex:[["I'm good at baking cakes.",'أنا جيد في خبز الكعك.','g_a1'],["I'm not very good at making pizza.",'لست جيدًا في صنع البيتزا.','g_a2'],['Samar is great at acting.','سمر ممتازة في التمثيل.','g_a3'],["Rashid's terrible at juggling!",'راشد سيئ جدًا في التلاعب بالكرات!','g_a4'],["I'm great at Maths but I'm terrible at P.E.!",'أنا ممتاز في الرياضيات لكني سيئ جدًا في التربية البدنية! (من الكتاب)','']],
+ pr:[["I'm good at ___ cakes.",['baking','bake','to bake'],0],['She is terrible ___ juggling.',['at','on','in'],0],["He is great at ___ toys.",['fixing','fix','fixes'],0]]},
+{id:'desc',en:'Describing people',ar:'وصف الأشخاص',c:'#1aa0a0',
+ rule:'نسأل عن الشكل بـ look like، وعن الشخصية بـ What is he like. ونستعمل seems بمعنى يبدو.',
+ form:'What does he look like?  He has fair hair.   What is he like?  He is friendly.   He seems shy.',
+ sp:'',
+ ex:[["Who's that boy over there?",'من ذلك الولد هناك؟','g_d1'],["What's he like?",'كيف شخصيته؟','g_d2'],["He's very friendly. He seems very confident.",'هو ودود جدًا. ويبدو واثقًا جدًا.','g_d3'],['What does she look like? She has long, dark hair.','كيف شكلها؟ شعرها طويل وداكن.','g_d4']],
+ pr:[["___ is he like? He's kind.",['What','Who','Where'],0],['She ___ shy at first.',['seems','seem','seeming'],0],['What does he look like? He has ___ hair.',['curly','confident','polite'],0]]},
+{id:'link',en:'Linking words',ar:'كلمات الربط',c:'#d19a00',
+ rule:'and تضيف فكرة. or تعطي اختيارًا. but تعبّر عن اختلاف. so تعطي النتيجة. because تعطي السبب.',
+ form:'and  (+)    or  (choice)    but  (different)    so  (result)    because  (reason)',
+ sp:'',
+ ex:[['Amira is kind and friendly.','أميرة لطيفة وودودة.','g_k1'],["What's more delicious: chocolate or a cupcake?",'أيهما ألذ: الشوكولاتة أم الكب كيك؟','g_k2'],["I can throw a ball very quickly, but I'm not good at catching.",'أستطيع رمي الكرة بسرعة لكني لا أجيد الإمساك بها.','g_k3'],['This room is very untidy because the children are playing.','هذه الغرفة غير مرتبة جدًا لأن الأطفال يلعبون.','g_k4'],['I do not have much money, so I cannot buy it.','ليس معي مال كثير، لذلك لا أستطيع شراءه.','g_k5']],
+ pr:[['I like pizza ___ I am bad at making it.',['but','so','or'],0],['It is cold, ___ I wear a jacket.',['so','because','or'],0],['Do you want tea ___ juice?',['or','but','so'],0]]},
+{id:'manners',en:'Good manners: should, must, polite',ar:'الآداب: should و must',c:'#2f7de1',
+ rule:'must تعني يجب. should تعني من الأفضل أن. It is polite to تعني من اللائق أن. بعدها نكتب الفعل بدون ing.',
+ form:'In Oman, you must + verb.   You should + verb.   It is polite to + verb.',
+ sp:'',
+ ex:[['In Oman, it is polite to say thank you.','في عُمان من اللائق أن تقول شكرًا.','g_m1'],['You should take off your shoes when you go inside.','يجب أن تخلع حذاءك عندما تدخل.','g_m2'],['In Oman, you must listen to older people.','في عُمان يجب أن تستمع إلى كبار السن.','g_m3']],
+ pr:[['It is polite ___ say please.',['to','for','on'],0],['You ___ listen to older people.',['should','shoulds','to'],0],['In Oman, you ___ take off your shoes.',['must','musts','to'],0]]}
+];
+var XP={"comp": [["Salim is ___ than Hamed.", ["older", "more old", "oldest"], 0], ["This box is ___ than that box.", ["smaller", "small", "smallest"], 0], ["Maryam is ___ than her brother.", ["kinder", "more kind", "kindest"], 0]], "sup": [["He is the ___ boy in the school.", ["tallest", "taller", "tall"], 0], ["That is the ___ room in the house.", ["tidiest", "tidier", "tidy"], 0], ["She is the ___ person in my family.", ["oldest", "older", "old"], 0]], "long": [["Hamed is ___ than his friend.", ["more confident", "confidenter", "most confident"], 0], ["She is the ___ girl in the school.", ["most hard-working", "more hard-working", "hard-workingest"], 0], ["This book is ___ than that book.", ["more interesting", "interestinger", "most interesting"], 0]], "irr": [["This pizza is ___ than that pizza.", ["better", "gooder", "best"], 0], ["He is the ___ player in the team.", ["best", "better", "goodest"], 0], ["My drawing is bad, but yours is ___ than mine.", ["worse", "worst", "badder"], 0]], "goodat": [["She is great at ___.", ["singing", "sing", "to sing"], 0], ["He is not very good at ___ pizza.", ["making", "make", "makes"], 0], ["We are terrible at ___ balls.", ["throwing", "throw", "throws"], 0]], "desc": [["What ___ she look like?", ["does", "is", "do"], 0], ["He ___ very friendly.", ["seems", "seeming", "seem"], 0], ["What is she ___? She is polite.", ["like", "look", "likes"], 0]], "link": [["I am tired, ___ I go to bed.", ["so", "but", "or"], 0], ["He is clever ___ hard-working.", ["and", "because", "so"], 0], ["I stay home ___ it is raining.", ["because", "but", "or"], 0]], "manners": [["You ___ say please and thank you.", ["should", "to", "shoulds"], 0], ["It is polite ___ listen to older people.", ["to", "for", "at"], 0], ["In Oman, you ___ take off your shoes.", ["must", "musts", "to"], 0]]};
+R.forEach(function(r){r.pr=r.pr.concat(XP[r.id])});
+var HL={comp:/\b(\w+er)\b(?= than)|\bthan\b/g,sup:/\bthe (\w+est)\b|\bshiest\b/g,long:/\bmore\b|\bthe most\b/g,irr:/\b(better|best|worse|worst)\b/g,goodat:/\b(not very good at|good at|great at|terrible at)\b|\b\w+ing\b/g,desc:/\bseems\b|\blike\b|\blook\b/g,link:/\b(and|or|but|so|because)\b/g,manners:/\b(must|should|polite to)\b/g};
+var COL=['#d6336c','#1971c2','#2b8a3e','#e8590c'];
+function hl(r,t){var i=0;return X(t).replace(HL[r.id],function(m){var c=COL[i++%COL.length];return '<span style="background:'+c+';color:#fff;border-radius:8px;padding:0 6px">'+m+'</span>'})}
+function E(h){var d=document.createElement('div');d.innerHTML=h;return d.firstElementChild}
+function X(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var css=document.createElement('style');css.textContent='.gx{background:#fff;border:2px solid #d9cdf2;border-radius:16px;padding:12px;margin:10px 0}.gf{background:#fff7d6;border:2px dashed #e0b400;border-radius:14px;padding:10px;font-weight:800;font-size:18px;text-align:center;direction:ltr;margin:10px 0;color:#5a3a00}.gar{font-size:19px;line-height:1.8;direction:rtl}.gee{font-size:19px;font-weight:700;color:#2a1a52}.gea{font-size:16px;direction:rtl;color:#5a4a7a}.gp button{display:block}';document.head.appendChild(css);
+function play(id){if(!window.AUD||!AUD[id])return;try{if(window.__ga)window.__ga.pause();window.__ga=new Audio(AUD[id]);window.__ga.play()}catch(e){}}
+function list(){var d=E('<div></div>');var b=E('<button class="back">&larr; Home</button>');b.onclick=function(){window.home()};d.appendChild(b);
+d.appendChild(E('<h2 style="margin-bottom:2px">Grammar</h2>'));d.appendChild(E('<div class="ar" lang="ar" dir="rtl" style="font-size:22px">شرح القواعد - الوحدة الأولى</div>'));
+var g=E('<div class="grid"></div>');R.forEach(function(r,i){var done=(JSON.parse(localStorage.getItem('g5gram')||'{}'))[r.id];var t=E('<button class="stn sec" style="border-color:'+r.c+'"><span class="secn" style="background:'+r.c+'">'+(i+1)+'</span><b>'+X(r.en)+'</b><small lang="ar" dir="rtl">'+r.ar+'</small><small>'+(done?'&#10003; practised':'6 questions + games')+'</small></button>');t.onclick=function(){view(i)};g.appendChild(t)});d.appendChild(g);
+if(window.G5_VIDEO_READY){var PT=[['Part 1 · الجزء الأول','المقارنة، التفضيل، الصفات الطويلة، good و bad','_NLy3XKOx40',[['0:00','أهلاً يا أبطال',0],['0:22','المقارنة بين اثنين',22],['3:22','التفضيل في مجموعة',202],['6:51','الصفات الطويلة',411],['9:49','good و bad',589]]],['Part 2 · الجزء الثاني','المواهب، وصف الأشخاص، كلمات الربط، السلوك المهذب','YJR9tGWJudk',[['0:00','المواهب: good at',0],['2:46','وصف الأشخاص',166],['5:42','كلمات الربط',342],['9:06','السلوك المهذب',546]]]];var v=E('<div style="margin:18px 0"><h3 style="margin:0 0 6px">Lesson video <small lang="ar" dir="rtl">فيديو شرح الدرس</small></h3></div>');
+PT.forEach(function(p){var w=E('<div style="margin-bottom:14px"><div style="font-weight:700">'+p[0]+'</div><div lang="ar" dir="rtl" style="font-size:14px;margin:2px 0 6px">'+p[1]+'</div><div class="vf" style="aspect-ratio:16/9;background:#2a1a5e;border-radius:14px;overflow:hidden"></div></div>');var vf=w.querySelector('.vf');var b=E('<button class="btn gold" style="width:100%;height:100%;font-size:20px">&#9654; Watch &middot; شاهد</button>');function ld(s){vf.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+p[2]+'?rel=0&start='+s+'" style="width:100%;height:100%;border:0" allow="encrypted-media;picture-in-picture" allowfullscreen title="Grammar lesson video"></iframe>'}b.onclick=function(){ld(0)};vf.appendChild(b);var cc=E('<div class="xo" style="margin-top:8px"></div>');p[3].forEach(function(c){var cb=E('<button class="xb" lang="ar">'+c[0]+' '+c[1]+'</button>');cb.onclick=function(){ld(c[2])};cc.appendChild(cb)});w.appendChild(cc);v.appendChild(w)});d.insertBefore(v,g)}
+window.__show(d)}
+function view(i){var r=R[i];var d=E('<div></div>');var b=E('<button class="back">&larr; Grammar</button>');b.onclick=list;d.appendChild(b);
+d.appendChild(E('<h2 style="color:'+r.c+';margin-bottom:2px">'+X(r.en)+'</h2>'));d.appendChild(E('<div class="ar" lang="ar" dir="rtl" style="font-size:20px">'+r.ar+'</div>'));
+d.appendChild(E('<div class="gx"><div class="gar" lang="ar">'+r.rule+'</div></div>'));d.appendChild(E('<div class="gf" style="background:#fff0f6;border-color:'+r.c+'">'+X(r.form)+'</div>'));d.appendChild(E('<div class="sm center">The coloured words in the examples show the rule.</div>'));
+if(r.sp)d.appendChild(E('<div class="gx"><div class="gar" lang="ar">'+r.sp+'</div></div>'));
+d.appendChild(E('<h3>Examples</h3>'));
+r.ex.forEach(function(e){var c=E('<div class="gx"><div class="gee">'+hl(r,e[0])+'</div><div class="gea" lang="ar">'+e[1]+'</div></div>');if(window.AUD&&AUD[e[2]]){var s=E('<button class="btn alt spk" style="margin-top:8px" aria-label="Listen">Listen</button>');s.onclick=function(){play(e[2])};c.appendChild(s)}d.appendChild(c)});
+
+d.appendChild(E('<h3>Build the sentence</h3>'));
+r.ex.filter(function(e){return e[2]&&e[0].split(' ').length>=4&&e[0].indexOf(',')<0}).slice(0,2).forEach(function(e){var words=e[0].replace(/[.!?]$/,'').split(' ');var punct=(e[0].match(/[.!?]$/)||[''])[0];var pool=words.map(function(w,i){return {w:w,i:i}}).sort(function(){return Math.random()-.5});var picked=[];var c=E('<div class="gx"><div class="gea" lang="ar">'+e[1]+'</div><div class="xo" id="bp" style="min-height:52px;border:2px dashed #b9a5e6;border-radius:12px;padding:6px;margin:8px 0;direction:ltr"></div><div class="xo bw" style="direction:ltr"></div><div class="sm bm"></div></div>');var bp=c.querySelector('#bp'),bw=c.querySelector('.bw'),bm=c.querySelector('.bm');
+ function draw(){bp.innerHTML='';picked.forEach(function(p,k){var b=E('<button class="xb on">'+X(p.w)+'</button>');b.onclick=function(){picked.splice(k,1);draw()};bp.appendChild(b)});bw.innerHTML='';pool.forEach(function(p){if(picked.indexOf(p)>=0)return;var b=E('<button class="xb">'+X(p.w)+'</button>');b.onclick=function(){picked.push(p);draw();if(picked.length===pool.length){var ok=picked.map(function(q){return q.w}).join(' ')===words.join(' ');bm.innerHTML=ok?'<b style="color:#2b8a3e">Yes! '+X(e[0])+'</b>':'Almost. Tap a word to take it out and try again. Take your time.';if(ok&&window.AUD&&AUD[e[2]])play(e[2])}else bm.innerHTML=''};bw.appendChild(b)})}draw();d.appendChild(c)});
+d.appendChild(E('<h3>Practice</h3>'));d.appendChild(E('<div class="sm">No timer. Think, then tap. If it is red, read the rule and try the next one.</div>'));var got=0,ans=0;var res=E('<div class="sm"></div>');var total=r.pr.length;
+r.pr.forEach(function(q,k){var opts=q[1].map(function(t,j){return {t:t,ok:j===q[2]}});opts.sort(function(){return Math.random()-.5});var c=E('<div class="xq gx"><b>'+(k+1)+'. '+X(q[0])+'</b><div class="xo"></div></div>');var o=c.querySelector('.xo');var fin=false;
+ opts.forEach(function(op){var bt=E('<button class="xb">'+X(op.t)+'</button>');bt.onclick=function(){if(fin)return;fin=true;ans++;if(op.ok){got++;bt.classList.add('ok')}else{bt.classList.add('no');o.querySelectorAll('button').forEach(function(x,ix){if(opts[ix].ok)x.classList.add('ok')})}
+  if(ans===r.pr.length){res.innerHTML='<b>'+got+' of '+r.pr.length+' correct</b>'+(got===r.pr.length?' - well done!':'. Read the rule again and try once more.');try{var s=JSON.parse(localStorage.getItem('g5gram')||'{}');s[r.id]=Math.max(s[r.id]||0,got);if(got===r.pr.length)s[r.id]=6;localStorage.setItem('g5gram',JSON.stringify(s))}catch(e){}}};o.appendChild(bt)});d.appendChild(c)});
+d.appendChild(res);
+var nx=E('<button class="btn gold" style="width:100%;margin:14px 0">'+(i<R.length-1?'Next rule &rarr;':'Back to the rules')+'</button>');nx.onclick=function(){i<R.length-1?view(i+1):list()};d.appendChild(nx);window.__show(d)}
+window.grammar=list;
+})();
