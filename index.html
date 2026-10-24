@@ -67,6 +67,7 @@ label{display:block;font-weight:700;margin:10px 0 4px;font-size:16px}
 <body>
 <header><h1><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-5px"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.600 5.800 21.100l1.400-7L2 9.300l7-.8z" fill="#f6b81a"/></svg> Talent Studio</h1><button id="snd" aria-label="Sound on or off"></button></header>
 <main id="app"></main>
+<script src="audio1.js"></script><script src="audio2.js"></script><script src="audio3.js"></script>
 <script>
 (function(){
 'use strict';
@@ -82,7 +83,9 @@ function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(M
 var ac;function beep(f,d,t){if(!S.sound)return;try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();var o=ac.createOscillator(),g=ac.createGain();o.type=t||'sine';o.frequency.value=f;g.gain.value=.08;o.connect(g);g.connect(ac.destination);o.start();g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+d);o.stop(ac.currentTime+d)}catch(e){}}
 function good(){beep(660,.12);setTimeout(function(){beep(880,.18)},110)}
 function bad(){beep(200,.25,'triangle')}
-function say(t){if(!('speechSynthesis' in window))return;try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+var SPK='<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';var AUD=window.AUD=window.AUD||{};var cur;
+function has(id){return !!(id&&AUD[id])}
+function play(id){if(!S.sound||!has(id))return;try{if(cur){cur.pause()}cur=new Audio(AUD[id]);cur.play()}catch(e){}}
 var snd=document.getElementById('snd');function sndUi(){snd.innerHTML=S.sound?'<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>':'<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>'}
 snd.onclick=function(){S.sound=!S.sound;save();sndUi()};sndUi();
 // ---- data
@@ -152,7 +155,7 @@ var it=items[i];var d=el('<div></div>');d.appendChild(backBtn());
 d.appendChild(el('<h2>'+title+'</h2>'));d.appendChild(el('<div class="ar" lang="ar" dir="rtl">'+ar+'</div>'));
 d.appendChild(el('<div class="prog"><i style="width:'+Math.round(i/items.length*100)+'%"></i></div>'));
 var c=el('<div class="card"><div class="sm">Question '+(i+1)+' of '+items.length+'</div>'+it.html+'</div>');
-if(it.say){var sb=el('<button class="btn alt" style="margin:6px 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Listen</button>');sb.onclick=function(){say(it.say)};c.appendChild(sb)}
+if(has(it.pre)){var sb=el('<button class="btn alt" style="margin:6px 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Listen</button>');sb.onclick=function(){play(it.pre)};c.appendChild(sb)}
 var tried=false,done=false,hintBox=el('<div></div>');
 var opts=shuffle(it.opts.map(function(o,idx){return{o:o,ok:idx===it.a}}));
 opts.forEach(function(op){var b=el('<button class="opt">'+esc(op.o)+'</button>');b.onclick=function(){
@@ -160,6 +163,7 @@ if(done)return;
 if(op.ok){done=true;b.classList.add('right');good();if(!tried)firstTry++;
 Array.prototype.forEach.call(c.querySelectorAll('.opt'),function(x){x.disabled=true});
 hintBox.innerHTML='<div class="hint"><b style="color:#1f9d63">&#10003;</b> '+(it.ok||'Correct!')+'</div>';
+if(has(it.aud)){play(it.aud);var la=el('<button class="btn alt" style="margin-top:6px">'+SPK+' Listen again</button>');la.onclick=function(){play(it.aud)};hintBox.appendChild(la)}
 var nx=el('<button class="btn gold" style="margin-top:8px">'+(i+1<items.length?'Next →':'Finish')+'</button>');
 nx.onclick=function(){i++;if(i<items.length)render();else end()};hintBox.appendChild(nx)}
 else{tried=true;b.classList.add('wrong');b.disabled=true;bad();hintBox.innerHTML='<div class="hint">Try again. Hint: '+esc(it.hint||'Read the question again.')+'</div>'}};c.appendChild(b)});
@@ -179,11 +183,11 @@ d.appendChild(el('<h2>Meet the words</h2>'));d.appendChild(el('<div class="ar" l
 var known=Object.keys(S.known).length;
 d.appendChild(el('<div class="prog"><i style="width:'+Math.round(known/12*100)+'%"></i></div>'));
 var c=el('<div class="card fc"><div class="sm">Word '+(i+1)+' of 12</div><div class="w">'+w[0]+'</div><div class="m ar" style="text-align:center" lang="ar" dir="rtl">'+w[1]+'</div><p>'+esc(w[3])+'</p><div class="chips" style="justify-content:center"><span class="chip">Opposite: '+w[2]+'</span></div></div>');
-var l=el('<button class="btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Listen</button>');l.onclick=function(){say(w[0])};
-var l2=el('<button class="btn alt" style="margin-left:6px"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Sentence</button>');l2.onclick=function(){say(w[3])};
+var l=el('<button class="btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Listen</button>');var wid='w_'+(i<9?'0':'')+(i+1);l.onclick=function(){play(wid+'_word')};
+var l2=el('<button class="btn alt" style="margin-left:6px"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Sentence</button>');l2.onclick=function(){play(wid+'_sentence')};
 var k=el('<label class="ck" style="justify-content:center"><input type="checkbox"'+(S.known[w[0]]?' checked':'')+'> I know this word</label>');
 k.querySelector('input').onchange=function(e){if(e.target.checked){S.known[w[0]]=1;good()}else delete S.known[w[0]];save();var n=Object.keys(S.known).length;if(n>=12)rate('words',3);else if(n>=8)rate('words',2);else if(n>=4)rate('words',1)};
-c.appendChild(l);c.appendChild(l2);c.appendChild(k);d.appendChild(c);
+if(has(wid+'_word'))c.appendChild(l);if(has(wid+'_sentence'))c.appendChild(l2);c.appendChild(k);d.appendChild(c);
 var nav=el('<div class="row2"></div>');
 var pb=el('<button class="btn alt">← Back</button>');pb.disabled=i===0;pb.onclick=function(){i--;render()};
 var nb=el('<button class="btn">'+(i<11?'Next →':'Done')+'</button>');nb.onclick=function(){if(i<11){i++;render()}else home()};
@@ -205,7 +209,7 @@ var MATCH=[
 ['Hamad says hello to everybody at school. He is ___.','friendly',['friendly','unfriendly','lazy'],'He is nice to everyone.'],
 ['The new student never says hello or smiles. She seems ___.','unfriendly',['unfriendly','friendly','confident'],'She is not friendly.']
 ];
-function match(){quiz('match','Find the word','اختر الكلمة التي تكمل الجملة.',shuffle(MATCH).map(function(m){return{html:'<p style="font-size:20px">'+esc(m[0]).replace('___','<b>_____</b>')+'</p>',opts:m[2],a:m[2].indexOf(m[1]),hint:m[3],say:m[0].replace('___','blank')}}))}
+function match(){quiz('match','Find the word','اختر الكلمة التي تكمل الجملة.',shuffle(MATCH.map(function(m,ix){return{m:m,ix:ix}})).map(function(o){var m=o.m;return{aud:'m_'+(o.ix<9?'0':'')+(o.ix+1),ok:m[0].replace('___',m[1]),html:'<p style="font-size:20px">'+esc(m[0]).replace('___','<b>_____</b>')+'</p>',opts:m[2],a:m[2].indexOf(m[1]),hint:m[3]}}))}
 // ---- 3 describe
 function describe(){
 var ps=shuffle(PERF),items=[];
@@ -214,15 +218,15 @@ var other=(p.traits[0]===WORDS[0][0])?'lazy':'shy';
 var ANT={shy:'confident',confident:'shy',lazy:'hard-working','hard-working':'lazy',friendly:'unfriendly',unfriendly:'friendly',kind:'mean',mean:'kind',polite:'rude',rude:'polite',tidy:'untidy',untidy:'tidy'};var wrongT=[ANT[p.traits[0]],ANT[p.traits[1]]];
 var tr=p.traits[Math.floor(Math.random()*2)];
 items.push({html:'<div class="pf">'+avatar(p)+'<div><b>'+p.n+'</b><div class="chips"><span class="chip">'+p.traits[0]+'</span><span class="chip">'+p.traits[1]+'</span></div></div></div><p>What is '+p.n+' like? <br><span class="sm">Choose the true sentence.</span></p>',
-opts:[he(p)+' seems '+tr+'.',he(p)+' seems '+wrongT[0]+'.',he(p)+' seems '+wrongT[1]+'.'],a:0,hint:'Look at the two words under the picture.',say:he(p)+' seems '+tr+'.'});
+opts:[he(p)+' seems '+tr+'.',he(p)+' seems '+wrongT[0]+'.',he(p)+' seems '+wrongT[1]+'.'],a:0,hint:'Look at the two words under the picture.',aud:'d_'+p.id+'_seems_'+tr});
 });
 ps.slice(0,4).forEach(function(p){
 var h=p.hair,right=he(p)+'\u2019s got '+h[0]+', '+h[1]+', '+h[2]+' hair.',w1=he(p)+'\u2019s got '+h[1]+', '+h[0]+', '+h[2]+' hair.',w2=he(p)+'\u2019s got '+h[2]+', '+h[1]+', '+h[0]+' hair.';
-items.push({html:'<div class="pf">'+avatar(p)+'<div><b>'+p.n+'</b><div class="sm">'+h.join(', ')+' hair</div></div></div><p>Which sentence has the words in the right order?</p>',opts:[right,w1,w2],a:0,hint:'Say long or short first. Then the colour, then curly/straight.',say:right});
+items.push({html:'<div class="pf">'+avatar(p)+'<div><b>'+p.n+'</b><div class="sm">'+h.join(', ')+' hair</div></div></div><p>Which sentence has the words in the right order?</p>',opts:[right,w1,w2],a:0,hint:'Say long or short first. Then the colour, then curly/straight.',aud:'d_'+p.id+'_hair'});
 });
 ps.slice(0,2).forEach(function(p){
 var allg=PERF.filter(function(x){return x.id!==p.id});var wr=shuffle(allg).slice(0,2);
-items.push({html:'<div class="pf">'+avatar(p)+'<div><b>'+p.n+'</b></div></div><p>What is '+p.n+' good at?</p>',opts:[he(p)+'\u2019s good at '+p.skill+'.',he(p)+'\u2019s good at '+wr[0].skill+'.',he(p)+'\u2019s good at '+wr[1].skill+'.'],a:0,hint:'Look at the studio list again: '+p.n+' can '+p.doing+'.',say:he(p)+' is good at '+p.skill+'.'});
+items.push({html:'<div class="pf">'+avatar(p)+'<div><b>'+p.n+'</b></div></div><p>What is '+p.n+' good at?</p>',opts:[he(p)+'\u2019s good at '+p.skill+'.',he(p)+'\u2019s good at '+wr[0].skill+'.',he(p)+'\u2019s good at '+wr[1].skill+'.'],a:0,hint:'Look at the studio list again: '+p.n+' can '+p.doing+'.',aud:'d_'+p.id+'_goodat'});
 });
 quiz('describe','Describe the performer','انظر إلى الموهوب ثم اختر الجملة الصحيحة.',items)}
 // ---- 4 compare
@@ -235,31 +239,28 @@ var ADJ=[
 ];
 var LBL={tidy:'Tidy',fr:'Friendly',hw:'Hard-working',conf:'Confident',skill:'Performing'};
 function bars(key,ids){return '<div>'+ids.map(function(id){var p=P(id);var v=p.sc[key];var m=key==='skill'?10:5;return '<div class="bar"><span class="n">'+p.n+'</span><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'</div>'}
+var CMP=[
+['tidy','yousuf','hamad',0],['fr','hamad','yousuf',0],['hw','salma','khalid',0],['conf','hamad','noor',0],['skill','salma','maryam',0],
+['tidy','yousuf',null,1],['hw','salma',null,1],['skill','salma',null,1]];
 function compare(){
 var items=[];
-shuffle(ADJ).concat(shuffle(ADJ).slice(0,3)).forEach(function(A,idx){
-if(idx<5){
-var ids=shuffle(PERF).map(function(p){return p});var a,b;
-for(var t=0;t<30;t++){var x=shuffle(PERF);a=x[0];b=x[1];if(a.sc[A.k]>b.sc[A.k])break}
-items.push({html:'<div class="sm">'+LBL[A.k]+' score</div>'+bars(A.k,[a.id,b.id])+'<p style="font-size:20px"><b>'+a.n+'</b> is ____ than <b>'+b.n+'</b>'+(A.k==='skill'?' at performing':'')+'.</p>',
-opts:[A.c,A.w[0],A.w[1]],a:0,hint:A.rule,say:a.n+' is '+A.c+' than '+b.n+(A.k==='skill'?' at performing':'')+'.',ok:a.n+' is '+A.c+' than '+b.n+(A.k==='skill'?' at performing':'')+'.'});
-}else{
-var best=PERF.slice().sort(function(p,q){return q.sc[A.k]-p.sc[A.k]})[0];
-items.push({html:'<div class="sm">'+LBL[A.k]+' score</div>'+bars(A.k,PERF.map(function(p){return p.id}))+'<p style="font-size:20px"><b>'+best.n+'</b> is ____ '+(A.k==='skill'?'performer ':'')+'in the group.</p>',
-opts:[A.s,A.ws[0],A.ws[1]],a:0,hint:A.rule,say:best.n+' is '+A.s+(A.k==='skill'?' performer':'')+' in the group.',ok:best.n+' is '+A.s+(A.k==='skill'?' performer':'')+' in the group.'});
-}});
-quiz('compare','Compare','انظر إلى الأعمدة ثم اختر صيغة المقارنة الصحيحة.',items.slice(0,8))}
+CMP.forEach(function(c,i){
+var A=ADJ.filter(function(x){return x.k===c[0]})[0],a=P(c[1]),b=c[2]?P(c[2]):null,sk=A.k==='skill';
+var full=b?a.n+' is '+A.c+' than '+b.n+(sk?' at performing':'')+'.':a.n+' is '+A.s+(sk?' performer':'')+' in the group.';
+var html=b?'<div class="sm">'+LBL[A.k]+' score</div>'+bars(A.k,[a.id,b.id])+'<p style="font-size:20px"><b>'+a.n+'</b> is ____ than <b>'+b.n+'</b>'+(sk?' at performing':'')+'.</p>':'<div class="sm">'+LBL[A.k]+' score</div>'+bars(A.k,PERF.map(function(p){return p.id}))+'<p style="font-size:20px"><b>'+a.n+'</b> is ____ '+(sk?'performer ':'')+'in the group.</p>';
+items.push({html:html,opts:b?[A.c,A.w[0],A.w[1]]:[A.s,A.ws[0],A.ws[1]],a:0,hint:A.rule,ok:full,aud:'c_'+(i+1)})});
+quiz('compare','Compare','انظر إلى الأعمدة ثم اختر صيغة المقارنة الصحيحة.',shuffle(items))}
 // ---- 5 judge
 function judge(){
 var qs=[
-['tidy','Who is the tidiest performer?'],['hw','Who is the most hard-working?'],['conf','Who is the most confident?'],['skill','Who is the best performer?'],['fr','Who is the friendliest?'],['tidy','Who is the least tidy? (the untidiest)']];
+['tidy','Who is the tidiest performer?'],['hw','Who is the most hard-working?'],['conf','Who is the most confident?'],['skill','Who is the best performer?'],['fr','Who is the friendliest?'],['tidy','Who is the least tidy? The untidiest.']];
 var items;
 items=qs.map(function(q,i){
 var sorted=PERF.slice().sort(function(a,b){return i===5?a.sc[q[0]]-b.sc[q[0]]:b.sc[q[0]]-a.sc[q[0]]});
 var top=sorted[0];var ties=sorted.filter(function(p){return p.sc[q[0]]===top.sc[q[0]]});
 if(ties.length>1){top=ties[0]}
 var others=shuffle(PERF.filter(function(p){return p.sc[q[0]]!==top.sc[q[0]]})).slice(0,2);
-return{html:'<div class="sm">'+LBL[q[0]]+' scores</div>'+bars(q[0],PERF.map(function(p){return p.id}))+'<p style="font-size:20px">'+q[1]+'</p>',opts:[top.n,others[0].n,others[1].n],a:0,hint:'Look at the bars. Find the '+(i===5?'shortest':'longest')+' bar.',say:q[1]}});
+return{html:'<div class="sm">'+LBL[q[0]]+' scores</div>'+bars(q[0],PERF.map(function(p){return p.id}))+'<p style="font-size:20px">'+q[1]+'</p>',opts:[top.n,others[0].n,others[1].n],a:0,hint:'Look at the bars. Find the '+(i===5?'shortest':'longest')+' bar.',pre:'j_'+(i+1)}});
 quiz('judge','The judges','انظر إلى الأعمدة وأجب عن أسئلة لجنة التحكيم.',items)}
 // ---- 6 write
 function write(){
