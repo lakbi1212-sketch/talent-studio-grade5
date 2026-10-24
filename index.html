@@ -9,11 +9,12 @@
 :root{--ink:#241540;--bg:#fff7e8;--card:#fff;--p:#5b2fa8;--p2:#3b1f6e;--gold:#f6b81a;--ok:#1f9d63;--bad:#d9433a;--soft:#efe6ff;--line:#e5d9f7}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:18px;line-height:1.45}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Arabic","Noto Naskh Arabic",Tahoma,sans-serif;letter-spacing:normal;word-spacing:normal;background:var(--bg);color:var(--ink);font-size:18px;line-height:1.45}
 header{background:linear-gradient(135deg,var(--p2),var(--p));color:#fff;padding:14px 16px;position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px}
 header h1{font-size:20px;margin:0;flex:1}
 header button{background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:10px;padding:8px 10px;font-size:18px}
 main{max-width:760px;margin:0 auto;padding:16px 14px 60px}
+.ar,[lang=ar]{font-family:"Noto Naskh Arabic","Noto Sans Arabic","Geeza Pro","Segoe UI",Tahoma,"Droid Arabic Naskh",Arial,sans-serif;letter-spacing:0!important;word-spacing:0;font-kerning:normal;text-rendering:optimizeLegibility}
 .ar{direction:rtl;text-align:right;font-size:16px;color:#5a4a7a;margin:2px 0 10px}
 h2{margin:6px 0 2px;font-size:24px}
 .card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:14px;margin:12px 0}
@@ -134,7 +135,7 @@ var STN=[
 ];
 function home(){
 var d=el('<div></div>');var tot=0;STN.forEach(function(s){tot+=S.stars[s[0]]||0});
-d.innerHTML='<h2>Welcome to Talent Studio!</h2><div class="ar">مرحبًا بك في استوديو المواهب! ساعد المواهب الستة، ثم اكتب وصفك.</div>'+
+d.innerHTML='<h2>Welcome to Talent Studio!</h2><div class="ar" lang="ar" dir="rtl">مرحبًا بك في استوديو المواهب! ساعد المواهب الستة، ثم اكتب وصفك.</div>'+
 '<div class="card"><div class="pf">'+avatar(PERF[1],70)+avatar(PERF[0],70)+avatar(PERF[3],70)+'</div><p>Six performers want to join the school talent show. Learn the words, describe them, compare them, and then write about your own performer.</p><div class="prog"><i style="width:'+Math.round(tot/18*100)+'%"></i></div><div class="sm">'+tot+' of 18 stars</div></div><div class="grid" id="g"></div>';
 var g=d.querySelector('#g');
 STN.forEach(function(s,i){var n=S.stars[s[0]]||0;var b=el('<button class="stn'+(n?' done':'')+'"><span class="em" style="display:inline-flex;width:38px;height:38px;border-radius:50%;background:#5b2fa8;color:#fff;align-items:center;justify-content:center;font-size:20px;font-weight:800">'+s[1]+'</span><b>'+(i+1)+'. '+s[2]+'</b><small>'+s[4]+'</small><span class="st">'+stars(n)+'</span></button>');b.onclick=function(){go(s[0])};g.appendChild(b)});
@@ -147,7 +148,7 @@ function quiz(id,title,ar,items,onEnd){
 var i=0,firstTry=0;
 function render(){
 var it=items[i];var d=el('<div></div>');d.appendChild(backBtn());
-d.appendChild(el('<h2>'+title+'</h2>'));d.appendChild(el('<div class="ar">'+ar+'</div>'));
+d.appendChild(el('<h2>'+title+'</h2>'));d.appendChild(el('<div class="ar" lang="ar" dir="rtl">'+ar+'</div>'));
 d.appendChild(el('<div class="prog"><i style="width:'+Math.round(i/items.length*100)+'%"></i></div>'));
 var c=el('<div class="card"><div class="sm">Question '+(i+1)+' of '+items.length+'</div>'+it.html+'</div>');
 if(it.say){var sb=el('<button class="btn alt" style="margin:6px 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-4px"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg> Listen</button>');sb.onclick=function(){say(it.say)};c.appendChild(sb)}
@@ -173,7 +174,7 @@ function words(){
 var i=0;
 function render(){
 var w=WORDS[i];var d=el('<div></div>');d.appendChild(backBtn());
-d.appendChild(el('<h2>Meet the words</h2>'));d.appendChild(el('<div class="ar">اضغط على زر Listen واستمع، ثم كرّر الكلمة.</div>'));
+d.appendChild(el('<h2>Meet the words</h2>'));d.appendChild(el('<div class="ar" lang="ar" dir="rtl">اضغط على زر Listen واستمع، ثم كرّر الكلمة.</div>'));
 var known=Object.keys(S.known).length;
 d.appendChild(el('<div class="prog"><i style="width:'+Math.round(known/12*100)+'%"></i></div>'));
 var c=el('<div class="card fc"><div class="sm">Word '+(i+1)+' of 12</div><div class="w">'+w[0]+'</div><div class="m ar" style="text-align:center" lang="ar" dir="rtl">'+w[1]+'</div><p>'+esc(w[3])+'</p><div class="chips" style="justify-content:center"><span class="chip">Opposite: '+w[2]+'</span></div></div>');
@@ -231,7 +232,7 @@ var ADJ=[
 {k:'conf',adj:'confident',c:'more confident',s:'the most confident',w:['confidenter','most confident'],ws:['the confidentest','more confident'],rule:'Long words: use more / the most.'},
 {k:'skill',adj:'good',c:'better',s:'the best',w:['gooder','best'],ws:['the goodest','better'],rule:'Irregular: good, better, the best.'}
 ];
-var LBL={tidy:'Tidy',fr:'Friendly',hw:'Hard-working',conf:'Confident',skill:'Talent'};
+var LBL={tidy:'Tidy',fr:'Friendly',hw:'Hard-working',conf:'Confident',skill:'Performing'};
 function bars(key,ids){return '<div>'+ids.map(function(id){var p=P(id);var v=p.sc[key];var m=key==='skill'?10:5;return '<div class="bar"><span class="n">'+p.n+'</span><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'</div>'}
 function compare(){
 var items=[];
@@ -239,18 +240,18 @@ shuffle(ADJ).concat(shuffle(ADJ).slice(0,3)).forEach(function(A,idx){
 if(idx<5){
 var ids=shuffle(PERF).map(function(p){return p});var a,b;
 for(var t=0;t<30;t++){var x=shuffle(PERF);a=x[0];b=x[1];if(a.sc[A.k]>b.sc[A.k])break}
-items.push({html:'<div class="sm">'+LBL[A.k]+' score</div>'+bars(A.k,[a.id,b.id])+'<p style="font-size:20px"><b>'+a.n+'</b> is ____ than <b>'+b.n+'</b>.</p>',
-opts:[A.c,A.w[0],A.w[1]],a:0,hint:A.rule,say:a.n+' is '+A.c+' than '+b.n+'.',ok:a.n+' is '+A.c+' than '+b.n+'.'});
+items.push({html:'<div class="sm">'+LBL[A.k]+' score</div>'+bars(A.k,[a.id,b.id])+'<p style="font-size:20px"><b>'+a.n+'</b> is ____ than <b>'+b.n+'</b>'+(A.k==='skill'?' at performing':'')+'.</p>',
+opts:[A.c,A.w[0],A.w[1]],a:0,hint:A.rule,say:a.n+' is '+A.c+' than '+b.n+(A.k==='skill'?' at performing':'')+'.',ok:a.n+' is '+A.c+' than '+b.n+(A.k==='skill'?' at performing':'')+'.'});
 }else{
 var best=PERF.slice().sort(function(p,q){return q.sc[A.k]-p.sc[A.k]})[0];
-items.push({html:'<div class="sm">'+LBL[A.k]+' score</div>'+bars(A.k,PERF.map(function(p){return p.id}))+'<p style="font-size:20px"><b>'+best.n+'</b> is ____ in the group.</p>',
-opts:[A.s,A.ws[0],A.ws[1]],a:0,hint:A.rule,say:best.n+' is '+A.s+' in the group.',ok:best.n+' is '+A.s+' in the group.'});
+items.push({html:'<div class="sm">'+LBL[A.k]+' score</div>'+bars(A.k,PERF.map(function(p){return p.id}))+'<p style="font-size:20px"><b>'+best.n+'</b> is ____ '+(A.k==='skill'?'performer ':'')+'in the group.</p>',
+opts:[A.s,A.ws[0],A.ws[1]],a:0,hint:A.rule,say:best.n+' is '+A.s+(A.k==='skill'?' performer':'')+' in the group.',ok:best.n+' is '+A.s+(A.k==='skill'?' performer':'')+' in the group.'});
 }});
 quiz('compare','Compare','انظر إلى الأعمدة ثم اختر صيغة المقارنة الصحيحة.',items.slice(0,8))}
 // ---- 5 judge
 function judge(){
 var qs=[
-['tidy','Who is the tidiest performer?'],['hw','Who is the most hard-working?'],['conf','Who is the most confident?'],['skill','Who has the best talent score?'],['fr','Who is the friendliest?'],['tidy','Who is the least tidy? (the untidiest)']];
+['tidy','Who is the tidiest performer?'],['hw','Who is the most hard-working?'],['conf','Who is the most confident?'],['skill','Who is the best performer?'],['fr','Who is the friendliest?'],['tidy','Who is the least tidy? (the untidiest)']];
 var items;
 items=qs.map(function(q,i){
 var sorted=PERF.slice().sort(function(a,b){return i===5?a.sc[q[0]]-b.sc[q[0]]:b.sc[q[0]]-a.sc[q[0]]});
@@ -262,7 +263,7 @@ quiz('judge','The judges','انظر إلى الأعمدة وأجب عن أسئل
 // ---- 6 write
 function write(){
 var W=S.write;var d=el('<div></div>');d.appendChild(backBtn());
-d.appendChild(el('<h2>Write your description</h2>'));d.appendChild(el('<div class="ar">اختر موهوبًا واكتب عنه. معلمك هو من يقيّم كتابتك.</div>'));
+d.appendChild(el('<h2>Write your description</h2>'));d.appendChild(el('<div class="ar" lang="ar" dir="rtl">اختر موهوبًا واكتب عنه. معلمك هو من يقيّم كتابتك.</div>'));
 var c=el('<div class="card"></div>');
 c.innerHTML='<b>1. Choose a performer</b><div class="perfs" id="pp" style="margin-top:8px"></div>';
 d.appendChild(c);
@@ -283,7 +284,7 @@ out.innerHTML='<b>2. Fill the plan</b><label>Who? ('+p.n+')</label><div class="s
 var o2=P(cmpId);
 function compSentence(){var A=ADJ[W.adj||0];var q=P(out.querySelector('#cmp').value);var hi=p.sc[A.k]>=q.sc[A.k];
 if(p.sc[A.k]===q.sc[A.k])return p.n+' and '+q.n+' are the same.';
-return hi?p.n+' is '+A.c+' than '+q.n+'.':q.n+' is '+A.c+' than '+p.n+'.'}
+var sfx=A.k==='skill'?' at performing':'';return hi?p.n+' is '+A.c+' than '+q.n+sfx+'.':q.n+' is '+A.c+' than '+p.n+sfx+'.'}
 var tb=el('<div class="card"><b>3. Your description</b><div class="sm">Press the button to build your first draft, then change it in your own words.</div><textarea id="ta" aria-label="Your description"></textarea></div>');
 var bb=el('<button class="btn" style="margin-top:8px">Build my first draft</button>');
 bb.onclick=function(){
