@@ -86,7 +86,7 @@ function sentGame(g){var ss=shuf(SENT.filter(function(s){var n=s.en.split(' ').l
   $('#bank').onclick=function(e){var b=e.target.closest('.tk');if(!b||b.disabled||lk)return;b.disabled=true;pk.push({w:b.dataset.w,k:b.dataset.k});draw()};
   $('#slot').onclick=function(e){var b=e.target.closest('.tk');if(!b||lk)return;var p=pk.splice(+b.dataset.j,1)[0];var bb=document.querySelector('#bank [data-k="'+p.k+'"]');if(bb)bb.disabled=false;draw()};
   $('#clr').onclick=function(){if(!lk)q()}}q()}
-function hear(g){var ws=shuf(WORDS).slice(0,10),i=0,ok=0;
+function hear(g){var ws=shuf(WORDS.filter(function(w){return AUD[w.aud]})).slice(0,10),i=0,ok=0;
  function q(){var w=ws[i];if(!w)return endScreen(ok,ws.length,g);var o=shuf([w].concat(shuf(WORDS.filter(function(x){return x.en!==w.en})).slice(0,2))),lk=false;
   show('<div class="prog"><i style="width:'+(i/ws.length*100)+'%"></i></div><div class="ptitle">👂 اسمع الكلمة ثم اختر معناها</div><div class="say"><button class="btn alt" id="sp">🔊 اسمع</button></div><div class="opts w" id="o">'+o.map(function(x,k){return '<button class="op" style="direction:rtl;font-size:24px" data-k="'+k+'">'+x.ar+'</button>'}).join('')+'</div><div class="fb" id="fb"></div>');
   setTimeout(function(){play(w.aud)},300);$('#sp').onclick=function(){play(w.aud)};
