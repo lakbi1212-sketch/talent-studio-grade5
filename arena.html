@@ -56,7 +56,7 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}paint
 function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 var cur=null;function play(id,cb){if(!id||!AUD[id]){if(cb)setTimeout(cb,350);return false}try{if(cur)cur.pause();cur=new Audio(AUD[id]);if(cb)cur.onended=cb;cur.play().catch(function(){if(cb)cb()})}catch(e){if(cb)cb()}return true}
-function cheer(ok){var ids=ok?['g3n_p1','g3n_p2','g3n_p3','g3n_p5','g3n_p7','g3n_p8']:['g3n_p4','g3n_p9'];var c=ids.filter(function(i){return AUD[i]});if(c.length)play(c[Math.floor(Math.random()*c.length)])}
+function cheer(ok){if(window.FBA){FBA.say(ok);return}var ids=ok?['g3n_p1','g3n_p2','g3n_p3','g3n_p5','g3n_p7','g3n_p8']:['g3n_p4','g3n_p9'];var c=ids.filter(function(i){return AUD[i]});if(c.length)play(c[Math.floor(Math.random()*c.length)])}
 function confetti(){var d=document.createElement('div');d.className='conf';var e=['⭐','🌟','🎉','☀️','🎈'];for(var i=0;i<26;i++){var s=document.createElement('i');s.textContent=e[i%5];s.style.left=(Math.random()*100)+'%';s.style.animationDelay=(Math.random()*.6)+'s';d.appendChild(s)}document.body.appendChild(d);setTimeout(function(){d.remove()},2800)}
 var WORDS=NW.map(function(w){return {en:w.en,ar:w.ar,aud:PFX+'w_'+w.id}});
 var SENT=NS.map(function(s,k){return {en:s.en,ar:s.ar,id:PFX+'s'+('0'+(k+1)).slice(-2)}});
@@ -99,4 +99,4 @@ function cards(g){var ws=WORDS,i=0;
  function q(){var w=ws[i];show('<div class="prog"><i style="width:'+((i+1)/ws.length*100)+'%"></i></div><div class="ptitle">🃏 كلمة '+(i+1)+' من '+ws.length+'</div><div class="fc"><div class="big"><span class="em">☀️</span></div><div class="en">'+esc(w.en)+'</div><div class="ar">'+w.ar+'</div></div><div class="say">'+(AUD[w.aud]?'<button class="btn alt" id="sp">🔊 اسمع مع شموسة</button>':'')+'</div><div class="row"><button class="btn r" id="pv">→ السابقة</button><button class="btn" id="nx">التالية ←</button></div>');
   var sp=$('#sp');if(sp){sp.onclick=function(){play(w.aud)};play(w.aud)}$('#pv').onclick=function(){i=(i+ws.length-1)%ws.length;q()};$('#nx').onclick=function(){if(i==ws.length-1){ST.stars+=3;ST.done++;save();confetti();P.classList.remove('on');window.scrollTo({top:0,behavior:'smooth'});return}i++;q()}}q()}
 function sents(g){show('<div class="ptitle">💬 جمل مع شموسة</div><div class="sl">'+SENT.map(function(s){return '<div class="si"><div class="e">'+esc(s.en)+'</div><div class="a">'+s.ar+'</div>'+(AUD[s.id]?'<button class="btn alt" data-p="'+s.id+'">🔊 اسمع</button>':'')+'</div>'}).join('')+'</div>');P.onclick=function(e){var b=e.target.closest('[data-p]');if(b)play(b.dataset.p)}}
-</script></body></html>
+</script><script src="fb-audio.js?v=1"></script></body></html>
