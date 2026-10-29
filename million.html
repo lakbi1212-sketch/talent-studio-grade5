@@ -260,7 +260,7 @@ function ask(){
 function pick(btn,o){
   if(game.locked||game.over)return;
   game.locked=true;
-  stop('thinking-pulse.mp3');
+  stopAll();
   btn.classList.add('picked');
   play('reveal-cue.mp3');
   setTimeout(function(){
