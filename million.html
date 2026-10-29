@@ -6,6 +6,14 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--bg1:#3b1f6e;--bg2:#5b2fa8;--gold:#f7c948;--gold2:#e8a90c;--green:#2fbf71;--red:#e8542f;--panel:rgba(10,20,35,.72)}
+body[data-unit="1"]{--bg1:#22337a;--bg2:#3b5bd6;--accent:#ffd166}
+body[data-unit="2"]{--bg1:#0d4a42;--bg2:#14706a;--accent:#5eead4}
+body[data-unit="3"]{--bg1:#5e2160;--bg2:#8a3390;--accent:#f0abfc}
+body[data-unit="4"]{--bg1:#6e3b1c;--bg2:#a85a2b;--accent:#fdba74}
+body:not([data-unit]){--accent:var(--gold)}
+.unit-ribbon{display:inline-block;background:var(--accent);color:#142d46;font-weight:800;border-radius:14px;padding:8px 18px;font-size:17px;margin:4px 0 10px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.pill.unit{background:var(--accent);color:#142d46;font-size:12.5px}
+.uchip .uico{margin-left:6px}
 body{font-family:'Noto Naskh Arabic','Segoe UI',Tahoma,Arial,sans-serif;background:linear-gradient(160deg,var(--bg1),var(--bg2));min-height:100vh;color:#fff}
 .wrap{max-width:680px;margin:0 auto;padding:20px 14px 30px}
 .center{text-align:center}
@@ -68,6 +76,7 @@ footer{text-align:center;margin-top:30px;font-size:12.5px;opacity:.85;line-heigh
     <span class="sunb" aria-hidden="true">☀️</span>
     <div class="badge">Grade 5 · الصف الخامس</div>
     <h1>من سيربح المليون؟</h1>
+    <div class="unit-ribbon" id="ui-unit-ribbon"></div>
     <p class="sub">استوديو المواهب<br>اختبر معلوماتك في كلمات وقواعد وحدات الكتاب، واصعد سلّم المليون: 15 سؤالًا من الأسهل إلى الأصعب!<br>معك 4 وسائل مساعدة: 50:50 · رأي الجمهور · اتصال بشموسة · تبديل السؤال</p>
     <div class="units" id="ui-units"></div>
     <div class="panel" style="text-align:right">
@@ -87,6 +96,7 @@ footer{text-align:center;margin-top:30px;font-size:12.5px;opacity:.85;line-heigh
 
   <div id="scr-game" style="display:none">
     <div class="topbar">
+      <span class="pill unit" id="ui-unit-pill"></span>
       <span class="pill gold" id="ui-qnum">السؤال 1 من 15</span>
       <span class="pill" id="ui-prize">100 ر.ع.</span>
       <button class="mute" id="btn-mute">🔊</button>
@@ -149,21 +159,35 @@ var selUnit=1;
 function unitOf(q){var m=/^Unit (\d+)/.exec(q.topic||'');return m?+m[1]:0}
 var BUCKET={vocab:1,odd:1,'vocab-rev':2,'verb-past':2,grammar:2,'verb-pp':3,order:3};
 function bucketOf(q){return BUCKET[q.type]||2}
+var UNIT_AR={1:'الوحدة الأولى',2:'الوحدة الثانية',3:'الوحدة الثالثة',4:'الوحدة الرابعة',5:'الوحدة الخامسة',6:'الوحدة السادسة'};
+function unitMeta(u){return (D.units&&D.units[u])||{en:'',icon:'📚'}}
+function unitLabel(u){var m=unitMeta(u);return m.icon+' '+(UNIT_AR[u]||('الوحدة '+u))}
+function applyUnitTheme(){
+  var ribbon=$('ui-unit-ribbon');
+  if(selUnit==='all'){
+    document.body.removeAttribute('data-unit');
+    ribbon.textContent='☀️ كل الوحدات';
+  }else{
+    document.body.setAttribute('data-unit',selUnit);
+    var m=unitMeta(selUnit);
+    ribbon.textContent=m.icon+' '+(UNIT_AR[selUnit]||('الوحدة '+selUnit))+(m.en?' · '+m.en:'');
+  }
+}
 function buildUnits(){
   var units=[];D.bank.forEach(function(q){var u=unitOf(q);if(u&&units.indexOf(u)<0)units.push(u)});
   units.sort(function(a,b){return a-b});
-  var names={1:'الوحدة الأولى',2:'الوحدة الثانية',3:'الوحدة الثالثة',4:'الوحدة الرابعة',5:'الوحدة الخامسة',6:'الوحدة السادسة'};
   var box=$('ui-units');box.innerHTML='';
   units.forEach(function(u){
     var b=document.createElement('button');b.className='uchip'+(selUnit===u?' sel':'');
-    b.textContent=names[u]||('الوحدة '+u);
+    b.textContent=unitLabel(u);
     b.onclick=function(){selUnit=u;buildUnits()};
     box.appendChild(b);
   });
   var all=document.createElement('button');all.className='uchip'+(selUnit==='all'?' sel':'');
-  all.textContent='كل الوحدات';
+  all.textContent='☀️ كل الوحدات';
   all.onclick=function(){selUnit='all';buildUnits()};
   box.appendChild(all);
+  applyUnitTheme();
 }
 function draw(pool,key,n){
   var out=shuffle(pool.filter(key)).slice(0,n);
@@ -186,6 +210,7 @@ function newGame(){
       .concat(draw(pool,function(q){return bucketOf(q)===3},5));
   }
   game={qs:qs,i:0,used:{fifty:false,aud:false,phone:false,swap:false},name:$('fname').value.trim().slice(0,20),school:$('school').value,unit:selUnit,over:false,locked:false};
+  $('ui-unit-pill').textContent=selUnit==='all'?'☀️ كل الوحدات':unitLabel(selUnit);
 }
 buildUnits();
 function curPrize(){return game.i>0?LADDER[game.i-1]:0}
