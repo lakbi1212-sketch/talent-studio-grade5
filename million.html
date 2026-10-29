@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="لعبة من سيربح المليون — الصف الخامس: كلمات وقواعد وحدات الكتاب.">
+<meta name="theme-color" content="#3b1f6e"><title>من سيربح المليون؟ · الصف الخامس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg1:#3b1f6e;--bg2:#5b2fa8;--gold:#f7c948;--gold2:#e8a90c;--green:#2fbf71;--red:#e8542f;--panel:rgba(10,20,35,.72)}
+body{font-family:'Noto Naskh Arabic','Segoe UI',Tahoma,Arial,sans-serif;background:linear-gradient(160deg,var(--bg1),var(--bg2));min-height:100vh;color:#fff}
+.wrap{max-width:680px;margin:0 auto;padding:20px 14px 30px}
+.center{text-align:center}
+.sunb{font-size:64px;display:inline-block;animation:sp 16s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.badge{display:inline-block;background:var(--gold);color:#142d46;font-weight:800;border-radius:999px;padding:5px 16px;font-size:14px;margin:8px 0 10px}
+h1{font-size:32px;font-weight:800;color:var(--gold);text-shadow:0 3px 12px rgba(0,0,0,.5);margin-bottom:6px}
+.sub{opacity:.92;font-size:15.5px;line-height:1.9}
+.panel{background:var(--panel);border:2px solid rgba(247,201,72,.35);border-radius:20px;padding:22px 18px;margin-top:20px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+label{display:block;font-weight:700;font-size:15px;margin:12px 0 6px}
+input,select{width:100%;padding:12px 14px;border-radius:12px;border:2px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;font-family:inherit;font-size:16px}
+select option{color:#142d46}
+.btn{display:block;width:100%;margin-top:18px;padding:15px;border:none;border-radius:14px;font-family:inherit;font-size:19px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#3a2a00;box-shadow:0 5px 0 #9a7208;transition:transform .1s}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #9a7208}
+.btn.ghost{background:rgba(255,255,255,.12);color:#fff;box-shadow:0 5px 0 rgba(0,0,0,.3);font-size:16px;padding:12px}
+.note{font-size:12.5px;opacity:.75;margin-top:14px;line-height:1.8}
+/* game layout */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.pill{background:rgba(255,255,255,.12);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:700}
+.pill.gold{background:var(--gold);color:#142d46}
+.lifelines{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.ll{flex:1;min-width:64px;background:linear-gradient(180deg,#1d4a6e,#12293d);border:2px solid rgba(247,201,72,.5);color:var(--gold);border-radius:12px;padding:8px 4px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer}
+.ll:disabled{opacity:.3;cursor:not-allowed;text-decoration:line-through}
+.qbox{background:linear-gradient(135deg,#16324e,#0f2a44);border:2px solid var(--gold);border-radius:16px;padding:20px 16px;margin:12px 0;font-size:19px;font-weight:700;line-height:1.9;min-height:90px}
+.qbox .en{direction:ltr;text-align:left;display:block;white-space:pre-line}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#1d4a6e,#143550);border:2px solid rgba(255,255,255,.2);border-radius:14px;padding:13px 14px;font-size:17.5px;font-weight:700;cursor:pointer;color:#fff;font-family:inherit;text-align:left;direction:ltr;transition:border-color .15s,background .15s}
+.opt .k{background:var(--gold);color:#142d46;border-radius:8px;min-width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.opt.picked{border-color:var(--gold);background:linear-gradient(135deg,#8a6a10,#5e4a06)}
+.opt.right{border-color:var(--green);background:linear-gradient(135deg,#156a40,#0e4a2c)}
+.opt.wrong{border-color:var(--red);background:linear-gradient(135deg,#7a2a15,#521d0e)}
+.opt:disabled{cursor:default}
+.opt.hidden{visibility:hidden}
+.exp{background:#fffbe8;color:#3a2a00;border-radius:14px;padding:14px 16px;margin-top:14px;font-size:15.5px;line-height:1.9;display:none}
+.exp b{color:#0e4a2c}
+.exp .en{direction:ltr;display:block;text-align:left;font-weight:700;margin-top:6px}
+.audience{background:rgba(255,255,255,.08);border-radius:12px;padding:12px;margin-top:10px;display:none;direction:ltr}
+.audience .row{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;margin:4px 0}
+.audience .bar{height:14px;background:var(--gold);border-radius:7px}
+.phone{background:rgba(255,255,255,.08);border-radius:12px;padding:12px;margin-top:10px;display:none;font-size:15.5px;line-height:1.8}
+/* ladder overlay */
+.ladder{position:fixed;inset:0;background:rgba(5,10,18,.86);display:none;align-items:center;justify-content:center;z-index:30;padding:18px}
+.ladder.open{display:flex}
+.ladder .in{background:#10273c;border:2px solid var(--gold);border-radius:18px;padding:18px 22px;max-width:320px;width:100%;max-height:86vh;overflow:auto}
+.ladder ol{list-style:none;direction:ltr}
+.ladder li{display:flex;justify-content:space-between;padding:7px 10px;border-radius:10px;font-weight:700;font-size:15px;color:#cfe3f5}
+.ladder li.safe{color:var(--gold)}
+.ladder li.cur{background:var(--gold);color:#142d46}
+.ladder li.done{opacity:.55}
+.big-prize{font-size:44px;font-weight:800;color:var(--gold);text-shadow:0 4px 18px rgba(0,0,0,.55);margin:8px 0}
+footer{text-align:center;margin-top:30px;font-size:12.5px;opacity:.85;line-height:1.9;direction:ltr}
+.mute{background:none;border:2px solid rgba(255,255,255,.3);border-radius:10px;color:#fff;font-size:16px;padding:4px 10px;cursor:pointer;font-family:inherit}
+.confetti{position:fixed;top:-10px;font-size:22px;animation:fall linear forwards;z-index:50;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+</style></head><body>
+<div class="wrap">
+  <div id="scr-start" class="center">
+    <span class="sunb" aria-hidden="true">☀️</span>
+    <div class="badge">Grade 5 · الصف الخامس</div>
+    <h1>من سيربح المليون؟</h1>
+    <p class="sub">@@SITE_NAME@@<br>اختبر معلوماتك في كلمات وقواعد وحدات الكتاب، واصعد سلّم المليون: 15 سؤالًا من الأسهل إلى الأصعب!<br>معك 4 وسائل مساعدة: 50:50 · رأي الجمهور · اتصال بشموسة · تبديل السؤال</p>
+    <div class="panel" style="text-align:right">
+      <label for="fname">الاسم الأول (اختياري — لحفظ نتيجتك)</label>
+      <input id="fname" maxlength="20" placeholder="اكتب اسمك الأول">
+      <label for="school">المدرسة</label>
+      <select id="school">
+        <option value="">اختر مدرستك</option>
+        <option>Al Lakbi</option><option>Al Khadra</option><option>Soqrah</option>
+        <option>Al Kahal Boys</option><option>Al Kahal Girls</option><option>Hitam</option>
+        <option>Al Shomoukh Boys</option><option>Al Shomoukh Girls</option>
+      </select>
+      <button class="btn" id="btn-start">ابدأ اللعب ☀️</button>
+      <p class="note">لعبة تدريبية للمتعة والمراجعة — النتيجة ليست درجة رسمية. النقاط الآمنة: 1,000 و 32,000 ر.ع.</p>
+    </div>
+  </div>
+
+  <div id="scr-game" style="display:none">
+    <div class="topbar">
+      <span class="pill gold" id="ui-qnum">السؤال 1 من 15</span>
+      <span class="pill" id="ui-prize">100 ر.ع.</span>
+      <button class="mute" id="btn-mute">🔊</button>
+      <button class="mute" id="btn-ladder">السلّم</button>
+    </div>
+    <div class="lifelines">
+      <button class="ll" id="ll-fifty">50:50</button>
+      <button class="ll" id="ll-aud">رأي الجمهور</button>
+      <button class="ll" id="ll-phone">اتصال بشموسة ☀️</button>
+      <button class="ll" id="ll-swap">تبديل السؤال</button>
+    </div>
+    <div class="qbox"><span class="en" id="ui-q"></span></div>
+    <div class="audience" id="ui-aud"></div>
+    <div class="phone" id="ui-phone"></div>
+    <div class="opts" id="ui-opts"></div>
+    <div class="exp" id="ui-exp"></div>
+    <button class="btn" id="btn-next" style="display:none">السؤال التالي ←</button>
+    <button class="btn ghost" id="btn-withdraw">انسحاب والاحتفاظ بالمبلغ</button>
+  </div>
+
+  <div id="scr-end" class="center" style="display:none">
+    <span class="sunb" aria-hidden="true">☀️</span>
+    <h1 id="end-title"></h1>
+    <div class="big-prize" id="end-prize"></div>
+    <p class="sub" id="end-msg" style="white-space:pre-line"></p>
+    <div class="panel">
+      <button class="btn" id="btn-again">العب مرة أخرى ☀️</button>
+      <button class="btn ghost" onclick="location.href='index.html'">العودة إلى الصفحة الرئيسية</button>
+      <p class="note" id="end-save"></p>
+    </div>
+  </div>
+</div>
+
+<div class="ladder" id="ui-ladder"><div class="in"><ol id="ui-ladder-ol"></ol><button class="btn ghost" id="btn-ladder-close">إغلاق</button></div></div>
+
+<footer>Prepared by<br><b>Mohamed Mostafa Al Shorbagy</b><br>Regional Supervisor · Wusta Governorate</footer>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="million-data.js"></script>
+<script>
+(function(){
+"use strict";
+var D=window.MILLION;
+var LADDER=[100,200,300,500,1000,2000,4000,8000,16000,32000,64000,125000,250000,500000,1000000];
+var SAFE={5:1000,10:32000};
+var SCHOOLS=["Al Lakbi","Al Khadra","Soqrah","Al Kahal Boys","Al Kahal Girls","Hitam","Al Shomoukh Boys","Al Shomoukh Girls"];
+var FB_CFG={apiKey:"AIzaSyBYYI-nLQF3QszGxtN_gspEVDoZ4ciSsDI",authDomain:"grade-9-million-results.firebaseapp.com",projectId:"grade-9-million-results",storageBucket:"grade-9-million-results.firebasestorage.app",messagingSenderId:"604163950835",appId:"1:604163950835:web:094af092197da724738f86"};
+var A=function(n){return new Audio('million-audio/'+n)};
+var SFX={};
+function loadSfx(){['question-intro-bed.mp3','thinking-pulse.mp3','reveal-cue.mp3','correct-applause.mp3','wrong-sting.mp3','opening-milestone.mp3','late-question-bg.mp3','game-start.mp3','praise-genius.mp3','praise-smart.mp3','praise-great.mp3','correct-well-done.mp3','encourage-tryagain.mp3','safe-haven.mp3','million-win.mp3','game-over.mp3'].forEach(function(n){SFX[n]=A(n)});}
+var muted=false;
+function play(n,loop){if(muted||!SFX[n])return;try{SFX[n].loop=!!loop;SFX[n].currentTime=0;SFX[n].play().catch(function(){})}catch(e){}}
+function stop(n){if(SFX[n]){try{SFX[n].pause();SFX[n].currentTime=0}catch(e){}}}
+function stopAll(){for(var k in SFX)stop(k)}
+function $(id){return document.getElementById(id)}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+
+var game=null;
+function newGame(){
+  var by={easy:[],medium:[],hard:[]};
+  D.bank.forEach(function(q){if(by[q.tier])by[q.tier].push(q)});
+  var qs=shuffle(by.easy).slice(0,5).concat(shuffle(by.medium).slice(0,5),shuffle(by.hard).slice(0,5));
+  game={qs:qs,i:0,used:{fifty:false,aud:false,phone:false,swap:false},name:$('fname').value.trim().slice(0,20),school:$('school').value,over:false,locked:false};
+}
+function curPrize(){return game.i>0?LADDER[game.i-1]:0}
+function safePrize(){var p=0;for(var s in SAFE){if(game.i>=+s)p=SAFE[s]}return p}
+function fmt(n){return n.toLocaleString('en-US')+' ر.ع.'}
+
+function show(id){['scr-start','scr-game','scr-end'].forEach(function(s){$(s).style.display=s===id?'':'none'})}
+function renderLadder(){
+  var ol=$('ui-ladder-ol');ol.innerHTML='';
+  for(var i=14;i>=0;i--){
+    var li=document.createElement('li');
+    li.textContent=(i+1)+' · '+LADDER[i].toLocaleString('en-US');
+    if(SAFE[i+1])li.classList.add('safe');
+    if(i===game.i)li.classList.add('cur');
+    else if(i<game.i)li.classList.add('done');
+    ol.appendChild(li);
+  }
+}
+function ask(){
+  stopAll();
+  if(game.i>=15)return endGame(true);
+  var q=game.qs[game.i];
+  game.q=q;game.locked=false;
+  $('ui-qnum').textContent='السؤال '+(game.i+1)+' من 15';
+  $('ui-prize').textContent=fmt(LADDER[game.i]);
+  $('ui-q').textContent=q.q;
+  $('ui-exp').style.display='none';$('ui-aud').style.display='none';$('ui-phone').style.display='none';
+  $('btn-next').style.display='none';
+  game.opts=shuffle(q.o);
+  var box=$('ui-opts');box.innerHTML='';
+  var letters=['A','B','C','D'];
+  game.opts.forEach(function(o,idx){
+    var b=document.createElement('button');b.className='opt';
+    b.innerHTML='<span class="k">'+letters[idx]+'</span><span></span>';
+    b.lastChild.textContent=o;
+    b.onclick=function(){pick(b,o)};
+    box.appendChild(b);
+  });
+  ['fifty','aud','phone','swap'].forEach(function(k){$('ll-'+k).disabled=game.used[k]});
+  renderLadder();
+  play(game.i>=10?'late-question-bg.mp3':'question-intro-bed.mp3');
+  play('thinking-pulse.mp3',true);
+}
+function pick(btn,o){
+  if(game.locked||game.over)return;
+  game.locked=true;
+  stop('thinking-pulse.mp3');
+  btn.classList.add('picked');
+  play('reveal-cue.mp3');
+  setTimeout(function(){
+    if(game.over)return;
+    var right=o===game.q.a;
+    var btns=$('ui-opts').children;
+    for(var i=0;i<btns.length;i++){
+      var t=game.opts[i];
+      if(t===game.q.a)btns[i].classList.add('right');
+      else if(t===o&&!right)btns[i].classList.add('wrong');
+    }
+    if(right){
+      play('correct-applause.mp3');
+      var praises=['praise-genius.mp3','praise-smart.mp3','praise-great.mp3','correct-well-done.mp3'];
+      setTimeout(function(){play(praises[Math.floor(Math.random()*praises.length)])},900);
+      if(SAFE[game.i+1])setTimeout(function(){play('safe-haven.mp3')},2600);
+      showExp(true);
+      $('btn-next').style.display='';
+    }else{
+      play('wrong-sting.mp3');
+      showExp(false);
+      setTimeout(function(){if(game.over)return;endGame(false)},3800);
+    }
+  },1600);
+}
+function showExp(right){
+  var e=$('ui-exp');
+  e.innerHTML='';
+  var h=document.createElement('div');
+  var b=document.createElement('b');b.textContent=right?'إجابة صحيحة! ☀️':'إجابة خاطئة. الصحيح: ';
+  h.appendChild(b);
+  if(!right){var s=document.createElement('span');s.style.direction='ltr';s.style.unicodeBidi='embed';s.textContent=game.q.a;b.appendChild(s)}
+  var w=document.createElement('div');w.style.whiteSpace='pre-line';w.textContent=game.q.why||'';
+  e.appendChild(h);e.appendChild(w);e.style.display='';
+}
+function endGame(won){
+  game.over=true;stopAll();
+  var prize=won?1000000:safePrize();
+  if(won){play('million-win.mp3');setTimeout(function(){play('correct-applause.mp3')},1500);confetti()}
+  else play('game-over.mp3');
+  $('end-title').textContent=won?'مبروك! ربحت المليون! 🏆':(prize>0?'انتهت اللعبة — أحسنت!':'انتهت اللعبة');
+  $('end-prize').textContent=fmt(prize);
+  $('end-msg').textContent=won?
+    'وصلت إلى قمة السلّم وأجبت على الأسئلة الخمسة عشر كلها! شموسة فخورة بك ☀️':
+    (prize>0?'خرجت بمبلغ آمن '+fmt(prize)+'.\nحاول مرة أخرى لتصل إلى المليون!':'لم تصل إلى نقطة أمان هذه المرة.\nحاول مرة أخرى — شموسة تؤمن بك! ☀️');
+  show('scr-end');
+  saveResult(prize,won);
+}
+function saveResult(prize,won){
+  var el=$('end-save');
+  if(!game.name||!game.school){el.textContent='';return}
+  var rec={firstName:game.name,school:game.school,score:prize,grade:D.grade,finishedAt:new Date().toISOString(),won:won};
+  try{
+    var ls=JSON.parse(localStorage.getItem('millionG'+D.grade)||'[]');ls.push(rec);localStorage.setItem('millionG'+D.grade,JSON.stringify(ls));
+  }catch(e){}
+  try{
+    firebase.initializeApp(FB_CFG);
+    firebase.firestore().collection('attempts').add({firstName:rec.firstName,school:rec.school,score:rec.score,grade:String(D.grade),finishedAt:firebase.firestore.FieldValue.serverTimestamp()})
+    .then(function(){el.textContent='حُفظت نتيجتك ✓'})
+    .catch(function(){el.textContent=''});
+  }catch(e){el.textContent=''}
+}
+function confetti(){
+  var em=['🎉','⭐','☀️','🏆','✨'];
+  for(var i=0;i<40;i++){(function(){
+    var c=document.createElement('div');c.className='confetti';
+    c.textContent=em[Math.floor(Math.random()*em.length)];
+    c.style.left=Math.random()*100+'vw';
+    c.style.animationDuration=(2+Math.random()*3)+'s';
+    c.style.fontSize=(16+Math.random()*20)+'px';
+    document.body.appendChild(c);
+    setTimeout(function(){c.remove()},5200);
+  })()}
+}
+/* lifelines */
+$('ll-fifty').onclick=function(){
+  if(game.used.fifty||game.locked)return;game.used.fifty=true;$('ll-fifty').disabled=true;
+  var wrongs=game.opts.filter(function(o){return o!==game.q.a});
+  var hide=wrongs.slice(0,Math.max(0,game.opts.length-2));
+  var btns=$('ui-opts').children;
+  game.opts.forEach(function(o,i){if(hide.indexOf(o)>=0)btns[i].classList.add('hidden')});
+};
+$('ll-aud').onclick=function(){
+  if(game.used.aud||game.locked)return;game.used.aud=true;$('ll-aud').disabled=true;
+  var el=$('ui-aud');el.innerHTML='';
+  var main=45+Math.floor(Math.random()*30);
+  var rest=100-main;var parts=[];
+  var wrongs=game.opts.filter(function(o){return o!==game.q.a});
+  for(var i=0;i<wrongs.length;i++){var p=i===wrongs.length-1?rest:Math.floor(Math.random()*rest);rest-=p;parts.push(p)}
+  var rows=game.opts.map(function(o){return{o:o,p:o===game.q.a?main:parts.pop()}});
+  var letters=['A','B','C','D'];
+  rows.forEach(function(r,idx){
+    var d=document.createElement('div');d.className='row';
+    d.innerHTML='<span style="min-width:22px">'+letters[idx]+'</span><div class="bar" style="width:'+r.p+'%"></div><span>'+r.p+'%</span>';
+    el.appendChild(d);
+  });
+  el.style.display='';
+};
+$('ll-phone').onclick=function(){
+  if(game.used.phone||game.locked)return;game.used.phone=true;$('ll-phone').disabled=true;
+  var el=$('ui-phone');
+  el.textContent='☀️ شموسة: هممم... دعني أفكر. أنا متأكدة تمامًا أن الإجابة الصحيحة هي «'+game.q.a+'»!';
+  el.style.direction='rtl';el.style.display='';
+  play('praise-smart.mp3');
+};
+$('ll-swap').onclick=function(){
+  if(game.used.swap||game.locked)return;game.used.swap=true;$('ll-swap').disabled=true;
+  var tier=game.q.tier;
+  var pool=D.bank.filter(function(q){return q.tier===tier&&game.qs.indexOf(q)<0});
+  if(pool.length)game.qs[game.i]=pool[Math.floor(Math.random()*pool.length)];
+  ask();
+};
+/* controls */
+$('btn-start').onclick=function(){loadSfx();newGame();show('scr-game');play('opening-milestone.mp3');setTimeout(ask,1200)};
+$('btn-again').onclick=function(){show('scr-start')};
+$('btn-next').onclick=function(){game.i++;ask()};
+$('btn-withdraw').onclick=function(){
+  if(game.over)return;game.over=true;stopAll();
+  var prize=curPrize();
+  play('game-over.mp3');
+  $('end-title').textContent='انسحبت بذكاء!';
+  $('end-prize').textContent=fmt(prize);
+  $('end-msg').textContent='خرجت بمبلغ '+fmt(prize)+'.\nحاول مرة أخرى لتصل إلى المليون! ☀️';
+  show('scr-end');saveResult(prize,false);
+};
+$('btn-mute').onclick=function(){muted=!muted;if(muted)stopAll();else play('thinking-pulse.mp3',true);$('btn-mute').textContent=muted?'🔇':'🔊'};
+$('btn-ladder').onclick=function(){$('ui-ladder').classList.add('open')};
+$('btn-ladder-close').onclick=function(){$('ui-ladder').classList.remove('open')};
+})();
+</script>
+<script>window.goatcounter={path:function(p){return "/g@@GRADE_N@@million"+p}};</script>
+<script data-goatcounter="https://shorbagy-sites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
