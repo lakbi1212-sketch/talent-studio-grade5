@@ -146,7 +146,7 @@ var SCHOOLS=["Al Lakbi","Al Khadra","Soqrah","Al Kahal Boys","Al Kahal Girls","H
 var FB_CFG={apiKey:"AIzaSyBYYI-nLQF3QszGxtN_gspEVDoZ4ciSsDI",authDomain:"grade-9-million-results.firebaseapp.com",projectId:"grade-9-million-results",storageBucket:"grade-9-million-results.firebasestorage.app",messagingSenderId:"604163950835",appId:"1:604163950835:web:094af092197da724738f86"};
 var A=function(n){return new Audio('million-audio/'+n)};
 var SFX={};
-function loadSfx(){['question-intro-bed.mp3','thinking-pulse.mp3','reveal-cue.mp3','correct-applause.mp3','wrong-sting.mp3','opening-milestone.mp3','late-question-bg.mp3','game-start.mp3','praise-genius.mp3','praise-smart.mp3','praise-great.mp3','correct-well-done.mp3','encourage-tryagain.mp3','safe-haven.mp3','million-win.mp3','game-over.mp3'].forEach(function(n){SFX[n]=A(n)});}
+function loadSfx(){['question-intro-bed.mp3','thinking-pulse.mp3','reveal-cue.mp3','correct-applause.mp3','wrong-sting.mp3','opening-milestone.mp3','late-question-bg.mp3'].forEach(function(n){SFX[n]=A(n)});}
 var muted=false;
 var OFFSETS={'correct-applause.mp3':3.8,'opening-milestone.mp3':0.65};
 function play(n,loop,onend){if(muted||!SFX[n]){if(onend)onend();return}try{var a=SFX[n];a.loop=!!loop;a.onended=onend?function(){a.onended=null;onend()}:null;a.currentTime=OFFSETS[n]||0;a.play().catch(function(){if(onend)onend()})}catch(e){if(onend)onend()}}
@@ -275,9 +275,6 @@ function pick(btn,o){
     if(right){
       stop('reveal-cue.mp3');
       if(SAFE[game.i+1]){play('opening-milestone.mp3')}else{play('correct-applause.mp3')}
-      var praises=['praise-genius.mp3','praise-smart.mp3','praise-great.mp3','correct-well-done.mp3'];
-      setTimeout(function(){play(praises[Math.floor(Math.random()*praises.length)])},900);
-      if(SAFE[game.i+1])setTimeout(function(){play('safe-haven.mp3')},2600);
       showExp(true);
       $('btn-next').style.display='';
     }else{
@@ -301,8 +298,7 @@ function showExp(right){
 function endGame(won){
   game.over=true;stopAll();
   var prize=won?1000000:safePrize();
-  if(won){play('opening-milestone.mp3');setTimeout(function(){play('million-win.mp3')},1500);confetti()}
-  else play('game-over.mp3');
+  if(won){play('opening-milestone.mp3');confetti()}
   $('end-title').textContent=won?'مبروك! ربحت المليون! 🏆':(prize>0?'انتهت اللعبة — أحسنت!':'انتهت اللعبة');
   $('end-prize').textContent=fmt(prize);
   $('end-msg').textContent=won?
@@ -367,7 +363,6 @@ $('ll-phone').onclick=function(){
   var el=$('ui-phone');
   el.textContent='☀️ شموسة: هممم... دعني أفكر. أنا متأكدة تمامًا أن الإجابة الصحيحة هي «'+game.q.a+'»!';
   el.style.direction='rtl';el.style.display='block';
-  play('praise-smart.mp3');
 };
 $('ll-swap').onclick=function(){
   if(game.used.swap||game.locked)return;game.used.swap=true;$('ll-swap').disabled=true;
@@ -383,7 +378,6 @@ $('btn-next').onclick=function(){game.i++;ask()};
 $('btn-withdraw').onclick=function(){
   if(game.over)return;game.over=true;stopAll();
   var prize=curPrize();
-  play('game-over.mp3');
   $('end-title').textContent='انسحبت بذكاء!';
   $('end-prize').textContent=fmt(prize);
   $('end-msg').textContent='خرجت بمبلغ '+fmt(prize)+'.\nحاول مرة أخرى لتصل إلى المليون! ☀️';
