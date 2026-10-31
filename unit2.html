@@ -143,7 +143,7 @@ if(selL.en===w.en){good();b.disabled=true;lb.disabled=true;b.classList.add('ok')
 if(matched===list.length)finish()}
 else{bad();wrongOnce[selL.en]=1;if(missed.indexOf(selL)<0)missed.push(selL);b.classList.add('no');setTimeout(function(){b.classList.remove('no')},500);msg.innerHTML='<b style="color:#d9433a">&#10007; Not this one. Try again.</b>'}};cr.appendChild(b)});
 d.appendChild(cols);d.appendChild(msg);show(d);
-function finish(){var nx=el('<button class="btn gold" style="margin-top:12px;width:100%">Next →</button>');nx.onclick=function(){if(!retry){si++}
+function finish(){var nx=el('<button class="btn gold" style="margin-top:12px;width:100%">Next →</button>');nx.onclick=function()if(!retry){si++}
 if(!retry&&si<sets.length){setup(sets[si],false)}else if(missed.length&&round<2){round++;var m=missed;missed=[];setup(m.length>1?m:m.concat(s.words.filter(function(x){return m.indexOf(x)<0}).slice(0,1)),true)}else{S.sec=S.sec||{};S.sec[s.id]=1;var n=Object.keys(S.sec).length;rate('studio',n>=7?3:n>=4?2:1);save();var e=el('<div class="card center"><div class="big" style="color:#f6b81a">&#9733;</div><h2>Section done!</h2><p>'+esc(s.en)+'</p></div>');var b=el('<button class="btn">Back to Word Studio</button>');b.onclick=studio;e.appendChild(b);var w=el('<div></div>');w.appendChild(e);show(w)}};d.appendChild(nx);nx.scrollIntoView&&nx.scrollIntoView({block:'center'})}
 }
 setup(sets[0],false)}
