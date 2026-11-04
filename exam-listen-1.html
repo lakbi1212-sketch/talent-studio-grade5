@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><script src="single-audio.js?v=1"></script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>الاستماع النموذج الأول | الصف الخامس</title><link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Naskh Arabic','Segoe UI',Tahoma,Arial,sans-serif;background:#f4f7fb;min-height:100vh;color:#17324f;padding:20px 14px 40px}
+.wrap{max-width:700px;margin:0 auto}
+.back{display:inline-block;background:#142d46;color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:6px 18px;font-size:15px;margin-bottom:14px}
+h1{font-size:27px;font-weight:800;color:#142d46;margin-bottom:2px}
+.sub{font-size:15px;opacity:.85;margin-bottom:10px}
+.sham{background:linear-gradient(135deg,#fff7d6,#d7f7f2);border:2px solid #12B5A5;color:#1B3A6B;border-radius:14px;padding:10px 16px;margin:6px 0 16px;font-size:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+.tile{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:#fff;border-radius:18px;padding:18px 12px;box-shadow:0 4px 12px rgba(20,45,70,.22);text-align:center}
+.tile .ic{font-size:34px}
+.tile .arname{font-size:20px;font-weight:800}
+.tile .enname{font-size:15px;font-weight:700;opacity:.95}
+.tile.pdf{background:#37474f;padding:10px;border-radius:12px;flex-direction:row;justify-content:center;gap:8px;font-size:14px}
+.card{background:#fff;border-radius:14px;padding:14px;border-inline-start:5px solid #12B5A5;box-shadow:0 2px 8px rgba(20,45,70,.10);margin-bottom:14px}
+.eng{direction:ltr;text-align:left;font-family:Poppins,'Segoe UI',Arial,sans-serif}
+.q{margin:14px 0}
+.qn{font-weight:800;color:#142d46}
+.opts{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.opts.row{flex-direction:row;flex-wrap:wrap}
+.opts.row .opt{flex:1;min-width:40%}
+.opt{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid #d7e2ee;border-radius:12px;padding:10px 14px;font-size:16px;cursor:pointer;text-align:left;font-family:inherit;color:#17324f;width:100%}
+.opt .bub{width:18px;height:18px;border-radius:50%;border:2px solid #9db3c8;flex:none}
+.opt.sel{border-color:#1B3A6B;background:#eaf1fb}
+.opt.sel .bub{background:#1B3A6B;border-color:#1B3A6B}
+.opt.ok{border-color:#0b7a4b;background:#e6f7ee}
+.opt.ok .bub{background:#0b7a4b;border-color:#0b7a4b}
+.opt.no{border-color:#c0392b;background:#fdecea}
+.opt.no .bub{background:#c0392b;border-color:#c0392b}
+.pics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.pic{background:#fff;border:2px solid #d7e2ee;border-radius:12px;padding:12px 6px;text-align:center;cursor:pointer}
+.pic img{width:100%;border-radius:8px;display:block;pointer-events:none}
+.pic .lab{display:inline-block;margin-top:6px;background:#eef3f9;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px;color:#142d46}
+.pic.sel{border-color:#1B3A6B;background:#eaf1fb}
+.pic.sel .lab{background:#1B3a6b;color:#fff}
+.pic.ok{border-color:#0b7a4b;background:#e6f7ee}
+.pic.no{border-color:#c0392b;background:#fdecea}
+.btn{display:inline-block;background:#1B3A6B;color:#fff;border:none;border-radius:12px;padding:12px 26px;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:14px}
+.btn.sec{background:#eef3f9;color:#142d46;margin-inline-start:8px}
+.score{display:none;margin-top:14px;background:#e6f7ee;border:2px solid #0b7a4b;color:#064d2e;border-radius:12px;padding:10px 16px;font-weight:800;font-size:17px}
+.score.show{display:block}
+.score.low{background:#fdf3e0;border-color:#b97a0e;color:#7a4d05}
+.cloze{background:#fff;border-radius:14px;padding:16px;line-height:2.2;font-size:17px;box-shadow:0 2px 8px rgba(20,45,70,.10)}
+.gap{display:inline-block;min-width:74px;text-align:center;background:#fff7d6;border:1.5px dashed #b97a0e;border-radius:8px;padding:0 8px;font-weight:700;color:#7a4d05}
+.gap.filled{background:#d7f7f2;border:1.5px solid #0e9f8a;color:#0b5a4e}
+.rtext{background:#fff;border-radius:14px;padding:16px;line-height:1.9;font-size:16.5px;box-shadow:0 2px 8px rgba(20,45,70,.10);white-space:pre-line}
+.excerpt{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(20,45,70,.08)}
+.followon{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;border-inline-start:5px solid #1976d2;box-shadow:0 2px 8px rgba(20,45,70,.08)}
+.matchrow{margin-top:8px;display:flex;align-items:center;gap:8px}
+.matchrow select{font-size:16px;padding:6px 12px;border-radius:8px;border:2px solid #d7e2ee;font-family:inherit}
+.matchrow select.ok{border-color:#0b7a4b;background:#e6f7ee}
+.matchrow select.no{border-color:#c0392b;background:#fdecea}
+.ans{width:100%;font-size:16px;padding:10px 14px;border-radius:10px;border:2px solid #d7e2ee;font-family:inherit;margin-top:6px}
+.ans.ok{border-color:#0b7a4b;background:#e6f7ee}
+.ans.no{border-color:#c0392b;background:#fdecea}
+.model{display:none;margin-top:6px;font-size:14px;color:#0b5a4e;background:#e6f7ee;border-radius:8px;padding:6px 10px}
+.model.show{display:block}
+textarea{width:100%;font-size:16px;padding:12px;border-radius:12px;border:2px solid #d7e2ee;font-family:inherit;resize:vertical}
+.wc{font-size:14px;color:#0b5a4e;margin-top:4px;font-weight:700}
+.wc.low{color:#c0392b}
+.checklist{margin-top:10px;background:#f8fbff;border:1.5px dashed #9db3c8;border-radius:12px;padding:10px 14px}
+.checklist label{display:flex;gap:8px;align-items:center;margin:6px 0;font-size:15px;cursor:pointer}
+.chart{display:block;max-width:100%;border-radius:10px;margin:8px auto;border:1px solid #d7e2ee}
+.preview img{max-width:100%;border-radius:10px;margin-top:8px}
+.audioph{background:repeating-linear-gradient(135deg,#fff7d6,#fff7d6 12px,#fdf3e0 12px,#fdf3e0 24px);border:2px dashed #b97a0e;border-radius:14px;padding:16px;text-align:center;font-size:16px;color:#7a4d05;font-weight:700}
+.note{background:#eaf1fb;border-radius:12px;padding:10px 14px;font-size:14.5px;color:#142d46;margin-top:12px}
+h3.sec{color:#142d46;margin:20px 0 6px}
+.marks{background:#12B5A5;color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:800}
+footer{margin-top:32px;font-size:12.5px;opacity:.85;line-height:1.9;color:#17324f}
+</style></head><body>
+<div class="wrap"><a class="back" href="exam-listen.html">رجوع</a><h1>🎧 الاستماع · النموذج الأول</h1><p class="sub">Listening · Model 1 · 10 marks</p><div class="sham">☀️ <b>شموسة معك</b> — استمع لكل حوار مرتين ثم أجب.</div>
+<div class="card audioph">🎙️ التسجيل الصوتي بصوت شموسة يُضاف هنا قريبًا — وحتى يجهز، اقرأ النص الكامل في قسم «نص الاستماع» في هذه الصفحة<br><span class="eng" style="display:block;margin-top:6px;font-weight:600">The Shamousa-voice recording is coming soon. Until then, read the full script in the «نص الاستماع» section on this page.</span></div>
+<div class="eng">
+<h3 class="sec">Listening 1 <span class="marks">5 marks</span></h3>
+<p style="font-size:15px">You are going to hear five short dialogues about the school talent show. Match the pictures with the dialogues. You will hear each dialogue twice.</p>
+<div id="picgrid" style="margin-top:8px"></div>
+<div id="l1" style="margin-top:10px"></div>
+<h3 class="sec">Listening 2 <span class="marks">5 marks</span></h3>
+<p style="font-size:15px">You are going to hear a dialogue between a teacher, Ms Maryam, and a student, Rashid, about the talent show. For each item, choose the correct option. You will hear the interview twice.</p>
+<div id="l2"></div>
+<button class="btn" id="check">Check my answers · تحقق</button><button class="btn sec" id="reset">Try again · حاول مرة أخرى</button>
+<p class="score" id="score"></p>
+</div>
+<a class="tile pdf" href="pdfs/exam-listen-1.pdf" target="_blank" rel="noopener"><span>📄</span><span>تحميل النموذج PDF · Model 1</span></a>
+<script>const _$=s=>document.querySelector(s);
+const $=s=>document.querySelector(s);
+const DATA={"PICS": ["ill/g5-ill-l1p1.jpg", "ill/g5-ill-l1p2.jpg", "ill/g5-ill-l1p3.jpg", "ill/g5-ill-l1p4.jpg", "ill/g5-ill-l1p5.jpg", "ill/g5-ill-l1p6.jpg"], "ANS": [0, 1, 3, 2, 5], "THEME": "the school talent show", "L2": [["What is Rashid going to play in the show?", ["the piano", "the oud", "the drums"], 1], ["Who taught Rashid to play?", ["his grandfather", "his teacher", "his father"], 0], ["How does Rashid feel about playing on stage?", ["very scared", "a little nervous", "very angry"], 1], ["What is his new song about?", ["the mountains", "school", "the sea"], 2], ["When does the show start?", ["at nine o'clock", "at ten o'clock", "at eight o'clock"], 0]]};
+const state={l1:Array(5).fill(''),l2:Array(5).fill(-1)};
+$('#picgrid').innerHTML=`<div class="pics" style="grid-template-columns:repeat(3,1fr)">${DATA.PICS.map((src,j)=>`<div class="pic" style="cursor:default"><img src="${src}" alt="Picture ${'ABCDEF'[j]}"><span class="lab">${'ABCDEF'[j]}</span></div>`).join('')}</div>`;
+$('#l1').innerHTML=DATA.ANS.map((a,i)=>`<div class="matchrow" style="font-size:16px"><span class="qn">Dialogue ${i+1}:</span><select id="m${i}" data-q="${i}"><option value="">Choose A-F</option>${'ABCDEF'.split('').map(L=>`<option>${L}</option>`).join('')}</select></div>`).join('');
+$('#l2').innerHTML=DATA.L2.map((it,i)=>`<div class="q"><p><span class="qn">${i+6}.</span> ${it[0]}</p><div class="opts row">${it[1].map((o,j)=>`<button type="button" class="opt" data-q="${i}" data-o="${j}"><span class="bub"></span><span>${o}</span></button>`).join('')}</div></div>`).join('');
+document.querySelectorAll('#l1 select').forEach(s=>s.addEventListener('change',()=>{state.l1[+s.dataset.q]=s.value;}));
+document.addEventListener('click',e=>{const el=e.target.closest('[data-o]');if(!el||el.disabled)return;const q=+el.dataset.q,o=+el.dataset.o;state.l2[q]=o;document.querySelectorAll(`[data-q="${q}"]`).forEach(x=>x.classList.toggle('sel',+x.dataset.o===o));});
+function check(){let got=0;DATA.ANS.forEach((a,i)=>{const v=state.l1[i];const s=document.getElementById('m'+i);s.classList.remove('ok','no');if(v&&'ABCDEF'.indexOf(v)===a){got++;s.classList.add('ok');}else{s.classList.add('no');}s.disabled=true;});
+DATA.L2.forEach((it,i)=>{const sel=state.l2[i];if(sel===it[2])got++;document.querySelectorAll(`[data-q="${i}"]`).forEach(x=>{x.classList.remove('ok','no');if(+x.dataset.o===it[2])x.classList.add('ok');else if(+x.dataset.o===sel)x.classList.add('no');x.disabled=true;});});
+const sc=$('#score');sc.textContent=`Your score: ${got} / 10`;sc.classList.add('show');sc.classList.toggle('low',got<5);}
+function resetAll(){state.l1.fill('');state.l2.fill(-1);document.querySelectorAll('#l1 select').forEach(s=>{s.value='';s.disabled=false;s.classList.remove('ok','no');});document.querySelectorAll('[data-o]').forEach(x=>{x.classList.remove('sel','ok','no');x.disabled=false;});$('#score').classList.remove('show');}
+$('#check').addEventListener('click',check);$('#reset').addEventListener('click',resetAll);
+</script><section class="card" style="margin-top:18px"><h3 class="sec">📜 نص الاستماع</h3><details style="background:#fff;border:2px solid #12B5A5;border-radius:12px;padding:10px 14px;margin-top:6px"><summary style="cursor:pointer;font-weight:800;color:#0b7a6e">اعرض النص الكامل لما ستسمعه في هذا النموذج · Show the full script for this model</summary><div style="font-size:14.5px;line-height:1.9;color:#142d46;margin-top:10px"><div dir="auto" style="text-align:start">الاستماع 1 · Listening 1 - خمسة حوارات قصيرة · Five short dialogues</div><div dir="auto" style="text-align:start">----------------------------------------</div><div dir="auto" style="text-align:start">الحوار 1 · Dialogue 1</div><div dir="auto" style="text-align:start">Boy: Are you going to watch the talent show on Thursday, Noor?</div><div dir="auto" style="text-align:start">Girl: Of course! I&#x27;m singing in it. I practise my song every evening.</div><div dir="auto" style="text-align:start">Boy: That&#x27;s wonderful! Do you sing Arabic songs or English songs?</div><div dir="auto" style="text-align:start">Girl: An English song. My music teacher helped me choose it.</div><div dir="auto" style="text-align:start">الحوار 2 · Dialogue 2</div><div dir="auto" style="text-align:start">Girl: What is Hamdan going to do in the talent show?</div><div dir="auto" style="text-align:start">Boy: He&#x27;s going to do some amazing tricks! He can make a coin disappear.</div><div dir="auto" style="text-align:start">Girl: Really? That sounds difficult! Where did he learn that?</div><div dir="auto" style="text-align:start">Boy: His uncle taught him. He practises every day after school.</div><div dir="auto" style="text-align:start">الحوار 3 · Dialogue 3</div><div dir="auto" style="text-align:start">Girl: My brother is in the talent show too.</div><div dir="auto" style="text-align:start">Boy: Oh really? What is he going to do?</div><div dir="auto" style="text-align:start">Girl: He&#x27;s going to play a famous Omani song. He practises every Friday with our grandfather.</div><div dir="auto" style="text-align:start">Boy: Wow, the oud! I love its sound. I&#x27;ll come early to hear him.</div><div dir="auto" style="text-align:start">الحوار 4 · Dialogue 4</div><div dir="auto" style="text-align:start">Boy: Did you see Aisha at practice yesterday, Salma?</div><div dir="auto" style="text-align:start">Girl: Yes! She jumped and turned so beautifully. Everyone clapped.</div><div dir="auto" style="text-align:start">Boy: She&#x27;s very strong! How long has she been learning that?</div><div dir="auto" style="text-align:start">Girl: For three years now. She goes to a sports club every week with her cousin.</div><div dir="auto" style="text-align:start">الحوار 5 · Dialogue 5</div><div dir="auto" style="text-align:start">Girl: What are the twins going to do in the show, Ali?</div><div dir="auto" style="text-align:start">Boy: They&#x27;re going to throw balls in the air and catch them!</div><div dir="auto" style="text-align:start">Girl: How many balls can they use at the same time?</div><div dir="auto" style="text-align:start">Boy: Three! Sometimes they drop one, and everyone laughs. It&#x27;s very funny.</div><div dir="auto" style="text-align:start">الاستماع 2 · Listening 2 - حوار · Dialogue</div><div dir="auto" style="text-align:start">----------------------------------------</div><div dir="auto" style="text-align:start">Ms Maryam: Hello, Rashid! Are you ready for the school talent show next week?</div><div dir="auto" style="text-align:start">Rashid: Hello, Ms Maryam! Yes, I am. I&#x27;m going to play the oud.</div><div dir="auto" style="text-align:start">Ms Maryam: Wonderful! When do you practise?</div><div dir="auto" style="text-align:start">Rashid: I practise every afternoon at home. My grandfather taught me to play.</div><div dir="auto" style="text-align:start">Ms Maryam: That&#x27;s lovely. And are you nervous about playing on stage?</div><div dir="auto" style="text-align:start">Rashid: A little bit! But my friends will be there, so I feel happy.</div><div dir="auto" style="text-align:start">Ms Maryam: Don&#x27;t worry. Last year you played very well, and everyone loved it.</div><div dir="auto" style="text-align:start">Rashid: Thank you! This year I will play a new song about the sea.</div><div dir="auto" style="text-align:start">Ms Maryam: I can&#x27;t wait to hear it. The show starts at nine o&#x27;clock on Thursday.</div><div dir="auto" style="text-align:start">Rashid: Great! See you there, Ms Maryam.</div></div></details><a class="tile pdf" href="g5-listening-script-student.txt" download style="margin-top:12px">📄 تحميل نصوص الاستماع · Download listening scripts</a></section><footer dir="ltr" style="unicode-bidi:isolate;text-align:center">Prepared by:<br>Mohamed Mostafa Al Shorbagy<br>Regional Supervisor, Wusta Governorate</footer></div><script>window.goatcounter={path:function(p){return "/g5"+p}};</script>
+<script data-goatcounter="https://shorbagy-sites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="redirect.js"></script>
+<!--hb-online--><script>(function(){try{var id=localStorage.getItem("hid");if(!id){id=Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem("hid",id)}function b(){if(document.hidden)return;fetch("https://itqan-gate.pages.dev/api/online?id="+id+"&_="+Date.now(),{mode:"no-cors",cache:"no-store"}).catch(function(){})}b();setInterval(b,25000);document.addEventListener("visibilitychange",b)}catch(e){}})();</script><!--/hb-online-->
+<script src="unity.js?v=2"></script></body></html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><script src="single-audio.js?v=1"></script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>القراءة النموذج الثاني | الصف الخامس</title><link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Naskh Arabic','Segoe UI',Tahoma,Arial,sans-serif;background:#f4f7fb;min-height:100vh;color:#17324f;padding:20px 14px 40px}
+.wrap{max-width:700px;margin:0 auto}
+.back{display:inline-block;background:#142d46;color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:6px 18px;font-size:15px;margin-bottom:14px}
+h1{font-size:27px;font-weight:800;color:#142d46;margin-bottom:2px}
+.sub{font-size:15px;opacity:.85;margin-bottom:10px}
+.sham{background:linear-gradient(135deg,#fff7d6,#d7f7f2);border:2px solid #12B5A5;color:#1B3A6B;border-radius:14px;padding:10px 16px;margin:6px 0 16px;font-size:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+.tile{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:#fff;border-radius:18px;padding:18px 12px;box-shadow:0 4px 12px rgba(20,45,70,.22);text-align:center}
+.tile .ic{font-size:34px}
+.tile .arname{font-size:20px;font-weight:800}
+.tile .enname{font-size:15px;font-weight:700;opacity:.95}
+.tile.pdf{background:#37474f;padding:10px;border-radius:12px;flex-direction:row;justify-content:center;gap:8px;font-size:14px}
+.card{background:#fff;border-radius:14px;padding:14px;border-inline-start:5px solid #12B5A5;box-shadow:0 2px 8px rgba(20,45,70,.10);margin-bottom:14px}
+.eng{direction:ltr;text-align:left;font-family:Poppins,'Segoe UI',Arial,sans-serif}
+.q{margin:14px 0}
+.qn{font-weight:800;color:#142d46}
+.opts{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.opts.row{flex-direction:row;flex-wrap:wrap}
+.opts.row .opt{flex:1;min-width:40%}
+.opt{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid #d7e2ee;border-radius:12px;padding:10px 14px;font-size:16px;cursor:pointer;text-align:left;font-family:inherit;color:#17324f;width:100%}
+.opt .bub{width:18px;height:18px;border-radius:50%;border:2px solid #9db3c8;flex:none}
+.opt.sel{border-color:#1B3A6B;background:#eaf1fb}
+.opt.sel .bub{background:#1B3A6B;border-color:#1B3A6B}
+.opt.ok{border-color:#0b7a4b;background:#e6f7ee}
+.opt.ok .bub{background:#0b7a4b;border-color:#0b7a4b}
+.opt.no{border-color:#c0392b;background:#fdecea}
+.opt.no .bub{background:#c0392b;border-color:#c0392b}
+.pics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.pic{background:#fff;border:2px solid #d7e2ee;border-radius:12px;padding:12px 6px;text-align:center;cursor:pointer}
+.pic img{width:100%;border-radius:8px;display:block;pointer-events:none}
+.pic .lab{display:inline-block;margin-top:6px;background:#eef3f9;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px;color:#142d46}
+.pic.sel{border-color:#1B3A6B;background:#eaf1fb}
+.pic.sel .lab{background:#1B3a6b;color:#fff}
+.pic.ok{border-color:#0b7a4b;background:#e6f7ee}
+.pic.no{border-color:#c0392b;background:#fdecea}
+.btn{display:inline-block;background:#1B3A6B;color:#fff;border:none;border-radius:12px;padding:12px 26px;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:14px}
+.btn.sec{background:#eef3f9;color:#142d46;margin-inline-start:8px}
+.score{display:none;margin-top:14px;background:#e6f7ee;border:2px solid #0b7a4b;color:#064d2e;border-radius:12px;padding:10px 16px;font-weight:800;font-size:17px}
+.score.show{display:block}
+.score.low{background:#fdf3e0;border-color:#b97a0e;color:#7a4d05}
+.cloze{background:#fff;border-radius:14px;padding:16px;line-height:2.2;font-size:17px;box-shadow:0 2px 8px rgba(20,45,70,.10)}
+.gap{display:inline-block;min-width:74px;text-align:center;background:#fff7d6;border:1.5px dashed #b97a0e;border-radius:8px;padding:0 8px;font-weight:700;color:#7a4d05}
+.gap.filled{background:#d7f7f2;border:1.5px solid #0e9f8a;color:#0b5a4e}
+.rtext{background:#fff;border-radius:14px;padding:16px;line-height:1.9;font-size:16.5px;box-shadow:0 2px 8px rgba(20,45,70,.10);white-space:pre-line}
+.excerpt{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(20,45,70,.08)}
+.followon{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;border-inline-start:5px solid #1976d2;box-shadow:0 2px 8px rgba(20,45,70,.08)}
+.matchrow{margin-top:8px;display:flex;align-items:center;gap:8px}
+.matchrow select{font-size:16px;padding:6px 12px;border-radius:8px;border:2px solid #d7e2ee;font-family:inherit}
+.matchrow select.ok{border-color:#0b7a4b;background:#e6f7ee}
+.matchrow select.no{border-color:#c0392b;background:#fdecea}
+.ans{width:100%;font-size:16px;padding:10px 14px;border-radius:10px;border:2px solid #d7e2ee;font-family:inherit;margin-top:6px}
+.ans.ok{border-color:#0b7a4b;background:#e6f7ee}
+.ans.no{border-color:#c0392b;background:#fdecea}
+.model{display:none;margin-top:6px;font-size:14px;color:#0b5a4e;background:#e6f7ee;border-radius:8px;padding:6px 10px}
+.model.show{display:block}
+textarea{width:100%;font-size:16px;padding:12px;border-radius:12px;border:2px solid #d7e2ee;font-family:inherit;resize:vertical}
+.wc{font-size:14px;color:#0b5a4e;margin-top:4px;font-weight:700}
+.wc.low{color:#c0392b}
+.checklist{margin-top:10px;background:#f8fbff;border:1.5px dashed #9db3c8;border-radius:12px;padding:10px 14px}
+.checklist label{display:flex;gap:8px;align-items:center;margin:6px 0;font-size:15px;cursor:pointer}
+.chart{display:block;max-width:100%;border-radius:10px;margin:8px auto;border:1px solid #d7e2ee}
+.preview img{max-width:100%;border-radius:10px;margin-top:8px}
+.audioph{background:repeating-linear-gradient(135deg,#fff7d6,#fff7d6 12px,#fdf3e0 12px,#fdf3e0 24px);border:2px dashed #b97a0e;border-radius:14px;padding:16px;text-align:center;font-size:16px;color:#7a4d05;font-weight:700}
+.note{background:#eaf1fb;border-radius:12px;padding:10px 14px;font-size:14.5px;color:#142d46;margin-top:12px}
+h3.sec{color:#142d46;margin:20px 0 6px}
+.marks{background:#12B5A5;color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:800}
+footer{margin-top:32px;font-size:12.5px;opacity:.85;line-height:1.9;color:#17324f}
+</style></head><body>
+<div class="wrap"><a class="back" href="exam-reading.html">رجوع</a><h1>📖 القراءة · النموذج الثاني</h1><p class="sub">Reading · Model 2 · 10 marks</p><div class="sham">☀️ <b>شموسة معك</b> — اقرأ بهدوء وأجب عن كل سؤال.</div>
+<div class="eng">
+<h3 class="sec">Reading 1 <span class="marks">5 marks</span></h3>
+<p style="font-size:15px">Match the texts with the pictures. For each text, choose the correct picture.</p>
+<div id="picgrid" style="margin-top:8px"></div>
+<div id="r1t" style="margin-top:8px"></div>
+<div id="r1s" style="margin-top:8px"></div>
+<h3 class="sec">Reading 2 <span class="marks">5 marks</span></h3>
+<p style="font-size:15px">Read the text. Are the statements True or False?</p>
+<div class="rtext" id="r2text" style="margin-top:8px"></div>
+<div id="r2"></div>
+<button class="btn" id="check">Check my answers · تحقق</button><button class="btn sec" id="reset">Try again · حاول مرة أخرى</button>
+<p class="score" id="score"></p>
+</div>
+<a class="tile pdf" href="pdfs/exam-reading-2.pdf" target="_blank" rel="noopener"><span>📄</span><span>تحميل النموذج PDF · Model 2</span></a>
+<script>const _$=s=>document.querySelector(s);
+const $=s=>document.querySelector(s);
+const DATA={"TEXTS": ["Fifty years ago, people travelled by camel across the desert. The trips were very slow and took many days.", "In the past, families lived in small mud houses. Now many people live in tall buildings with fast lifts.", "Long ago, children wrote on small boards. Today, they use computers and tablets at school every day.", "In the past, sailors used big wooden ships called dhows. They sailed to India and Africa for trade.", "Years ago, people took water from a well. Now clean water comes to every house in Oman."], "PICS": ["ill/g5-ill-r2p1.jpg", "ill/g5-ill-r2p2.jpg", "ill/g5-ill-r2p3.jpg", "ill/g5-ill-r2p4.jpg", "ill/g5-ill-r2p5.jpg"], "A": [3, 2, 4, 0, 1], "R2T": "Yousuf loves visiting his grandfather in the old village. Last Friday, his grandfather showed him a black and white photo. In the photo, there was a small school with only twenty students. 'This was my school,' Grandfather said with a smile. 'We sat on the floor, and we had one book for every three boys.' Yousuf was very surprised. His school has two thousand students, smart boards in every class, and a big library! That evening, Yousuf wrote about the photo in his notebook. He felt very lucky to live now, but he also really loved hearing all the stories about the old days.", "TF": [["Yousuf visited his grandfather on Friday.", 0], ["The photo was in colour.", 1], ["Grandfather's school had twenty students.", 0], ["Every boy in the old school had his own book.", 1], ["Yousuf wrote about the photo in his notebook.", 0]]};
+const state={r1:Array(5).fill(-1),tf:Array(5).fill(-1)};
+$('#picgrid').innerHTML=`<div class="pics" style="grid-template-columns:repeat(3,1fr)">${DATA.PICS.map((src,j)=>`<div class="pic" style="cursor:default"><img src="${src}" alt="Picture ${'ABCDE'[j]}"><span class="lab">${'ABCDE'[j]}</span></div>`).join('')}</div>`;
+$('#r1t').innerHTML=DATA.TEXTS.map((t,i)=>`<div class="excerpt"><b>${i+1}.</b> ${t}</div>`).join('');
+$('#r1s').innerHTML=DATA.TEXTS.map((t,i)=>`<div class="matchrow" style="font-size:16px"><span class="qn">Text ${i+1}:</span><select id="m${i}" data-q="${i}"><option value="">Choose A-E</option>${'ABCDE'.split('').map(L=>`<option>${L}</option>`).join('')}</select></div>`).join('');
+$('#r2text').textContent=DATA.R2T;
+$('#r2').innerHTML=DATA.TF.map((it,i)=>`<div class="q"><p><span class="qn">${i+6}.</span> ${it[0]}</p><div class="opts row">${['True','False'].map((o,j)=>`<button type="button" class="opt" data-q="${i}" data-o="${j}"><span class="bub"></span><span>${o}</span></button>`).join('')}</div></div>`).join('');
+document.querySelectorAll('#r1s select').forEach(s=>s.addEventListener('change',()=>{state.r1[+s.dataset.q]=s.value;}));
+document.addEventListener('click',e=>{const el=e.target.closest('[data-o]');if(!el||el.disabled)return;const q=+el.dataset.q,o=+el.dataset.o;state.tf[q]=o;document.querySelectorAll(`[data-q="${q}"]`).forEach(x=>x.classList.toggle('sel',+x.dataset.o===o));});
+function check(){let got=0;DATA.A.forEach((a,i)=>{const v=state.r1[i];const s=document.getElementById('m'+i);s.classList.remove('ok','no');if(v===a){got++;s.classList.add('ok');}else{s.classList.add('no');}s.disabled=true;});
+DATA.TF.forEach((it,i)=>{const sel=state.tf[i];if(sel===it[1])got++;document.querySelectorAll(`[data-q="${i}"]`).forEach(x=>{x.classList.remove('ok','no');if(+x.dataset.o===it[1])x.classList.add('ok');else if(+x.dataset.o===sel)x.classList.add('no');x.disabled=true;});});
+const sc=$('#score');sc.textContent=`Your score: ${got} / 10`;sc.classList.add('show');sc.classList.toggle('low',got<5);}
+function resetAll(){state.r1.fill(-1);state.tf.fill(-1);document.querySelectorAll('#r1s select').forEach(s=>{s.value='';s.disabled=false;s.classList.remove('ok','no');});document.querySelectorAll('[data-o]').forEach(x=>{x.classList.remove('sel','ok','no');x.disabled=false;});$('#score').classList.remove('show');}
+$('#check').addEventListener('click',check);$('#reset').addEventListener('click',resetAll);
+</script><footer dir="ltr" style="unicode-bidi:isolate;text-align:center">Prepared by:<br>Mohamed Mostafa Al Shorbagy<br>Regional Supervisor, Wusta Governorate</footer></div><script>window.goatcounter={path:function(p){return "/g5"+p}};</script>
+<script data-goatcounter="https://shorbagy-sites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="redirect.js"></script>
+<!--hb-online--><script>(function(){try{var id=localStorage.getItem("hid");if(!id){id=Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem("hid",id)}function b(){if(document.hidden)return;fetch("https://itqan-gate.pages.dev/api/online?id="+id+"&_="+Date.now(),{mode:"no-cors",cache:"no-store"}).catch(function(){})}b();setInterval(b,25000);document.addEventListener("visibilitychange",b)}catch(e){}})();</script><!--/hb-online-->
+<script src="unity.js?v=2"></script></body></html>

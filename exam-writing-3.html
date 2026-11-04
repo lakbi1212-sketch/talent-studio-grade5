@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><script src="single-audio.js?v=1"></script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>الكتابة النموذج الثالث | الصف الخامس</title><link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Naskh Arabic','Segoe UI',Tahoma,Arial,sans-serif;background:#f4f7fb;min-height:100vh;color:#17324f;padding:20px 14px 40px}
+.wrap{max-width:700px;margin:0 auto}
+.back{display:inline-block;background:#142d46;color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:6px 18px;font-size:15px;margin-bottom:14px}
+h1{font-size:27px;font-weight:800;color:#142d46;margin-bottom:2px}
+.sub{font-size:15px;opacity:.85;margin-bottom:10px}
+.sham{background:linear-gradient(135deg,#fff7d6,#d7f7f2);border:2px solid #12B5A5;color:#1B3A6B;border-radius:14px;padding:10px 16px;margin:6px 0 16px;font-size:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+.tile{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:#fff;border-radius:18px;padding:18px 12px;box-shadow:0 4px 12px rgba(20,45,70,.22);text-align:center}
+.tile .ic{font-size:34px}
+.tile .arname{font-size:20px;font-weight:800}
+.tile .enname{font-size:15px;font-weight:700;opacity:.95}
+.tile.pdf{background:#37474f;padding:10px;border-radius:12px;flex-direction:row;justify-content:center;gap:8px;font-size:14px}
+.card{background:#fff;border-radius:14px;padding:14px;border-inline-start:5px solid #12B5A5;box-shadow:0 2px 8px rgba(20,45,70,.10);margin-bottom:14px}
+.eng{direction:ltr;text-align:left;font-family:Poppins,'Segoe UI',Arial,sans-serif}
+.q{margin:14px 0}
+.qn{font-weight:800;color:#142d46}
+.opts{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.opts.row{flex-direction:row;flex-wrap:wrap}
+.opts.row .opt{flex:1;min-width:40%}
+.opt{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid #d7e2ee;border-radius:12px;padding:10px 14px;font-size:16px;cursor:pointer;text-align:left;font-family:inherit;color:#17324f;width:100%}
+.opt .bub{width:18px;height:18px;border-radius:50%;border:2px solid #9db3c8;flex:none}
+.opt.sel{border-color:#1B3A6B;background:#eaf1fb}
+.opt.sel .bub{background:#1B3A6B;border-color:#1B3A6B}
+.opt.ok{border-color:#0b7a4b;background:#e6f7ee}
+.opt.ok .bub{background:#0b7a4b;border-color:#0b7a4b}
+.opt.no{border-color:#c0392b;background:#fdecea}
+.opt.no .bub{background:#c0392b;border-color:#c0392b}
+.pics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.pic{background:#fff;border:2px solid #d7e2ee;border-radius:12px;padding:12px 6px;text-align:center;cursor:pointer}
+.pic img{width:100%;border-radius:8px;display:block;pointer-events:none}
+.pic .lab{display:inline-block;margin-top:6px;background:#eef3f9;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px;color:#142d46}
+.pic.sel{border-color:#1B3A6B;background:#eaf1fb}
+.pic.sel .lab{background:#1B3a6b;color:#fff}
+.pic.ok{border-color:#0b7a4b;background:#e6f7ee}
+.pic.no{border-color:#c0392b;background:#fdecea}
+.btn{display:inline-block;background:#1B3A6B;color:#fff;border:none;border-radius:12px;padding:12px 26px;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:14px}
+.btn.sec{background:#eef3f9;color:#142d46;margin-inline-start:8px}
+.score{display:none;margin-top:14px;background:#e6f7ee;border:2px solid #0b7a4b;color:#064d2e;border-radius:12px;padding:10px 16px;font-weight:800;font-size:17px}
+.score.show{display:block}
+.score.low{background:#fdf3e0;border-color:#b97a0e;color:#7a4d05}
+.cloze{background:#fff;border-radius:14px;padding:16px;line-height:2.2;font-size:17px;box-shadow:0 2px 8px rgba(20,45,70,.10)}
+.gap{display:inline-block;min-width:74px;text-align:center;background:#fff7d6;border:1.5px dashed #b97a0e;border-radius:8px;padding:0 8px;font-weight:700;color:#7a4d05}
+.gap.filled{background:#d7f7f2;border:1.5px solid #0e9f8a;color:#0b5a4e}
+.rtext{background:#fff;border-radius:14px;padding:16px;line-height:1.9;font-size:16.5px;box-shadow:0 2px 8px rgba(20,45,70,.10);white-space:pre-line}
+.excerpt{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(20,45,70,.08)}
+.followon{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;border-inline-start:5px solid #1976d2;box-shadow:0 2px 8px rgba(20,45,70,.08)}
+.matchrow{margin-top:8px;display:flex;align-items:center;gap:8px}
+.matchrow select{font-size:16px;padding:6px 12px;border-radius:8px;border:2px solid #d7e2ee;font-family:inherit}
+.matchrow select.ok{border-color:#0b7a4b;background:#e6f7ee}
+.matchrow select.no{border-color:#c0392b;background:#fdecea}
+.ans{width:100%;font-size:16px;padding:10px 14px;border-radius:10px;border:2px solid #d7e2ee;font-family:inherit;margin-top:6px}
+.ans.ok{border-color:#0b7a4b;background:#e6f7ee}
+.ans.no{border-color:#c0392b;background:#fdecea}
+.model{display:none;margin-top:6px;font-size:14px;color:#0b5a4e;background:#e6f7ee;border-radius:8px;padding:6px 10px}
+.model.show{display:block}
+textarea{width:100%;font-size:16px;padding:12px;border-radius:12px;border:2px solid #d7e2ee;font-family:inherit;resize:vertical}
+.wc{font-size:14px;color:#0b5a4e;margin-top:4px;font-weight:700}
+.wc.low{color:#c0392b}
+.checklist{margin-top:10px;background:#f8fbff;border:1.5px dashed #9db3c8;border-radius:12px;padding:10px 14px}
+.checklist label{display:flex;gap:8px;align-items:center;margin:6px 0;font-size:15px;cursor:pointer}
+.chart{display:block;max-width:100%;border-radius:10px;margin:8px auto;border:1px solid #d7e2ee}
+.preview img{max-width:100%;border-radius:10px;margin-top:8px}
+.audioph{background:repeating-linear-gradient(135deg,#fff7d6,#fff7d6 12px,#fdf3e0 12px,#fdf3e0 24px);border:2px dashed #b97a0e;border-radius:14px;padding:16px;text-align:center;font-size:16px;color:#7a4d05;font-weight:700}
+.note{background:#eaf1fb;border-radius:12px;padding:10px 14px;font-size:14.5px;color:#142d46;margin-top:12px}
+h3.sec{color:#142d46;margin:20px 0 6px}
+.marks{background:#12B5A5;color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:800}
+footer{margin-top:32px;font-size:12.5px;opacity:.85;line-height:1.9;color:#17324f}
+</style></head><body>
+<div class="wrap"><a class="back" href="exam-writing.html">رجوع</a><h1>✍️ الكتابة · النموذج الثالث</h1><p class="sub">Writing · Model 3 · 10 marks</p><div class="sham">☀️ <b>شموسة معك</b> — اكتب بخط واضح وراجع إجابتك بالقائمة قبل التسليم للمعلم.</div>
+<div class="eng">
+<div id="w1"></div>
+<div id="w2"></div>
+<div class="note" dir="rtl" lang="ar">الكتابة تُصحَّح من معلمك بمقياس 0-5 لكل فقرة (المجموع 10). اكتب هنا أو أرفق صورة إجابتك واعرضها على معلمك.</div>
+</div>
+<a class="tile pdf" href="pdfs/exam-writing-3.pdf" target="_blank" rel="noopener"><span>📄</span><span>تحميل النموذج PDF · Model 3</span></a>
+<script>const _$=s=>document.querySelector(s);
+const $=s=>document.querySelector(s);
+const DATA={"TOPIC": "A beautiful place you visited in Oman", "SIT": "Situation: Your class is planning a trip to explore a new place. Write an email to your friend inviting him/her to come with you.", "ADJ": ["friendly", "exciting"], "C1": ["I described the topic with details", "I used clear and organised sentences", "I wrote at least 40 words", "I checked my spelling and punctuation"], "C2": ["I completed the task in the situation", "I used the right email style", "I wrote at least 40 words", "I checked my spelling and punctuation"]};
+function block(id,head,checks){return `<h3 class="sec">${id==='answer1'?'Writing 1':'Writing 2'} <span class="marks">5 marks</span></h3>${head}<textarea id="${id}" rows="8" maxlength="4000" placeholder="Write here..." style="margin-top:8px"></textarea><p class="wc" id="${id}-wc">0 words (minimum 40)</p><div style="margin-top:8px"><label class="btn sec" style="display:inline-block;cursor:pointer;margin:0">📎 Or attach a photo / PDF of your handwritten answer · <bdi dir="ltr">أو أرفق صورة / PDF لإجابتك بخط يدك</bdi><input type="file" id="${id}-file" accept="image/*,application/pdf" hidden></label><p style="font-size:13px;margin-top:4px;opacity:.85">The file stays on your device only - nothing is uploaded or sent. Show it to your teacher for marking. <bdi dir="ltr">الملف يبقى على جهازك فقط، ولا يُرفع ولا يُرسل. اعرضه على معلمك لتصحيحه.</bdi></p><div class="preview" id="${id}-preview"></div></div><div class="checklist"><p style="font-weight:700;font-size:14px;margin-bottom:4px">Self-review - tick what your writing includes:</p>${checks.map(x=>`<label><input type="checkbox"><span>${x}</span></label>`).join('')}</div>`}
+const head1=`<p style="font-size:15px"><b>Write a descriptive text of at least 40 words on the following topic:</b></p><div style="background:#fff;border:2px solid #1B3A6B;border-radius:12px;padding:10px 16px;margin:8px 0;text-align:center;font-weight:700;font-size:17px">“${DATA.TOPIC}”</div><p style="font-size:15px">Your writing should be clear and organised.</p>`;
+const head2=`<p style="font-size:15px"><b>Complete the following task. Write at least 40 words.</b></p><p style="font-size:15px">${DATA.SIT}</p><p style="font-size:15px">Your writing should be ${DATA.ADJ[0]} and ${DATA.ADJ[1]}.</p>`;
+$('#w1').innerHTML=block('answer1',head1,DATA.C1);
+$('#w2').innerHTML=block('answer2',head2,DATA.C2);
+['answer1','answer2'].forEach(id=>{const t=document.getElementById(id),wc=document.getElementById(id+'-wc');t.addEventListener('input',()=>{const n=(t.value.trim().match(/\S+/g)||[]).length;wc.textContent=`${n} words (minimum 40)`;wc.classList.toggle('low',n<50);});});
+['answer1','answer2'].forEach(id=>{const f=document.getElementById(id+'-file'),pv=document.getElementById(id+'-preview');f.addEventListener('change',()=>{pv.innerHTML='';const file=f.files[0];if(!file)return;const url=URL.createObjectURL(file);if(file.type.startsWith('image/')){const img=document.createElement('img');img.src=url;img.alt='Your handwritten answer';pv.appendChild(img);}else{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent='Open the attached PDF ('+file.name+')';pv.appendChild(a);}});});
+</script><footer dir="ltr" style="unicode-bidi:isolate;text-align:center">Prepared by:<br>Mohamed Mostafa Al Shorbagy<br>Regional Supervisor, Wusta Governorate</footer></div><script>window.goatcounter={path:function(p){return "/g5"+p}};</script>
+<script data-goatcounter="https://shorbagy-sites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="redirect.js"></script>
+<!--hb-online--><script>(function(){try{var id=localStorage.getItem("hid");if(!id){id=Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem("hid",id)}function b(){if(document.hidden)return;fetch("https://itqan-gate.pages.dev/api/online?id="+id+"&_="+Date.now(),{mode:"no-cors",cache:"no-store"}).catch(function(){})}b();setInterval(b,25000);document.addEventListener("visibilitychange",b)}catch(e){}})();</script><!--/hb-online-->
+<script src="unity.js?v=2"></script></body></html>
