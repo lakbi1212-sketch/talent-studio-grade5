@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><script src="protect.js"></script><meta name="copyright" content="© 2026 Mohamed Mostafa Al Shorbagy — Shamousa (شموسة). All rights reserved."><meta name="author" content="Mohamed Mostafa Al Shorbagy — Regional Supervisor, Wusta Governorate"><meta name="shm-sig" content="SHM-2026-ITQAN-90f132"><script src="single-audio.js?v=1"></script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>المفردات والقواعد النموذج التاسع | الصف الخامس</title><link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Naskh Arabic','Segoe UI',Tahoma,Arial,sans-serif;background:#f4f7fb;min-height:100vh;color:#17324f;padding:20px 14px 40px}
+.wrap{max-width:700px;margin:0 auto}
+.back{display:inline-block;background:#142d46;color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:6px 18px;font-size:15px;margin-bottom:14px}
+h1{font-size:27px;font-weight:800;color:#142d46;margin-bottom:2px}
+.sub{font-size:15px;opacity:.85;margin-bottom:10px}
+.sham{background:linear-gradient(135deg,#fff7d6,#d7f7f2);border:2px solid #12B5A5;color:#1B3A6B;border-radius:14px;padding:10px 16px;margin:6px 0 16px;font-size:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+.tile{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:#fff;border-radius:18px;padding:18px 12px;box-shadow:0 4px 12px rgba(20,45,70,.22);text-align:center}
+.tile .ic{font-size:34px}
+.tile .arname{font-size:20px;font-weight:800}
+.tile .enname{font-size:15px;font-weight:700;opacity:.95}
+.tile.pdf{background:#37474f;padding:10px;border-radius:12px;flex-direction:row;justify-content:center;gap:8px;font-size:14px}
+.card{background:#fff;border-radius:14px;padding:14px;border-inline-start:5px solid #12B5A5;box-shadow:0 2px 8px rgba(20,45,70,.10);margin-bottom:14px}
+.eng{direction:ltr;text-align:left;font-family:Poppins,'Segoe UI',Arial,sans-serif}
+.q{margin:14px 0}
+.qn{font-weight:800;color:#142d46}
+.opts{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.opts.row{flex-direction:row;flex-wrap:wrap}
+.opts.row .opt{flex:1;min-width:40%}
+.opt{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid #d7e2ee;border-radius:12px;padding:10px 14px;font-size:16px;cursor:pointer;text-align:left;font-family:inherit;color:#17324f;width:100%}
+.opt .bub{width:18px;height:18px;border-radius:50%;border:2px solid #9db3c8;flex:none}
+.opt.sel{border-color:#1B3A6B;background:#eaf1fb}
+.opt.sel .bub{background:#1B3A6B;border-color:#1B3A6B}
+.opt.ok{border-color:#0b7a4b;background:#e6f7ee}
+.opt.ok .bub{background:#0b7a4b;border-color:#0b7a4b}
+.opt.no{border-color:#c0392b;background:#fdecea}
+.opt.no .bub{background:#c0392b;border-color:#c0392b}
+.pics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.pic{background:#fff;border:2px solid #d7e2ee;border-radius:12px;padding:12px 6px;text-align:center;cursor:pointer}
+.pic img{width:100%;border-radius:8px;display:block;pointer-events:none}
+.pic .lab{display:inline-block;margin-top:6px;background:#eef3f9;border-radius:999px;padding:2px 12px;font-weight:700;font-size:13px;color:#142d46}
+.pic.sel{border-color:#1B3A6B;background:#eaf1fb}
+.pic.sel .lab{background:#1B3a6b;color:#fff}
+.pic.ok{border-color:#0b7a4b;background:#e6f7ee}
+.pic.no{border-color:#c0392b;background:#fdecea}
+.btn{display:inline-block;background:#1B3A6B;color:#fff;border:none;border-radius:12px;padding:12px 26px;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:14px}
+.btn.sec{background:#eef3f9;color:#142d46;margin-inline-start:8px}
+.score{display:none;margin-top:14px;background:#e6f7ee;border:2px solid #0b7a4b;color:#064d2e;border-radius:12px;padding:10px 16px;font-weight:800;font-size:17px}
+.score.show{display:block}
+.score.low{background:#fdf3e0;border-color:#b97a0e;color:#7a4d05}
+.cloze{background:#fff;border-radius:14px;padding:16px;line-height:2.2;font-size:17px;box-shadow:0 2px 8px rgba(20,45,70,.10)}
+.gap{display:inline-block;min-width:74px;text-align:center;background:#fff7d6;border:1.5px dashed #b97a0e;border-radius:8px;padding:0 8px;font-weight:700;color:#7a4d05}
+.gap.filled{background:#d7f7f2;border:1.5px solid #0e9f8a;color:#0b5a4e}
+.rtext{background:#fff;border-radius:14px;padding:16px;line-height:1.9;font-size:16.5px;box-shadow:0 2px 8px rgba(20,45,70,.10);white-space:pre-line}
+.excerpt{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;box-shadow:0 2px 8px rgba(20,45,70,.08)}
+.followon{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;border-inline-start:5px solid #1976d2;box-shadow:0 2px 8px rgba(20,45,70,.08)}
+.matchrow{margin-top:8px;display:flex;align-items:center;gap:8px}
+.matchrow select{font-size:16px;padding:6px 12px;border-radius:8px;border:2px solid #d7e2ee;font-family:inherit}
+.matchrow select.ok{border-color:#0b7a4b;background:#e6f7ee}
+.matchrow select.no{border-color:#c0392b;background:#fdecea}
+.ans{width:100%;font-size:16px;padding:10px 14px;border-radius:10px;border:2px solid #d7e2ee;font-family:inherit;margin-top:6px}
+.ans.ok{border-color:#0b7a4b;background:#e6f7ee}
+.ans.no{border-color:#c0392b;background:#fdecea}
+.model{display:none;margin-top:6px;font-size:14px;color:#0b5a4e;background:#e6f7ee;border-radius:8px;padding:6px 10px}
+.model.show{display:block}
+textarea{width:100%;font-size:16px;padding:12px;border-radius:12px;border:2px solid #d7e2ee;font-family:inherit;resize:vertical}
+.wc{font-size:14px;color:#0b5a4e;margin-top:4px;font-weight:700}
+.wc.low{color:#c0392b}
+.checklist{margin-top:10px;background:#f8fbff;border:1.5px dashed #9db3c8;border-radius:12px;padding:10px 14px}
+.checklist label{display:flex;gap:8px;align-items:center;margin:6px 0;font-size:15px;cursor:pointer}
+.chart{display:block;max-width:100%;border-radius:10px;margin:8px auto;border:1px solid #d7e2ee}
+.preview img{max-width:100%;border-radius:10px;margin-top:8px}
+.audioph{background:repeating-linear-gradient(135deg,#fff7d6,#fff7d6 12px,#fdf3e0 12px,#fdf3e0 24px);border:2px dashed #b97a0e;border-radius:14px;padding:16px;text-align:center;font-size:16px;color:#7a4d05;font-weight:700}
+.note{background:#eaf1fb;border-radius:12px;padding:10px 14px;font-size:14.5px;color:#142d46;margin-top:12px}
+h3.sec{color:#142d46;margin:20px 0 6px}
+.marks{background:#12B5A5;color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:800}
+footer{margin-top:32px;font-size:12.5px;opacity:.85;line-height:1.9;color:#17324f}
+</style></head><body>
+<div class="wrap"><a class="back" href="exam-grammar.html">رجوع</a><h1>📐 المفردات والقواعد · النموذج التاسع</h1><p class="sub">Vocabulary &amp; Grammar · Model 9 · 10 marks</p><div class="sham">☀️ <b>شموسة معك</b> — انظر إلى الصور واكتب الكلمات، ثم اختر الإجابة الصحيحة لكل جملة.</div>
+<div class="eng">
+<h3 class="sec">Vocabulary <span class="marks">5 marks</span></h3>
+<p style="font-size:15px">Match the pictures with the words. For each picture, choose the correct word.</p>
+<div id="vcbwords" style="display:flex;flex-wrap:wrap;gap:8px;margin:8px 0"></div>
+<div class="pics" style="grid-template-columns:repeat(2,1fr);margin-top:8px" id="vcb"></div>
+<h3 class="sec">Grammar <span class="marks">5 marks</span></h3>
+<p style="font-size:15px">For each item, choose the correct option to complete the sentence.</p>
+<div id="grm"></div>
+<button class="btn" id="check">Check my answers · تحقق</button><button class="btn sec" id="reset">Try again · حاول مرة أخرى</button>
+<p class="score" id="score"></p>
+</div>
+<a class="tile pdf" href="pdfs/exam-grammar-9.pdf" target="_blank" rel="noopener"><span>📄</span><span>تحميل النموذج PDF · Model 9</span></a>
+<script>const _$=s=>document.querySelector(s);
+const $=s=>document.querySelector(s);
+const DATA={"VCBW": ["certificate", "audience", "village", "goat", "camera", "clock"], "VCB": [["ill/g5-ill-v9p1.jpg", 0], ["ill/g5-ill-v9p2.jpg", 1], ["ill/g5-ill-v9p3.jpg", 2], ["ill/g5-ill-v9p4.jpg", 3], ["ill/g5-ill-v9p5.jpg", 4]], "GRM": [["My brother is ____ than me at painting.", "better", "gooder", 0], ["They ____ got a new piano.", "has", "have", 1], ["Long ago, people ____ by donkey.", "travel", "travelled", 1], ["____ your grandmother live in a village?", "Does", "Do", 0], ["This souq is ____ than the supermarket.", "older", "oldest", 0]]};
+const state={vcb:Array(5).fill(-1),grm:Array(5).fill(-1)};
+$('#vcbwords').innerHTML=DATA.VCBW.map((w,j)=>`<span style="background:#fff;border:2px solid #7c3aed;border-radius:10px;padding:4px 12px;font-weight:700;font-size:16px">${'abcdef'[j].toUpperCase()}. ${w}</span>`).join('');
+$('#vcb').innerHTML=DATA.VCB.map((it,i)=>`<div class="q" style="text-align:center"><img src="${it[0]}" alt="picture ${i+1}" style="width:150px;border-radius:10px;border:2px solid #d7e2ee;display:block;margin:0 auto 6px"><p class="qn">${i+1}.</p><div class="opts row" style="justify-content:center;flex-wrap:wrap">${DATA.VCBW.map((w,j)=>`<button type="button" class="opt" style="padding:4px 10px;font-size:14px;min-width:0" data-vq="${i}" data-vo="${j}"><span class="bub"></span><span>${w}</span></button>`).join('')}</div></div>`).join('');
+$('#grm').innerHTML=DATA.GRM.map((it,i)=>`<div class="q"><p style="font-size:16.5px;line-height:1.9"><span class="qn">${i+6}.</span> ${it[0].replace('____',`<span class="gap" id="gap${i}">____</span>`)}</p><div class="opts row">${[it[1],it[2]].map((o,j)=>`<button type="button" class="opt" data-gq="${i}" data-go="${j}"><span class="bub"></span><span>${o}</span></button>`).join('')}</div></div>`).join('');
+document.addEventListener('click',e=>{const el=e.target.closest('[data-vo],[data-go]');if(!el||el.disabled)return;
+if(el.dataset.vo!==undefined){const q=+el.dataset.vq,o=+el.dataset.vo;state.vcb[q]=o;document.querySelectorAll(`[data-vq="${q}"]`).forEach(x=>x.classList.toggle('sel',+x.dataset.vo===o));}
+else{const q=+el.dataset.gq,o=+el.dataset.go;state.grm[q]=o;document.querySelectorAll(`[data-gq="${q}"]`).forEach(x=>x.classList.toggle('sel',+x.dataset.go===o));const gp=document.getElementById('gap'+q);gp.textContent=[DATA.GRM[q][1],DATA.GRM[q][2]][o];gp.classList.add('filled');}});
+function check(){let got=0;DATA.VCB.forEach((it,i)=>{const sel=state.vcb[i];if(sel===it[1])got++;document.querySelectorAll(`[data-vq="${i}"]`).forEach(x=>{x.classList.remove('ok','no');if(+x.dataset.vo===it[1])x.classList.add('ok');else if(+x.dataset.vo===sel)x.classList.add('no');x.disabled=true;});});
+DATA.GRM.forEach((it,i)=>{const sel=state.grm[i];if(sel===it[3])got++;document.querySelectorAll(`[data-gq="${i}"]`).forEach(x=>{x.classList.remove('ok','no');if(+x.dataset.go===it[3])x.classList.add('ok');else if(+x.dataset.go===sel)x.classList.add('no');x.disabled=true;});});
+const sc=$('#score');sc.textContent=`Your score: ${got} / 10`;sc.classList.add('show');sc.classList.toggle('low',got<5);}
+function resetAll(){state.vcb.fill(-1);state.grm.fill(-1);document.querySelectorAll('[data-vo],[data-go]').forEach(x=>{x.classList.remove('sel','ok','no');x.disabled=false;});for(let k=0;k<5;k++){const gp=document.getElementById('gap'+k);gp.textContent='____';gp.classList.remove('filled');}$('#score').classList.remove('show');}
+$('#check').addEventListener('click',check);$('#reset').addEventListener('click',resetAll);
+</script><footer dir="ltr" style="unicode-bidi:isolate;text-align:center">Prepared by:<br>Mohamed Mostafa Al Shorbagy<br>Regional Supervisor, Wusta Governorate</footer></div><script>window.goatcounter={path:function(p){return "/g5"+p}};</script>
+<script data-goatcounter="https://shorbagy-sites.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="redirect.js"></script>
+<!--hb-online--><script>(function(){try{var id=localStorage.getItem("hid");if(!id){id=Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem("hid",id)}function b(){if(document.hidden)return;fetch("https://itqan-gate.pages.dev/api/online?id="+id+"&_="+Date.now(),{mode:"no-cors",cache:"no-store"}).catch(function(){})}b();setInterval(b,25000);document.addEventListener("visibilitychange",b)}catch(e){}})();</script><!--/hb-online-->
+<script src="unity.js?v=2"></script><span data-shm="SHM-2026-ITQAN-90f132" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;opacity:0">© 2026 شموسة — Mohamed Mostafa Al Shorbagy</span></body></html>
