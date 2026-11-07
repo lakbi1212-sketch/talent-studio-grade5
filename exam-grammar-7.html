@@ -69,7 +69,7 @@ textarea{width:100%;font-size:16px;padding:12px;border-radius:12px;border:2px so
 h3.sec{color:#142d46;margin:20px 0 6px}
 .marks{background:#12B5A5;color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:800}
 footer{margin-top:32px;font-size:12.5px;opacity:.85;line-height:1.9;color:#17324f}
-</style></head><body>
+</style><script>window.SHM_BOARDS_QUIET=1;</script><script src="https://itqan-boards.itqan-gate.workers.dev/boards.js" defer></script></head><body>
 <div class="wrap"><a class="back" href="exam-grammar.html">رجوع</a><h1>📐 المفردات والقواعد · النموذج السابع</h1><p class="sub">Vocabulary &amp; Grammar · Model 7 · 10 marks</p><div class="sham">☀️ <b>شموسة معك</b> — انظر إلى الصور واكتب الكلمات، ثم اختر الإجابة الصحيحة لكل جملة.</div>
 <div class="eng">
 <h3 class="sec">Vocabulary <span class="marks">5 marks</span></h3>
@@ -93,7 +93,7 @@ $('#grm').innerHTML=DATA.GRM.map((it,i)=>`<div class="q"><p style="font-size:16.
 document.addEventListener('click',e=>{const el=e.target.closest('[data-vo],[data-go]');if(!el||el.disabled)return;
 if(el.dataset.vo!==undefined){const q=+el.dataset.vq,o=+el.dataset.vo;state.vcb[q]=o;document.querySelectorAll(`[data-vq="${q}"]`).forEach(x=>x.classList.toggle('sel',+x.dataset.vo===o));}
 else{const q=+el.dataset.gq,o=+el.dataset.go;state.grm[q]=o;document.querySelectorAll(`[data-gq="${q}"]`).forEach(x=>x.classList.toggle('sel',+x.dataset.go===o));const gp=document.getElementById('gap'+q);gp.textContent=[DATA.GRM[q][1],DATA.GRM[q][2]][o];gp.classList.add('filled');}});
-function check(){let got=0;DATA.VCB.forEach((it,i)=>{const sel=state.vcb[i];if(sel===it[1])got++;document.querySelectorAll(`[data-vq="${i}"]`).forEach(x=>{x.classList.remove('ok','no');if(+x.dataset.vo===it[1])x.classList.add('ok');else if(+x.dataset.vo===sel)x.classList.add('no');x.disabled=true;});});
+function check(){try{if(window.ShmBoards)ShmBoards.log('exam')}catch(e){}let got=0;DATA.VCB.forEach((it,i)=>{const sel=state.vcb[i];if(sel===it[1])got++;document.querySelectorAll(`[data-vq="${i}"]`).forEach(x=>{x.classList.remove('ok','no');if(+x.dataset.vo===it[1])x.classList.add('ok');else if(+x.dataset.vo===sel)x.classList.add('no');x.disabled=true;});});
 DATA.GRM.forEach((it,i)=>{const sel=state.grm[i];if(sel===it[3])got++;document.querySelectorAll(`[data-gq="${i}"]`).forEach(x=>{x.classList.remove('ok','no');if(+x.dataset.go===it[3])x.classList.add('ok');else if(+x.dataset.go===sel)x.classList.add('no');x.disabled=true;});});
 const sc=$('#score');sc.textContent=`Your score: ${got} / 10`;sc.classList.add('show');sc.classList.toggle('low',got<5);}
 function resetAll(){state.vcb.fill(-1);state.grm.fill(-1);document.querySelectorAll('[data-vo],[data-go]').forEach(x=>{x.classList.remove('sel','ok','no');x.disabled=false;});for(let k=0;k<5;k++){const gp=document.getElementById('gap'+k);gp.textContent='____';gp.classList.remove('filled');}$('#score').classList.remove('show');}

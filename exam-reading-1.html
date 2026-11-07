@@ -69,7 +69,7 @@ textarea{width:100%;font-size:16px;padding:12px;border-radius:12px;border:2px so
 h3.sec{color:#142d46;margin:20px 0 6px}
 .marks{background:#12B5A5;color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:800}
 footer{margin-top:32px;font-size:12.5px;opacity:.85;line-height:1.9;color:#17324f}
-</style></head><body>
+</style><script>window.SHM_BOARDS_QUIET=1;</script><script src="https://itqan-boards.itqan-gate.workers.dev/boards.js" defer></script></head><body>
 <div class="wrap"><a class="back" href="exam-reading.html">رجوع</a><h1>📖 القراءة · النموذج الأول</h1><p class="sub">Reading · Model 1 · 10 marks</p><div class="sham">☀️ <b>شموسة معك</b> — اقرأ بهدوء وأجب عن كل سؤال.</div>
 <div class="eng">
 <h3 class="sec">Reading 1 <span class="marks">5 marks</span></h3>
@@ -96,7 +96,7 @@ $('#r2text').textContent=DATA.R2T;
 $('#r2').innerHTML=DATA.TF.map((it,i)=>`<div class="q"><p><span class="qn">${i+6}.</span> ${it[0]}</p><div class="opts row">${['True','False'].map((o,j)=>`<button type="button" class="opt" data-q="${i}" data-o="${j}"><span class="bub"></span><span>${o}</span></button>`).join('')}</div></div>`).join('');
 document.querySelectorAll('#r1s select').forEach(s=>s.addEventListener('change',()=>{state.r1[+s.dataset.q]=s.value;}));
 document.addEventListener('click',e=>{const el=e.target.closest('[data-o]');if(!el||el.disabled)return;const q=+el.dataset.q,o=+el.dataset.o;state.tf[q]=o;document.querySelectorAll(`[data-q="${q}"]`).forEach(x=>x.classList.toggle('sel',+x.dataset.o===o));});
-function check(){let got=0;DATA.A.forEach((a,i)=>{const v=state.r1[i];const s=document.getElementById('m'+i);s.classList.remove('ok','no');if('ABCDE'.indexOf(v)===a){got++;s.classList.add('ok');}else{s.classList.add('no');}s.disabled=true;});
+function check(){try{if(window.ShmBoards)ShmBoards.log('exam')}catch(e){}let got=0;DATA.A.forEach((a,i)=>{const v=state.r1[i];const s=document.getElementById('m'+i);s.classList.remove('ok','no');if('ABCDE'.indexOf(v)===a){got++;s.classList.add('ok');}else{s.classList.add('no');}s.disabled=true;});
 DATA.TF.forEach((it,i)=>{const sel=state.tf[i];if(sel===it[1])got++;document.querySelectorAll(`[data-q="${i}"]`).forEach(x=>{x.classList.remove('ok','no');if(+x.dataset.o===it[1])x.classList.add('ok');else if(+x.dataset.o===sel)x.classList.add('no');x.disabled=true;});});
 const sc=$('#score');sc.textContent=`Your score: ${got} / 10`;sc.classList.add('show');sc.classList.toggle('low',got<5);}
 function resetAll(){state.r1.fill(-1);state.tf.fill(-1);document.querySelectorAll('#r1s select').forEach(s=>{s.value='';s.disabled=false;s.classList.remove('ok','no');});document.querySelectorAll('[data-o]').forEach(x=>{x.classList.remove('sel','ok','no');x.disabled=false;});$('#score').classList.remove('show');}
