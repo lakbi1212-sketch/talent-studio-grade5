@@ -75,8 +75,8 @@
 }
 
 /* Slanted handwriting for whiteboard examples (Mohamed: خط يد مائل) */
-@font-face{font-family:WhiteboardHand;src:url('/fonts/caveat.ttf') format('truetype');font-style:italic;font-weight:400;font-display:swap}
-.whiteboard .en,.whiteboard .english-sentence,.whiteboard .english-line,.whiteboard .scene-card .en,.whiteboard .scene-card .options,.whiteboard .board-title .en,.whiteboard .event strong{font-family:WhiteboardHand,Caveat,'Segoe Script','Bradley Hand',cursive;font-style:italic;font-weight:400;color:#173d80}
+@font-face{font-family:WhiteboardHand;src:url('/fonts/patrick-hand.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+.whiteboard .en,.whiteboard .english-sentence,.whiteboard .english-line,.whiteboard .scene-card .en,.whiteboard .scene-card .options,.whiteboard .board-title .en,.whiteboard .event strong{font-family:WhiteboardHand,'Segoe Print','Bradley Hand',cursive;font-style:normal;font-weight:400;color:#173d80}
 .whiteboard .scene-heading{font-family:inherit}
 
 .gh-unit-section{margin:34px 0;padding:26px 18px;border-radius:24px;background:linear-gradient(135deg,#e7f7f6,#eaf1fb);border:2px solid #cfe8ec}
