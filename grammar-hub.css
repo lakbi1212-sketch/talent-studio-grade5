@@ -62,3 +62,6 @@ a:focus-visible{outline:3px solid #df9d14;outline-offset:3px}
 
 /* Isolate Arabic connectors between English titles. */
 .gh-ar-join{font-family:Tahoma,Arial,sans-serif!important;direction:rtl;unicode-bidi:isolate;display:inline-block;margin-inline:.3em;font-style:normal}
+
+/* Keep emoji icons out of text-font fallback. */
+.unit-icon{font-family:Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,Segoe UI Symbol,Twemoji Mozilla,sans-serif}
