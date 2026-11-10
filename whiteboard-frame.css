@@ -1,0 +1,75 @@
+/* A quiet whiteboard edge, in the page flow with the handwriting. */
+.whiteboard {
+  border: 7px solid #bdcbce;
+  border-top-color: #d3dddf;
+  border-bottom-color: #a9bbbf;
+  border-radius: 14px;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 3px #e2ebec,
+              0 3px 10px #17344712;
+}
+@media (max-width: 650px) {
+  .whiteboard {
+    border-width: 5px;
+    border-radius: 12px;
+  }
+}
+
+/* Whole English examples retain LTR/left alignment throughout handwriting. */
+.whiteboard .english-sentence,.whiteboard .english-line {
+  display:block!important;direction:ltr!important;unicode-bidi:isolate;
+  text-align:left!important;white-space:pre-line;overflow-wrap:anywhere;
+  padding-inline:6px;max-width:100%;
+}
+.whiteboard .english-sentence { margin:8px 0!important; }
+.whiteboard .red-key { margin:4px .25em; }
+.whiteboard .english-sentence .red-key,.whiteboard .english-line .red-key {
+  white-space:nowrap;
+}
+.whiteboard .token.circle { margin-inline:.2em; }
+.whiteboard .english-sentence { font-family:WhiteboardHand,Arial,sans-serif;font-size:27px!important;line-height:1.9; }
+@media(max-width:650px){.whiteboard .english-sentence{font-size:26px!important;}}
+
+/* Keep long Arabic scene headings inside the board on narrow screens. */
+.whiteboard .scene-heading{white-space:normal;overflow-wrap:anywhere;max-width:100%;min-width:0;line-height:1.6;padding-inline:4px;}
+
+/* Larger, bold lesson lettering with the original red-circle design. */
+.whiteboard .scene-heading{font-size:clamp(25px,2.8vw,36px)!important;font-weight:800!important;}
+.whiteboard .scene-card .label{font-size:clamp(17px,1.8vw,21px)!important;font-weight:800!important;color:#087b82;}
+.whiteboard .scene-card .plain,.whiteboard .scene-card .recap,.whiteboard .scene-card .rule,.whiteboard .scene-card .warning{font-size:clamp(20px,2.42vw,31px)!important;font-weight:700!important;line-height:1.9!important;overflow-wrap:anywhere;}
+.whiteboard .scene-card .en,.whiteboard .scene-card .options,.whiteboard .english-sentence,.whiteboard .english-line{font-size:clamp(28px,3.36vw,43px)!important;font-weight:700!important;line-height:1.9!important;}
+.whiteboard .red-key,.whiteboard .token.circle{color:#087b82!important;font-weight:800!important;}
+.whiteboard .scene-card .recap{color:#1c4f89!important;}
+.whiteboard .scene-card .rule{color:#116b77!important;}
+.whiteboard .scene-card{min-width:0;}
+@media(max-width:650px){
+ .whiteboard{padding:16px 10px!important;}
+ .whiteboard .scene-card{padding:14px 12px!important;}
+ .whiteboard .english-sentence,.whiteboard .english-line{padding-inline:4px;}
+ .whiteboard .red-key{margin-inline:.23em;}
+}
+/* The original continuous-board sample uses zones instead of scene cards. */
+.whiteboard .zone .line,.whiteboard .board-footer,.whiteboard .blend-intro{font-size:clamp(20px,2.42vw,31px)!important;font-weight:700!important;line-height:1.9;overflow-wrap:anywhere;}
+.whiteboard .zone .formula,.whiteboard .zone .exam-options,.whiteboard .zone .exam-answer{font-size:clamp(28px,3.36vw,43px)!important;font-weight:700!important;line-height:1.9;overflow-wrap:anywhere;}
+.whiteboard .zone h2,.whiteboard .board-title{font-weight:800!important;}
+@media(max-width:360px){.whiteboard #t8c2 .red-key{font-size:.80em;}}
+.practice-zone .question-text{font-size:clamp(24px,2.2vw,30px)!important;font-weight:700;}
+.practice-zone #reason{font-size:20px;font-weight:700;}
+.practice-zone .choice{font-weight:700;}
+
+/* Scenes stay written on the board like a real whiteboard; a soft line marks each new scene. */
+.scene-part{padding-top:20px;margin-top:20px;border-top:2px dashed #cfdfe4}
+.scene-part:first-child{padding-top:0;margin-top:0;border-top:0}
+/* Keep the mobile toolbar on a single readable row; expanded options get their own row. */
+@media(max-width:650px){
+.player{display:grid;grid-template-columns:112px minmax(0,1fr) 42px;gap:6px;align-items:center}
+.player>#play{min-width:0;width:112px;padding:8px 5px;white-space:nowrap;font-size:14px}
+.pace-label{font-size:0;min-width:0;justify-content:center}
+.pace-label select{font-size:12px;width:100%;min-width:0;min-height:42px;padding:5px 2px}
+.lesson-tools{border:0;padding:0;min-width:0}
+.lesson-tools>summary{font-size:0;width:42px;min-height:42px;justify-content:center}
+.lesson-tools>summary::before{content:'☰';font-size:24px}
+.lesson-tools[open]{grid-column:1/-1}
+.lesson-tools[open]>summary{font-size:13px;width:auto;justify-content:flex-start}
+.lesson-tools[open]>summary::before{font-size:18px;content:'▾'}
+}

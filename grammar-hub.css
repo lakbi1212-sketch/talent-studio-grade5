@@ -1,0 +1,61 @@
+/* هوية «شرح القواعد بالصوت» — مشتركة بين كل الصفوف
+   Shared grammar-hub stylesheet (Itqan navy + turquoise identity, one colour per unit).
+   Usage: <link rel="stylesheet" href="grammar-hub.css"> then:
+   <header class="gh-hero">…</header>
+   <section class="unit u1"><div class="unit-banner"><span class="unit-icon">🎭</span><div><h2>…</h2><small>…</small></div></div>
+     <a class="lesson" href="…"><span class="num">1</span><span class="txt"><b>…</b><i dir="ltr">…</i></span><span class="go">←</span></a>
+   </section> */
+:root{--navy:#1b3866;--teal:#087d89;--ink:#173447;--muted:#4d6975;--line:#d3e7ea;--bg:#f3f8fb;
+--u1:#087d89;--u1d:#065f68;--u1t:#e2f4f4;
+--u2:#6d4fc2;--u2d:#553aa6;--u2t:#efebfa;
+--u3:#e07b12;--u3d:#b25f0c;--u3t:#fdf1e0;
+--u4:#cf4d7c;--u4d:#a93a63;--u4t:#fceaf2;
+--u5:#2e9e5b;--u5d:#247a46;--u5t:#e6f5ec;
+--u6:#2f6fd0;--u6d:#2456a5;--u6t:#e9f0fc}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.8;
+background:var(--bg) radial-gradient(circle at 12% 8%,#dff1f280 0 90px,transparent 91px),
+radial-gradient(circle at 88% 22%,#efe9fa80 0 70px,transparent 71px),
+radial-gradient(circle at 8% 78%,#fdeed980 0 80px,transparent 81px),
+radial-gradient(circle at 92% 88%,#e6f5ec80 0 60px,transparent 61px);background-attachment:fixed}
+.en{font-family:"Poppins","Segoe UI",Arial,sans-serif}
+main{max-width:920px;margin:auto;padding:22px 16px 70px}
+.gh-back{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff!important;text-decoration:none;font-weight:700;font-size:16px;padding:9px 20px;border-radius:999px;box-shadow:0 3px 10px #087d8940;margin-bottom:16px}
+.gh-back:hover{background:var(--navy)}
+.gh-hero{position:relative;background:linear-gradient(135deg,#e7f7f6,#eaf1fb);border:2px solid #cfe8ec;border-radius:24px;padding:22px 22px 20px;margin-bottom:8px;overflow:hidden}
+.gh-hero h1{font-size:clamp(26px,5vw,36px);color:var(--navy);margin:0 0 6px;line-height:1.35}
+.gh-hero .lead{margin:0 0 12px;color:var(--muted);font-size:16px;max-width:78%}
+.gh-chips{display:flex;flex-wrap:wrap;gap:8px}
+.gh-chips span{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:700;color:var(--teal)}
+.gh-sun{position:absolute;inset-inline-end:14px;top:12px;width:92px;height:92px;filter:drop-shadow(0 4px 8px #f5a62355)}
+@media(max-width:560px){.gh-sun{width:64px;height:64px;top:10px;inset-inline-end:10px}.gh-hero .lead{max-width:100%;font-size:15px}}
+.unit{margin-top:34px}
+.unit-banner{display:flex;align-items:center;gap:14px;border-radius:20px;padding:12px 18px;margin-bottom:6px;border:2px solid transparent}
+.unit-icon{flex:none;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;color:#fff;box-shadow:0 4px 10px #17344730}
+.unit-banner h2{margin:0;font-size:clamp(20px,3.4vw,25px);line-height:1.4}
+.unit-banner small{display:block;font-size:14.5px;font-weight:600}
+.u1 .unit-banner{background:var(--u1t);border-color:#bfe5e6}.u1 .unit-icon{background:var(--u1)}.u1 .unit-banner h2,.u1 .unit-banner small{color:var(--u1d)}
+.u2 .unit-banner{background:var(--u2t);border-color:#d8cdf2}.u2 .unit-icon{background:var(--u2)}.u2 .unit-banner h2,.u2 .unit-banner small{color:var(--u2d)}
+.u3 .unit-banner{background:var(--u3t);border-color:#f5dab4}.u3 .unit-icon{background:var(--u3)}.u3 .unit-banner h2,.u3 .unit-banner small{color:var(--u3d)}
+.u4 .unit-banner{background:var(--u4t);border-color:#f2c6d8}.u4 .unit-icon{background:var(--u4)}.u4 .unit-banner h2,.u4 .unit-banner small{color:var(--u4d)}
+.u5 .unit-banner{background:var(--u5t);border-color:#c2e6cf}.u5 .unit-icon{background:var(--u5)}.u5 .unit-banner h2,.u5 .unit-banner small{color:var(--u5d)}
+.u6 .unit-banner{background:var(--u6t);border-color:#c3d6f2}.u6 .unit-icon{background:var(--u6)}.u6 .unit-banner h2,.u6 .unit-banner small{color:var(--u6d)}
+.lesson{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit;background:#fff;border:2px solid var(--line);border-inline-start:7px solid var(--teal);border-radius:18px;padding:14px 18px;margin:12px 0;transition:transform .15s,box-shadow .15s;box-shadow:0 1px 4px #17344710}
+.lesson:hover{transform:translateY(-2px)}
+.u1 .lesson{border-inline-start-color:var(--u1)}.u1 .num{background:var(--u1)}.u1 .go{color:var(--u1)}.u1 .lesson:hover{box-shadow:0 6px 18px #087d8926;border-color:var(--u1)}
+.u2 .lesson{border-inline-start-color:var(--u2)}.u2 .num{background:var(--u2)}.u2 .go{color:var(--u2)}.u2 .lesson:hover{box-shadow:0 6px 18px #6d4fc226;border-color:var(--u2)}
+.u3 .lesson{border-inline-start-color:var(--u3)}.u3 .num{background:var(--u3)}.u3 .go{color:var(--u3)}.u3 .lesson:hover{box-shadow:0 6px 18px #e07b1226;border-color:var(--u3)}
+.u4 .lesson{border-inline-start-color:var(--u4)}.u4 .num{background:var(--u4)}.u4 .go{color:var(--u4)}.u4 .lesson:hover{box-shadow:0 6px 18px #cf4d7c26;border-color:var(--u4)}
+.u5 .lesson{border-inline-start-color:var(--u5)}.u5 .num{background:var(--u5)}.u5 .go{color:var(--u5)}.u5 .lesson:hover{box-shadow:0 6px 18px #2e9e5b26;border-color:var(--u5)}
+.u6 .lesson{border-inline-start-color:var(--u6)}.u6 .num{background:var(--u6)}.u6 .go{color:var(--u6)}.u6 .lesson:hover{box-shadow:0 6px 18px #2f6fd026;border-color:var(--u6)}
+.num{flex:none;width:40px;height:40px;border-radius:50%;color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;font-family:"Poppins",Arial,sans-serif}
+.lesson .txt{flex:1;min-width:0}
+.lesson .txt b{display:block;font-size:clamp(18px,2.6vw,20px);color:var(--navy);line-height:1.5}
+.lesson .txt i{display:block;font-style:normal;font-size:14.5px;color:var(--muted);margin-top:2px;font-family:"Poppins","Segoe UI",Arial,sans-serif}
+.go{flex:none;font-size:26px;font-weight:800}
+.gh-home{display:flex;justify-content:center;margin-top:44px}
+.gh-home a{background:var(--navy);color:#fff!important;text-decoration:none;font-weight:800;font-size:18px;padding:13px 38px;border-radius:999px;box-shadow:0 4px 14px #1b386640}
+.gh-home a:hover{background:var(--teal)}
+.gh-note{text-align:center;color:var(--muted);font-size:15px;margin-top:26px}
+footer{margin-top:34px;text-align:center;font-size:14px;color:#7a858a}
+a:focus-visible{outline:3px solid #df9d14;outline-offset:3px}
