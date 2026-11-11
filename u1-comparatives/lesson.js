@@ -86,3 +86,5 @@ function restart(){start(0)}function jump(i){start(i)}
 function scrub(v){let at=Number(v)/1000*total(),i=0;while(i<scenes.length-1&&at>=scenes[i].duration)at-=scenes[i++].duration;const resume=playing;pause();scene=i;finished=false;$('done').hidden=true;draw(i,at/scenes[i].duration);if(resume)start(i,at);else{const e=epoch;load(i,at,e).catch(()=>{})}}
 audio.addEventListener('ended',()=>{if(!playing)return;if(scene<scenes.length-1)start(scene+1);else{playing=false;finished=true;cancelAnimationFrame(raf);draw(scene,1);$('done').hidden=false}});
 $('chapters').innerHTML=scenes.map((s,i)=>'<option value="'+i+'">'+escapeHTML(s.label)+'</option>').join('');draw(0,1);$('scene-label').textContent='جاهز للبدء';
+// Deep link: open a specific scene, optionally at a fraction (#3 or #3,0.5)
+;(function(){const m=location.hash.match(/^#(\d+)(?:,([0-9.]+))?$/);if(!m)return;const i=+m[1];if(i>=scenes.length)return;const fr=m[2]?Math.max(0,Math.min(1,+m[2])):1;draw(i,fr);setTimeout(()=>{const p=document.getElementById('part-'+i);if(p)p.scrollIntoView()},60)})();
