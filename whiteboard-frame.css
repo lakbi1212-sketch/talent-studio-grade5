@@ -95,3 +95,8 @@
 .gh-unit-section.u4{background:var(--u4t);border-color:#f2c6d8}.gh-unit-section.u4 .num{background:var(--u4)}.gh-unit-section.u4 .go{color:var(--u4)}
 .gh-unit-section.u5{background:var(--u5t);border-color:#c2e6cf}.gh-unit-section.u5 .num{background:var(--u5)}.gh-unit-section.u5 .go{color:var(--u5)}
 .gh-unit-section.u6{background:var(--u6t);border-color:#c3d6f2}.gh-unit-section.u6 .num{background:var(--u6)}.gh-unit-section.u6 .go{color:var(--u6)}
+
+/* Mohamed 11 Nov: no empty cards; arrow-only cards sit between cards without their own box */
+.scene-card:has(> div.arrow .typed:empty),.scene-card:has(> div.arrow:empty){display:none!important}
+.scene-card:has(> div.arrow){background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;text-align:center!important}
+.scene-card:has(> div.en .typed:empty),.scene-card:has(> div.en:empty){display:none!important}
