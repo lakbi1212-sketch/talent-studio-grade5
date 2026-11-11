@@ -47,11 +47,20 @@ function englishRuns(txt,render,sourceText=txt){
  }
  return out+escapeHTML(txt.slice(last));
 }
-function markedText(txt,kind,marks,sourceText=txt,cm){
+function optionChips(txt,hl){
+ return txt.split(/\n| {2,}/).map(p=>{const w=p.trim();if(!w)return '';
+  const on=hl&&(w.toLowerCase()===String(hl).toLowerCase()||w.toUpperCase().indexOf(String(hl).toUpperCase()+'.')===0);
+  return '<span class="opt'+(on?' opt-correct':'')+'">'+escapeHTML(w)+'</span>'}).join(' ')}
+function correctOpt(s,oId){
+ const bi=s.blocks.findIndex(b=>b.id===oId);if(bi<0)return '';
+ if(s.blocks[bi].answer)return s.blocks[bi].answer;
+ for(let j=bi+1;j<s.blocks.length;j++){const cm=(s.colorMarks||[]).find(x=>x[0]===s.blocks[j].id&&x[3]==='mk-ans');if(cm)return cm[1];}
+ return ''}
+function markedText(txt,kind,marks,sourceText=txt,cm,hl=''){
  if(kind==='trow')return txt?trowHTML(txt,false):'';
  if(kind==='trow-head')return txt?trowHTML(txt,true):'';
  const wrap=t=>(cm&&cm.length)?colorize(t,cm):circleText(t,marks);
- if((kind.includes('en')||kind==='options')&&!/[؀-ۿ]/.test(sourceText))return '<span class="english-line" dir="ltr">'+wrap(txt)+'</span>';
+ if(kind==='options')return '<span class="english-line options-line" dir="ltr">'+optionChips(txt,hl)+'</span>';if((kind.includes('en')||kind==='options')&&!/[؀-ۿ]/.test(sourceText))return '<span class="english-line" dir="ltr">'+wrap(txt)+'</span>';
  return englishRuns(txt,wrap,sourceText)}
 
 const $=id=>document.getElementById(id);let scene=0,playing=false,finished=false,epoch=0,raf=0,shown=-1,focusCard='';
@@ -61,9 +70,9 @@ function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','
 function mixed(s){return englishRuns(s,escapeHTML)}
 function pinHTML(i){const s=scenes[i];if(s.blocks.some(b=>b.kind==='en'||b.kind.indexOf('trow')===0))return '';for(let j=i-1;j>=0;j--){const t=scenes[j],ec=t.cues.filter(c=>{const b=t.blocks.find(x=>x.id===c[0]);return b&&b.kind==='en'});if(!ec.length)continue;const cue=[...ec].reverse().find(c=>c[1].trim().split(/\s+/).length>=3)||ec[ec.length-1];return '<section class="scene-card pin-card" id="card-pin-'+i+'"><div class="label">آخر مثال</div><div id="pin-'+i+'" class="en">'+markedText(cue[1],'en',t.wordMarks.filter(m=>m[0]===cue[0]),cue[1],(t.colorMarks||[]).filter(m=>m[0]===cue[0]))+'</div></section>'}return ''}
 function ensurePart(i){let p=$('part-'+i);if(!p){const s=scenes[i];p=document.createElement('div');p.className='scene-part';p.id='part-'+i;p.innerHTML='<h2 class="scene-heading">'+mixed(s.label)+'</h2>'+s.blocks.map(b=>'<section class="scene-card'+(b.wrong?' wrong-x':'')+'" id="card-'+b.id+'"><div class="label">'+escapeHTML(b.label)+'</div><div id="'+b.id+'" class="'+b.kind+'"></div></section>').join('')+pinHTML(i);$('scene-board').appendChild(p)}return p}
-function setScene(i,frac){const s=scenes[i];for(const c of s.cues){const el=$(c[0]),txt=c[1].slice(0,Math.ceil(c[1].length*frac)),kind=s.blocks.find(b=>b.id===c[0]).kind,html=frac>0?markedText(txt,kind,s.wordMarks.filter(m=>m[0]===c[0]&&frac>=m[2]),c[1],(s.colorMarks||[]).filter(m=>m[0]===c[0]&&frac>=(m[4]||0))):'';if(el._html!==html){el.innerHTML=html;el._html=html}$('card-'+c[0]).hidden=!txt}}
+function setScene(i,frac){const s=scenes[i];for(const c of s.cues){const el=$(c[0]),txt=c[1].slice(0,Math.ceil(c[1].length*frac)),kind=s.blocks.find(b=>b.id===c[0]).kind,html=frac>0?markedText(txt,kind,s.wordMarks.filter(m=>m[0]===c[0]&&frac>=m[2]),c[1],(s.colorMarks||[]).filter(m=>m[0]===c[0]&&frac>=(m[4]||0)),frac>=1?correctOpt(s,c[0]):''):'';if(el._html!==html){el.innerHTML=html;el._html=html}$('card-'+c[0]).hidden=!txt}}
 function draw(i,f,scroll=false){const s=scenes[i];if(shown!==i){for(let k=0;k<i;k++){ensurePart(k);setScene(k,1)}for(let k=i+1;k<scenes.length;k++){const p=$('part-'+k);if(p)p.remove()}ensurePart(i);setScene(i,0);shown=i;focusCard='';$('caption').textContent=s.script;$('chapters').value=i;}
- let active='',activeAt=-1;for(const c of s.cues){const el=$(c[0]),part=Math.max(0,Math.min(1,(f-c[2])/(c[3]-c[2]))),txt=c[1].slice(0,Math.ceil(c[1].length*part));const kind=s.blocks.find(b=>b.id===c[0]).kind;let html=markedText(txt,kind,s.wordMarks.filter(m=>m[0]===c[0]&&f>=m[2]),c[1],(s.colorMarks||[]).filter(m=>m[0]===c[0]&&f>=(m[4]||0)));
+ let active='',activeAt=-1;for(const c of s.cues){const el=$(c[0]),part=Math.max(0,Math.min(1,(f-c[2])/(c[3]-c[2]))),txt=c[1].slice(0,Math.ceil(c[1].length*part));const kind=s.blocks.find(b=>b.id===c[0]).kind;let html=markedText(txt,kind,s.wordMarks.filter(m=>m[0]===c[0]&&f>=m[2]),c[1],(s.colorMarks||[]).filter(m=>m[0]===c[0]&&f>=(m[4]||0)),f>=c[3]?correctOpt(s,c[0]):'');
  if(el._html!==html){el.innerHTML=html;el._html=html}const card=$('card-'+c[0]);card.hidden=!txt;if(f>=c[2]&&(!active||c[2]>=activeAt)){active=card.id;activeAt=c[2];}}
  const elapsed=startOf(i)+f*s.duration;$('clock').textContent=fmt(elapsed/pace)+' / '+fmt(total()/pace);$('progress').value=Math.round(elapsed/total()*1000);$('scene-label').textContent=s.label;document.querySelectorAll('#play,.inline-play').forEach(b=>b.textContent=playing?'❚❚ إيقاف مؤقت':finished?'↺ أعد الشرح':audio.src?'▶ متابعة الشرح':'▶ ابدأ الشرح');
  if(scroll&&active&&active!==focusCard){focusCard=active;const el=$(active),r=el.getBoundingClientRect();if(r.top<0||r.bottom>innerHeight-90)el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}}
