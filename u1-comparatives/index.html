@@ -93,7 +93,11 @@ header,.lesson-nav{display:none}
 .scene-card:has(.trow){padding:8px 10px;margin-top:4px}
 @media(max-width:650px){.tcell{padding:6px 3px;font-size:15px}.trow:not(.head) .tcell.en-cell{font-size:17px}}
 </style>
-</head><body><header>
+<style>
+/* Arabic-first lines inside scene cards and headings read RTL; .en/.options lines stay LTR-isolated */
+.scene-card{direction:rtl;text-align:right}
+.whiteboard .scene-heading{direction:rtl;unicode-bidi:plaintext;text-align:start}
+</style></head><body><header>
 <a href="../grammar.html#u1">← الوحدة الأولى: عرض المواهب</a>
 <h1>المقارنة والتفضيل</h1>
 </header><main class="shell"><nav class="lesson-nav"><a href="../">الرئيسية</a><a href="../grammar.html#u1">قواعد الوحدة الأولى</a></nav><section class="player"><button id="play" onclick="toggle()">▶ ابدأ الشرح</button><label class="pace-label" for="pace">سرعة الشرح <select id="pace" onchange="setPace(this.value)"><option value="0.85" selected>هادئ · 0.85×</option><option value="0.75">أبطأ · 0.75×</option><option value="1">سرعة التسجيل · 1×</option></select></label><details class="lesson-tools"><summary>التدريبات وخيارات الدرس</summary><div class="toolbar"><button class="secondary" onclick="jump(3)">تدريب القصيرة</button>
