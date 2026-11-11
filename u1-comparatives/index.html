@@ -98,10 +98,10 @@ header,.lesson-nav{display:none}
 .scene-card{direction:rtl;text-align:right}
 .whiteboard .scene-heading{direction:rtl;unicode-bidi:plaintext;text-align:start}
 </style><style>
-/* Lesson options: spaced chips; the chosen option turns yellow once the answer shows */
-.scene-card .options .options-line{display:flex;flex-wrap:wrap;gap:12px;white-space:normal}
-.scene-card .options .opt{display:inline-block;padding:6px 16px;border:1.5px solid #b9cfdd;border-radius:999px;background:#f4f9fd;white-space:nowrap;line-height:1.5}
-.scene-card .options .opt.opt-correct{background:#ffe98a;border-color:#d9a800;font-weight:700}
+/* Lesson options: spaced out; the chosen option gets the yellow marker once the answer shows */
+.scene-card .options .options-line{display:flex;flex-wrap:wrap;gap:6px 26px;white-space:normal}
+.scene-card .options .opt{display:inline-block;padding:0 4px;white-space:nowrap;line-height:1.9}
+.scene-card .options .opt.opt-correct{background-image:linear-gradient(100deg,rgba(255,231,155,.4) 0%,rgba(255,224,102,.78) 12%,rgba(255,224,102,.78) 88%,rgba(255,231,155,.4) 100%);background-repeat:no-repeat;background-position:left center;background-size:100% 88%;border-radius:5px 11px 6px 13px}
 .mk-be{color:#7a3db8}
 </style>
 </head><body><header>
