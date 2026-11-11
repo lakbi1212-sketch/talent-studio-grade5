@@ -1,35 +1,10 @@
 (function(){
 var R=[
-{id:'comp',en:'Short adjectives: comparing two',ar:'مقارنة شيئين بصفة قصيرة',c:'#2f7de1',
- rule:'<div style="direction:rtl;text-align:right;margin:.3em 0">نضيف er في آخر الصفة القصيرة، ثم نكتب than بعدها.</div><div style="direction:rtl;text-align:right;margin:.3em 0">للمقارنة بين اثنين فقط.</div>',
- form:'adjective + er + than',
- sp:'<div style="direction:rtl;text-align:right;margin:.3em 0">تغيير الهجاء:</div><div dir="ltr" style="text-align:left;margin:.3em 0;line-height:1.7">tidy → tidier</div><div style="direction:rtl;text-align:right;margin:.3em 0">نحذف <bdi dir="ltr">y</bdi> ونكتب <bdi dir="ltr">ier</bdi>.</div><div dir="ltr" style="text-align:left;margin:.3em 0;line-height:1.7">big → bigger</div><div style="direction:rtl;text-align:right;margin:.3em 0">نكرر الحرف الأخير.</div>',
- ex:[['My mum is shorter than me.','أمي أقصر مني.','g_c1'],['Zaid is kinder than Qais.','زيد ألطف من قيس.','g_c2'],['Zainab is tidier than Hazim.','زينب أكثر ترتيبًا من حازم.','g_c3'],["My room is bigger than my sister's room.",'غرفتي أكبر من غرفة أختي.','g_c4']],
- pr:[['Hamed is ___ than Salim.',['taller','tall','tallest'],0],['My bag is ___ than your bag.',['big','bigger','biggest'],1],['Her room is ___ than his room.',['tidier','tidiest','tidyer'],0]]},
-{id:'sup',en:'Short adjectives: the best of many',ar:'الأفضل بين عدة أشياء',c:'#e8573c',
- rule:'<div style="direction:rtl;text-align:right;margin:.3em 0">نستعمل <bdi dir="ltr">the</bdi> قبل الصفة ونضيف est في آخرها.</div><div style="direction:rtl;text-align:right;margin:.3em 0">نقارن شخصًا أو شيئًا بالباقين كلهم.</div>',
- form:'the + adjective + est',
- sp:'<div dir="ltr" style="text-align:left;margin:.3em 0;line-height:1.7">shy → shier → the shiest</div><div dir="ltr" style="text-align:left;margin:.3em 0;line-height:1.7">big → bigger → the biggest</div><div dir="ltr" style="text-align:left;margin:.3em 0;line-height:1.7">tidy → the tidiest</div>',
- ex:[["She's the shortest person in our family!",'هي أقصر شخص في عائلتنا!','g_s1'],['My friends are the quietest students in the library.','أصدقائي أهدأ الطلاب في المكتبة.','g_s2'],["Hazim's room is the tidiest room in the house.",'غرفة حازم أكثر الغرف ترتيبًا في البيت.','g_s3'],['This is the biggest cat ever!','هذه أكبر قطة على الإطلاق!','g_s4'],['shy, shier, the shiest','خجول، أكثر خجلًا، الأكثر خجلًا','g_s5']],
- pr:[['She is the ___ girl in the class.',['shortest','shorter','short'],0],['This is the ___ cat I know.',['biggest','bigger','bigest'],0],['Who is the ___ student in your class?',['kindest','kinder','more kind'],0]]},
-{id:'long',en:'Long adjectives: more and the most',ar:'الصفات الطويلة: more و the most',c:'#8a52c9',
- rule:'<div style="direction:rtl;text-align:right;margin:.3em 0">الصفة الطويلة مثل <bdi dir="ltr">hard-working</bdi> و<bdi dir="ltr">confident</bdi> لا نضيف لها er أو est.</div><div style="direction:rtl;text-align:right;margin:.3em 0">نكتب more قبلها للمقارنة بين اثنين، و the most للأفضل بين كثيرين.</div>',
- form:'more + adjective + than   /   the most + adjective',
- sp:'',
- ex:[["I'm more hard-working than my best friend.",'أنا أكثر اجتهادًا من أعز أصدقائي.','g_l1'],["I'm the most hard-working person in the class!",'أنا أكثر شخص مجتهد في الفصل!','g_l2'],['My brother is more confident than my sister.','أخي أكثر ثقة بنفسه من أختي.','g_l3'],['Sabah is the most confident student in the class.','صباح أكثر طالبة ثقة بنفسها في الفصل.','g_l4']],
- pr:[['Rahaf is ___ than anyone else.',['more hard-working','hard-workinger','most hard-working'],0],['He is the ___ student in class.',['most confident','more confident','confidenter'],0],['My brother is ___ than me at school.',['more hard-working','hard-workinger','most hard-working'],0]]},
-{id:'irr',en:'Irregular: good and bad',ar:'صفات شاذة: good و bad',c:'#2aa86a',
- rule:'<div style="direction:rtl;text-align:right;margin:.3em 0"><bdi dir="ltr">good</bdi> و<bdi dir="ltr">bad</bdi> لهما أشكال خاصة.</div><div style="direction:rtl;text-align:right;margin:.3em 0">نحفظها كما هي ولا نضيف er أو est.</div>',
- form:'good, better, the best   /   bad, worse, the worst',
- sp:'',
- ex:[['good, better, the best','جيد، أفضل، الأفضل','g_i1'],['bad, worse, the worst','سيئ، أسوأ، الأسوأ','g_i2'],['Laila is better than Marwa at maths.','ليلى أفضل من مروة في الرياضيات.','g_i3'],['Noora is the best at juggling.','نورة هي الأفضل في التلاعب بالكرات.','g_i4'],['Basil is worse than Faris. He is the worst boy in the street!','باسل أسوأ من فارس. هو أسوأ ولد في الشارع!','g_i5']],
- pr:[['She is ___ than me at spelling.',['better','gooder','more good'],0],['That was the ___ film ever!',['worst','baddest','worse'],0],['My team played ___ than your team.',['worse','worst','badder'],0]]},
-{id:'goodat',en:'Good at ... + verb-ing',ar:'التعبير عن المهارة: good at',c:'#f26a21',
- rule:'<div style="direction:rtl;text-align:right;margin:.3em 0">نقول ما نتقنه أو لا نتقنه بهذه العبارات.</div><div style="direction:rtl;text-align:right;margin:.3em 0">بعد <bdi dir="ltr">at</bdi> نكتب الفعل مع <bdi dir="ltr">ing</bdi>، أو نكتب اسمًا مثل <bdi dir="ltr">Maths</bdi>.</div>',
- form:'great at / good at / not very good at / terrible at + verb-ing  or  noun',
- sp:'<div dir="ltr" style="text-align:left;margin:.3em 0;line-height:1.7">bake → baking</div><div dir="ltr" style="text-align:left;margin:.3em 0;line-height:1.7">make → making</div><div dir="ltr" style="text-align:left;margin:.3em 0;line-height:1.7">juggle → juggling</div>',
- ex:[["I'm good at baking cakes.",'أنا جيد في خبز الكعك.','g_a1'],["I'm not very good at making pizza.",'لست جيدًا في صنع البيتزا.','g_a2'],['Samar is great at acting.','سمر ممتازة في التمثيل.','g_a3'],["Rashid's terrible at juggling!",'راشد سيئ جدًا في التلاعب بالكرات!','g_a4'],["I'm great at Maths but I'm terrible at P.E.!",'أنا ممتاز في الرياضيات لكني سيئ جدًا في التربية البدنية! (من الكتاب)','']],
- pr:[["I'm good at ___ cakes.",['baking','bake','to bake'],0],['She is terrible ___ juggling.',['at','on','in'],0],["He is great at ___ toys.",['fixing','fix','fixes'],0]]},
+
+
+
+
+
 {id:'desc',en:'Describing people',ar:'وصف الأشخاص',c:'#1aa0a0',
  rule:'<div style="direction:rtl;text-align:right;margin:.3em 0">نسأل عن الشكل بـ <bdi dir="ltr">look like</bdi>، وعن الشخصية بـ <bdi dir="ltr">What is he like</bdi>.</div><div style="direction:rtl;text-align:right;margin:.3em 0">ونستعمل <bdi dir="ltr">seems</bdi> بمعنى يبدو.</div>',
  form:'What does he look like?  He has fair hair.   What is he like?  He is friendly.   He seems shy.',
