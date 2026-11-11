@@ -100,3 +100,8 @@
 .scene-card:has(> div.arrow .typed:empty),.scene-card:has(> div.arrow:empty){display:none!important}
 .scene-card:has(> div.arrow){background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;text-align:center!important}
 .scene-card:has(> div.en .typed:empty),.scene-card:has(> div.en:empty){display:none!important}
+
+/* Mohamed 11 Nov: MCQ options as clearly spaced chips */
+.scene-card .options .options-line{display:flex!important;flex-wrap:wrap;gap:10px 18px!important;white-space:normal}
+.scene-card .options .opt{padding:2px 14px!important;border:1.5px solid #cfe0e8;border-radius:12px;background:#fff}
+.scene-card .options .opt.opt-correct{border-color:#e0b800}
