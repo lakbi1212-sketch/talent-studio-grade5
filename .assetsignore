@@ -3,3 +3,5 @@
 .wrangler
 node_modules
 wrangler.jsonc
+**/scenes.json
+worker.js
