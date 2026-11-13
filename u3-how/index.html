@@ -91,6 +91,14 @@ header,.lesson-nav{display:none}
 /* A short introduction should not leave a full-screen empty board. */
 .whiteboard:has(#scene-board > .scene-part:only-child){min-height:0!important}
 </style>
+
+<style id="controls-grid-bidi-20261113">
+.inline-controls{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:"prev play next" "back tools forward";direction:rtl;gap:8px;width:100%;align-items:stretch}
+.inline-controls>button{width:100%;min-width:0;margin:0;min-height:52px;padding:8px 4px;font-size:14px;line-height:1.45;white-space:normal;text-align:center;overflow-wrap:normal;display:flex;align-items:center;justify-content:center}
+.inline-controls>button:nth-child(1){grid-area:prev}.inline-controls>button:nth-child(2){grid-area:forward}.inline-controls>button:nth-child(3){grid-area:play}.inline-controls>button:nth-child(4){grid-area:back}.inline-controls>button:nth-child(5){grid-area:next}.inline-controls>button:nth-child(6){grid-area:tools}
+.source-rule bdi{direction:ltr;unicode-bidi:isolate;display:inline-block}.source-rule>span[dir="ltr"],.source-rule>.rule-en{display:block;direction:ltr;unicode-bidi:isolate;text-align:left;margin:8px 0}.source-rule p{margin:8px 0}
+@media(max-width:400px){.inline-controls>button{font-size:13px;min-height:54px}}
+</style>
 </head><body><header>
 <a href="../grammar.html#u3">← الوحدة الثالثة: هيا نستكشف</a>
 <h1>أسئلة How</h1>
