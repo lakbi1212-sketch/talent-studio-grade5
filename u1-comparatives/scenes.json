@@ -1,42 +1,3478 @@
 [
- {
-  "script": "أهلًا بكم، أنا شموسة. درسنا اليوم: المقارنة والتفضيل.\nComparative and superlative adjectives.\nنقارن بين اثنين، ونفضّل واحدًا على الكل.\nبالبلدي: أحسن من، وأحسن واحد.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "الصفة القصيرة تاخذ er للمقارنة.\nMy mum is shorter than me.\nأمي أقصر مني.\nthan تجي بعد صفة المقارنة دائمًا.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "وللتفضيل نحط the و est.\nShe's the shortest person in our family!\nهي أقصر شخص في عائلتنا!\nshort و shorter و the shortest.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "الصفة الطويلة تاخذ more و the most.\nI'm more hard-working than my best friend.\nأنا أكثر اجتهادًا من صديقي المقرب.\nI'm the most hard-working person in the class!\nأنا أكثر شخص مجتهد في الصف!",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "والصفات الشاذة تُحفظ.\ngood يصير better و the best.\nbad يصير worse و the worst.\ntidy يصير tidier و the tidiest.\nbig يصير bigger و the biggest.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "خطأ شائع: more مع القصيرة.\nMy mum is more short than me.\nغلط! قولوا:\nMy mum is shorter than me.\nوأنا كتبت more short في الواجب مرة، والصف ما رحمني من الضحك.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "تدريب: قارنوا وفضّلوا.\ntidy: tidier, the tidiest.\nhard-working: more hard-working, the most hard-working.\ngood: better, the best.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "نلخص درس اليوم.\nالقصيرة تاخذ er و est، والطويلة تاخذ more و most.\nMy mum is shorter than me.\nShe's the shortest person in our family!\nمع السلامة.",
-  "wordMarks": [],
-  "duration": 30
- }
+  {
+    "label": "1 · الفكرة: أحسن من وأحسن واحد",
+    "script": "أهلًا بكم، أنا شموسة. درسنا اليوم: المقارنة والتفضيل.\nComparative and superlative adjectives.\nنقارن بين اثنين، ونفضّل واحدًا على الكل.\nبمعنى تاني: أحسن من، وأحسن واحد.",
+    "duration": 17.064,
+    "audio": "01.mp3",
+    "blocks": [
+      {
+        "id": "s1p1-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s1p1-e",
+        "Comparative and superlative adjectives.",
+        0.36448,
+        0.76569
+      ]
+    ],
+    "wordMarks": []
+  },
+  {
+    "label": "2 · القصيرة بـ er وthan",
+    "script": "الصفة القصيرة تاخذ er للمقارنة.\nMy mum is shorter than me.\nأمي أقصر مني.\nthan تجي بعد صفة المقارنة دائمًا.",
+    "duration": 13.0,
+    "audio": "02.mp3",
+    "blocks": [
+      {
+        "id": "s2p1-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s2p1-e",
+        "My mum is shorter than me.",
+        0.33071,
+        0.53143
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s2p1-e",
+        "shorter",
+        "er",
+        "mk-er",
+        0.40791
+      ],
+      [
+        "s2p1-e",
+        "than",
+        "",
+        "mk-than",
+        0.46967
+      ]
+    ]
+  },
+  {
+    "label": "3 · التفضيل بـ the وest",
+    "script": "وللتفضيل نحط the و est.\nShe's the shortest person in our family!\nهي أقصر شخص في عائلتنا!\nshort و shorter و the shortest.",
+    "duration": 16.24,
+    "audio": "03.mp3",
+    "blocks": [
+      {
+        "id": "s3p1-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s3p3-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s3p1-e",
+        "She's the shortest person in our family!",
+        0.14741,
+        0.4882
+      ],
+      [
+        "s3p3-e",
+        "the shortest.",
+        0.88217,
+        0.97765
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s3p1-e",
+        "the",
+        "",
+        "mk-the",
+        0.19853
+      ],
+      [
+        "s3p1-e",
+        "shortest",
+        "est",
+        "mk-est",
+        0.23261
+      ],
+      [
+        "s3p3-e",
+        "the",
+        "",
+        "mk-the",
+        0.88217
+      ],
+      [
+        "s3p3-e",
+        "shortest",
+        "est",
+        "mk-est",
+        0.9
+      ]
+    ]
+  },
+  {
+    "label": "4 · تدريب محلول: القصيرة (1–5)",
+    "script": "دلوقتي نحل عشرين تمرين على الصفات القصيرة، خمسة خمسة. ركزوا في السبب مش بس الإجابة.\nالتمرين الأول: My brother is ___ than me.\nالاختيارات: taller, tallest, tall.\nالإجابة: taller. بنقارن بين اثنين وعندنا than، يبقى الصفة القصيرة تاخذ er.\nالتمرين الثاني: Sara is the ___ girl in her class.\nالاختيارات: shorter, shortest, short.\nالإجابة: shortest. التفضيل: نحط the قبل الصفة و est في الآخر.\nالتمرين الثالث: A car is ___ than a bike.\nالاختيارات: fastest, fast, faster.\nالإجابة: faster. مع than نستخدم المقارنة: fast تاخذ er.\nالتمرين الرابع: This is the ___ day of the year!\nالاختيارات: hottest, hotter, hot.\nالإجابة: hottest. hot حرف علة قبله حرف ساكن، فنضاعف t ونضيف est مع the.\nالتمرين الخامس: My bag is ___ than your bag.\nالاختيارات: biggest, bigger, big.\nالإجابة: bigger. big نضاعف g ونضيف er للمقارنة.",
+    "duration": 124.152,
+    "audio": "09.mp3",
+    "blocks": [
+      {
+        "id": "09q1",
+        "label": "تمرين 1",
+        "kind": "en"
+      },
+      {
+        "id": "09o1",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1836459,
+        "answer": "taller"
+      },
+      {
+        "id": "09a1",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "09q2",
+        "label": "تمرين 2",
+        "kind": "en"
+      },
+      {
+        "id": "09o2",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3813068,
+        "answer": "shortest"
+      },
+      {
+        "id": "09a2",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "09q3",
+        "label": "تمرين 3",
+        "kind": "en"
+      },
+      {
+        "id": "09o3",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5602809,
+        "answer": "faster"
+      },
+      {
+        "id": "09a3",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "09q4",
+        "label": "تمرين 4",
+        "kind": "en"
+      },
+      {
+        "id": "09o4",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7382885,
+        "answer": "hottest"
+      },
+      {
+        "id": "09a4",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "09q5",
+        "label": "تمرين 5",
+        "kind": "en"
+      },
+      {
+        "id": "09o5",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9359495,
+        "answer": "bigger"
+      },
+      {
+        "id": "09a5",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "09q1",
+        "My brother is ___ than me.",
+        0.0743744,
+        0.1120065
+      ],
+      [
+        "09o1",
+        "taller  tallest  tall",
+        0.1120065,
+        0.1433726
+      ],
+      [
+        "09a1",
+        "taller. بنقارن بين اثنين وعندنا than، يبقى الصفة القصيرة تاخذ er.",
+        0.1836459,
+        0.251627
+      ],
+      [
+        "09q2",
+        "Sara is the ___ girl in her class.",
+        0.2556544,
+        0.3045797
+      ],
+      [
+        "09o2",
+        "shorter  shortest  short",
+        0.3045797,
+        0.3410336
+      ],
+      [
+        "09a2",
+        "shortest. التفضيل: نحط the قبل الصفة و est في الآخر.",
+        0.3813068,
+        0.435434
+      ],
+      [
+        "09q3",
+        "A car is ___ than a bike.",
+        0.4394613,
+        0.483392
+      ],
+      [
+        "09o3",
+        "fastest  fast  faster",
+        0.483392,
+        0.5200077
+      ],
+      [
+        "09a3",
+        "faster. مع than نستخدم المقارنة: fast تاخذ er.",
+        0.5602809,
+        0.6137638
+      ],
+      [
+        "09q4",
+        "This is the ___ day of the year!",
+        0.6177911,
+        0.6651499
+      ],
+      [
+        "09o4",
+        "hottest  hotter  hot",
+        0.6651499,
+        0.6980153
+      ],
+      [
+        "09a4",
+        "hottest. hot حرف علة قبله حرف ساكن، فنضاعف t ونضيف est مع the.",
+        0.7382885,
+        0.8065919
+      ],
+      [
+        "09q5",
+        "My bag is ___ than your bag.",
+        0.8106192,
+        0.859073
+      ],
+      [
+        "09o5",
+        "biggest  bigger  big",
+        0.859073,
+        0.8956763
+      ],
+      [
+        "09a5",
+        "bigger. big نضاعف g ونضيف er للمقارنة.",
+        0.9359495,
+        0.9955538
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "09a1",
+        "taller",
+        "",
+        "mk-ans",
+        0.1981671
+      ],
+      [
+        "09a2",
+        "shortest",
+        "",
+        "mk-ans",
+        0.3952914
+      ],
+      [
+        "09a3",
+        "faster",
+        "",
+        "mk-ans",
+        0.5755814
+      ],
+      [
+        "09a4",
+        "hottest",
+        "",
+        "mk-ans",
+        0.7534857
+      ],
+      [
+        "09a5",
+        "bigger",
+        "",
+        "mk-ans",
+        0.9558408
+      ]
+    ]
+  },
+  {
+    "label": "5 · تدريب محلول: القصيرة (6–10)",
+    "script": "نكمل حل التمارين على الصفات القصيرة.\nالتمرين السادس: This is the ___ book in the library.\nالاختيارات: older, old, oldest.\nالإجابة: oldest. التفضيل على الكل: the oldest.\nالتمرين السابع: Ahmed is ___ than Salim.\nالاختيارات: shorter, shortest, short.\nالإجابة: shorter. مقارنة بين شخصين: short تاخذ er مع than.\nالتمرين الثامن: Our class is the ___ in the school.\nالاختيارات: bigger, biggest, big.\nالإجابة: biggest. التفضيل: the + big مضاعفة g + est.\nالتمرين التاسع: A train is ___ than a bus.\nالاختيارات: longest, long, longer.\nالإجابة: longer. مقارنة بـ than: long تاخذ er.\nالتمرين العاشر: The lion is the ___ animal here.\nالاختيارات: strongest, stronger, strong.\nالإجابة: strongest. التفضيل: the strongest.",
+    "duration": 111.768,
+    "audio": "10.mp3",
+    "blocks": [
+      {
+        "id": "10q6",
+        "label": "تمرين 6",
+        "kind": "en"
+      },
+      {
+        "id": "10o6",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1617637,
+        "answer": "oldest"
+      },
+      {
+        "id": "10a6",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "10q7",
+        "label": "تمرين 7",
+        "kind": "en"
+      },
+      {
+        "id": "10o7",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3390953,
+        "answer": "shorter"
+      },
+      {
+        "id": "10a7",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "10q8",
+        "label": "تمرين 8",
+        "kind": "en"
+      },
+      {
+        "id": "10o8",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5378999,
+        "answer": "biggest"
+      },
+      {
+        "id": "10a8",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "10q9",
+        "label": "تمرين 9",
+        "kind": "en"
+      },
+      {
+        "id": "10o9",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7535252,
+        "answer": "longer"
+      },
+      {
+        "id": "10a9",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "10q10",
+        "label": "تمرين 10",
+        "kind": "en"
+      },
+      {
+        "id": "10o10",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9505404,
+        "answer": "strongest"
+      },
+      {
+        "id": "10a10",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "10q6",
+        "This is the ___ book in the library.",
+        0.0348198,
+        0.0860757
+      ],
+      [
+        "10o6",
+        "older  old  oldest",
+        0.0860757,
+        0.1170281
+      ],
+      [
+        "10a6",
+        "oldest. التفضيل على الكل: the oldest.",
+        0.1617637,
+        0.2118674
+      ],
+      [
+        "10q7",
+        "Ahmed is ___ than Salim.",
+        0.216341,
+        0.2568348
+      ],
+      [
+        "10o7",
+        "shorter  shortest  short",
+        0.2568348,
+        0.2943597
+      ],
+      [
+        "10a7",
+        "shorter. مقارنة بين شخصين: short تاخذ er مع than.",
+        0.3390953,
+        0.4027987
+      ],
+      [
+        "10q8",
+        "Our class is the ___ in the school.",
+        0.4072722,
+        0.4592041
+      ],
+      [
+        "10o8",
+        "bigger  biggest  big",
+        0.4592041,
+        0.4931644
+      ],
+      [
+        "10a8",
+        "biggest. التفضيل: the + big مضاعفة g + est.",
+        0.5378999,
+        0.6091189
+      ],
+      [
+        "10q9",
+        "A train is ___ than a bus.",
+        0.6135924,
+        0.6660712
+      ],
+      [
+        "10o9",
+        "longest  long  longer",
+        0.6660712,
+        0.7087896
+      ],
+      [
+        "10a9",
+        "longer. مقارنة بـ than: long تاخذ er.",
+        0.7535252,
+        0.8057763
+      ],
+      [
+        "10q10",
+        "The lion is the ___ animal here.",
+        0.8102498,
+        0.8622729
+      ],
+      [
+        "10o10",
+        "strongest  stronger  strong",
+        0.8622729,
+        0.9058049
+      ],
+      [
+        "10a10",
+        "strongest. التفضيل: the strongest.",
+        0.9505404,
+        0.994918
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "10a6",
+        "oldest",
+        "",
+        "mk-ans",
+        0.1767738
+      ],
+      [
+        "10a7",
+        "shorter",
+        "",
+        "mk-ans",
+        0.3542971
+      ],
+      [
+        "10a8",
+        "biggest",
+        "",
+        "mk-ans",
+        0.556821
+      ],
+      [
+        "10a9",
+        "longer",
+        "",
+        "mk-ans",
+        0.7691785
+      ],
+      [
+        "10a10",
+        "strongest",
+        "",
+        "mk-ans",
+        0.9647413
+      ]
+    ]
+  },
+  {
+    "label": "6 · تدريب محلول: القصيرة (11–15)",
+    "script": "نكمل حل التمارين على الصفات القصيرة.\nالحادي عشر: My sister is ___ than me.\nالاختيارات: youngest, younger, young.\nالإجابة: younger. مقارنة بين اثنين: young تاخذ er.\nالثاني عشر: Ali is the ___ boy in the team.\nالاختيارات: younger, young, youngest.\nالإجابة: youngest. التفضيل: the youngest.\nالثالث عشر: This box is ___ than that one.\nالاختيارات: heavier, heaviest, heavy.\nالإجابة: heavier. heavy تنتهي بـ y، نقلبها i ونضيف er.\nالرابع عشر: This is the ___ room in the house.\nالاختيارات: tidier, tidiest, tidy.\nالإجابة: tidiest. tidy نفس الفكرة: y تقلب i ونضيف est مع the.\nالخامس عشر: My desk is ___ than yours.\nالاختيارات: tidiest, tidy, tidier.\nالإجابة: tidier. مقارنة: tidy تتحول tidier.",
+    "duration": 111.912,
+    "audio": "11.mp3",
+    "blocks": [
+      {
+        "id": "11q11",
+        "label": "تمرين 11",
+        "kind": "en"
+      },
+      {
+        "id": "11o11",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1615555,
+        "answer": "younger"
+      },
+      {
+        "id": "11a11",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "11q12",
+        "label": "تمرين 12",
+        "kind": "en"
+      },
+      {
+        "id": "11o12",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3518836,
+        "answer": "youngest"
+      },
+      {
+        "id": "11a12",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "11q13",
+        "label": "تمرين 13",
+        "kind": "en"
+      },
+      {
+        "id": "11o13",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.533991,
+        "answer": "heavier"
+      },
+      {
+        "id": "11a13",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "11q14",
+        "label": "تمرين 14",
+        "kind": "en"
+      },
+      {
+        "id": "11o14",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7303953,
+        "answer": "tidiest"
+      },
+      {
+        "id": "11a14",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "11q15",
+        "label": "تمرين 15",
+        "kind": "en"
+      },
+      {
+        "id": "11o15",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9418114,
+        "answer": "tidier"
+      },
+      {
+        "id": "11a15",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "11q11",
+        "My sister is ___ than me.",
+        0.0375653,
+        0.077225
+      ],
+      [
+        "11o11",
+        "youngest  younger  young",
+        0.077225,
+        0.1168775
+      ],
+      [
+        "11a11",
+        "younger. مقارنة بين اثنين: young تاخذ er.",
+        0.1615555,
+        0.2151691
+      ],
+      [
+        "11q12",
+        "Ali is the ___ boy in the team.",
+        0.2196369,
+        0.2666255
+      ],
+      [
+        "11o12",
+        "younger  young  youngest",
+        0.2666255,
+        0.3072057
+      ],
+      [
+        "11a12",
+        "youngest. التفضيل: the youngest.",
+        0.3518836,
+        0.3922725
+      ],
+      [
+        "11q13",
+        "This box is ___ than that one.",
+        0.3967403,
+        0.4458802
+      ],
+      [
+        "11o13",
+        "heavier  heaviest  heavy",
+        0.4458802,
+        0.489313
+      ],
+      [
+        "11a13",
+        "heavier. heavy تنتهي بـ y، نقلبها i ونضيف er.",
+        0.533991,
+        0.5990421
+      ],
+      [
+        "11q14",
+        "This is the ___ room in the house.",
+        0.6035099,
+        0.6506259
+      ],
+      [
+        "11o14",
+        "tidier  tidiest  tidy",
+        0.6506259,
+        0.6857173
+      ],
+      [
+        "11a14",
+        "tidiest. tidy نفس الفكرة: y تقلب i ونضيف est مع the.",
+        0.7303953,
+        0.8097434
+      ],
+      [
+        "11q15",
+        "My desk is ___ than yours.",
+        0.8142112,
+        0.8579098
+      ],
+      [
+        "11o15",
+        "tidiest  tidy  tidier",
+        0.8579098,
+        0.8971335
+      ],
+      [
+        "11a15",
+        "tidier. مقارنة: tidy تتحول tidier.",
+        0.9418114,
+        0.9950676
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "11a11",
+        "younger",
+        "",
+        "mk-ans",
+        0.1759561
+      ],
+      [
+        "11a12",
+        "youngest",
+        "",
+        "mk-ans",
+        0.3650568
+      ],
+      [
+        "11a13",
+        "heavier",
+        "",
+        "mk-ans",
+        0.550195
+      ],
+      [
+        "11a14",
+        "tidiest",
+        "",
+        "mk-ans",
+        0.7479289
+      ],
+      [
+        "11a15",
+        "tidier",
+        "",
+        "mk-ans",
+        0.9583943
+      ]
+    ]
+  },
+  {
+    "label": "7 · تدريب محلول: القصيرة (16–20)",
+    "script": "نكمل حل التمارين على الصفات القصيرة.\nالسادس عشر: Winter is ___ than autumn.\nالاختيارات: colder, coldest, cold.\nالإجابة: colder. مع than: cold تاخذ er.\nالسابع عشر: January is the ___ month here.\nالاختيارات: colder, coldest, cold.\nالإجابة: coldest. التفضيل: the coldest.\nالثامن عشر: The film was ___ than I thought.\nالاختيارات: funniest, funny, funnier.\nالإجابة: funnier. funny نقلب الـ y إلى i ونضيف er.\nالتاسع عشر: That was the ___ joke in the show!\nالاختيارات: funniest, funnier, funny.\nالإجابة: funniest. التفضيل: the funniest.\nالعشرون: Today is ___ than yesterday.\nالاختيارات: nicest, nicer, nice.\nالإجابة: nicer. nice تنتهي بـ e، فنضيف r فقط: nicer.",
+    "duration": 109.44,
+    "audio": "12.mp3",
+    "blocks": [
+      {
+        "id": "12q16",
+        "label": "تمرين 16",
+        "kind": "en"
+      },
+      {
+        "id": "12o16",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1652047,
+        "answer": "colder"
+      },
+      {
+        "id": "12a16",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "12q17",
+        "label": "تمرين 17",
+        "kind": "en"
+      },
+      {
+        "id": "12o17",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3587354,
+        "answer": "coldest"
+      },
+      {
+        "id": "12a17",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "12q18",
+        "label": "تمرين 18",
+        "kind": "en"
+      },
+      {
+        "id": "12o18",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5500731,
+        "answer": "funnier"
+      },
+      {
+        "id": "12a18",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "12q19",
+        "label": "تمرين 19",
+        "kind": "en"
+      },
+      {
+        "id": "12o19",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7607822,
+        "answer": "funniest"
+      },
+      {
+        "id": "12a19",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "12q20",
+        "label": "تمرين 20",
+        "kind": "en"
+      },
+      {
+        "id": "12o20",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9364035,
+        "answer": "nicer"
+      },
+      {
+        "id": "12a20",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "12q16",
+        "Winter is ___ than autumn.",
+        0.0391154,
+        0.0814876
+      ],
+      [
+        "12o16",
+        "colder  coldest  cold",
+        0.0814876,
+        0.1195175
+      ],
+      [
+        "12a16",
+        "colder. مع than: cold تاخذ er.",
+        0.1652047,
+        0.2203947
+      ],
+      [
+        "12q17",
+        "January is the ___ month here.",
+        0.2249635,
+        0.2735226
+      ],
+      [
+        "12o17",
+        "colder  coldest  cold",
+        0.2735226,
+        0.3130482
+      ],
+      [
+        "12a17",
+        "coldest. التفضيل: the coldest.",
+        0.3587354,
+        0.4095395
+      ],
+      [
+        "12q18",
+        "The film was ___ than I thought.",
+        0.4141082,
+        0.4630575
+      ],
+      [
+        "12o18",
+        "funniest  funny  funnier",
+        0.4630575,
+        0.504386
+      ],
+      [
+        "12a18",
+        "funnier. funny نقلب الـ y إلى i ونضيف er.",
+        0.5500731,
+        0.6125731
+      ],
+      [
+        "12q19",
+        "That was the ___ joke in the show!",
+        0.6171418,
+        0.6713069
+      ],
+      [
+        "12o19",
+        "funniest  funnier  funny",
+        0.6713069,
+        0.715095
+      ],
+      [
+        "12a19",
+        "funniest. التفضيل: the funniest.",
+        0.7607822,
+        0.8039108
+      ],
+      [
+        "12q20",
+        "Today is ___ than yesterday.",
+        0.8084795,
+        0.852491
+      ],
+      [
+        "12o20",
+        "nicest  nicer  nice",
+        0.852491,
+        0.8907164
+      ],
+      [
+        "12a20",
+        "nicer. nice تنتهي بـ e، فنضيف r فقط: nicer.",
+        0.9364035,
+        0.994883
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "12a16",
+        "colder",
+        "",
+        "mk-ans",
+        0.183223
+      ],
+      [
+        "12a17",
+        "coldest",
+        "",
+        "mk-ans",
+        0.3753245
+      ],
+      [
+        "12a18",
+        "funnier",
+        "",
+        "mk-ans",
+        0.5660783
+      ],
+      [
+        "12a19",
+        "funniest",
+        "",
+        "mk-ans",
+        0.7741928
+      ],
+      [
+        "12a20",
+        "nicer",
+        "",
+        "mk-ans",
+        0.9508144
+      ]
+    ]
+  },
+  {
+    "label": "8 · الطويلة بـ more وmost",
+    "script": "الصفة الطويلة تاخذ more و the most.\nI'm more hard-working than my best friend.\nأنا أكثر اجتهادًا من صديقي المقرب.\nI'm the most hard-working person in the class!\nأنا أكثر شخص مجتهد في الصف!",
+    "duration": 24.76,
+    "audio": "04.mp3",
+    "blocks": [
+      {
+        "id": "s4p0-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s4p1-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s4p3-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s4p0-e",
+        "the most.",
+        0.11416,
+        0.16767
+      ],
+      [
+        "s4p1-e",
+        "I'm more hard-working than my best friend.",
+        0.1856,
+        0.41703
+      ],
+      [
+        "s4p3-e",
+        "I'm the most hard-working person in the class!",
+        0.65749,
+        0.8141
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s4p0-e",
+        "the most",
+        "",
+        "mk-most",
+        0.11416
+      ],
+      [
+        "s4p1-e",
+        "more",
+        "",
+        "mk-more",
+        0.20764
+      ],
+      [
+        "s4p1-e",
+        "than",
+        "",
+        "mk-than",
+        0.30683
+      ],
+      [
+        "s4p3-e",
+        "the most",
+        "",
+        "mk-most",
+        0.67111
+      ]
+    ]
+  },
+  {
+    "label": "9 · أمثلة محلولة: الطويلة (1–5)",
+    "script": "ناخد عشرين مثال محلول على more و the most، خمسة خمسة، ونشوف مكان more و than والصفة بينهم.\nI'm more hard-working than my best friend.\nmore قبل الصفة الطويلة، وthan بعدها.\nI'm the most hard-working person in the class!\nthe most للتفضيل على الكل.\nThis story is more interesting than that one.\ninteresting طويلة: more + الصفة + than.\nThis is the most interesting book in the library.\nالتفضيل: the most interesting.\nThe talent show was more exciting than last year.\nexciting طويلة، نقارن بـ more.",
+    "duration": 59.28,
+    "audio": "13.mp3",
+    "blocks": [
+      {
+        "id": "13e1",
+        "label": "مثال 1",
+        "kind": "en"
+      },
+      {
+        "id": "13n1",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "13e2",
+        "label": "مثال 2",
+        "kind": "en"
+      },
+      {
+        "id": "13n2",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "13e3",
+        "label": "مثال 3",
+        "kind": "en"
+      },
+      {
+        "id": "13n3",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "13e4",
+        "label": "مثال 4",
+        "kind": "en"
+      },
+      {
+        "id": "13n4",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "13e5",
+        "label": "مثال 5",
+        "kind": "en"
+      },
+      {
+        "id": "13n5",
+        "label": "",
+        "kind": "plain"
+      }
+    ],
+    "cues": [
+      [
+        "13e1",
+        "I'm more hard-working than my best friend.",
+        0.18293,
+        0.27033
+      ],
+      [
+        "13n1",
+        "more قبل الصفة الطويلة، وthan بعدها.",
+        0.27033,
+        0.34553
+      ],
+      [
+        "13e2",
+        "I'm the most hard-working person in the class!",
+        0.34553,
+        0.44106
+      ],
+      [
+        "13n2",
+        "the most للتفضيل على الكل.",
+        0.44106,
+        0.49593
+      ],
+      [
+        "13e3",
+        "This story is more interesting than that one.",
+        0.49593,
+        0.58943
+      ],
+      [
+        "13n3",
+        "interesting طويلة: more + الصفة + than.",
+        0.58943,
+        0.67073
+      ],
+      [
+        "13e4",
+        "This is the most interesting book in the library.",
+        0.67073,
+        0.77236
+      ],
+      [
+        "13n4",
+        "التفضيل: the most interesting.",
+        0.77236,
+        0.83537
+      ],
+      [
+        "13e5",
+        "The talent show was more exciting than last year.",
+        0.83537,
+        0.93699
+      ],
+      [
+        "13n5",
+        "exciting طويلة، نقارن بـ more.",
+        0.93699,
+        1
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "13e1",
+        "more",
+        "",
+        "mk-more",
+        0.20293
+      ],
+      [
+        "13e1",
+        "than",
+        "",
+        "mk-than",
+        0.22871
+      ],
+      [
+        "13e2",
+        "the most",
+        "",
+        "mk-most",
+        0.36553
+      ],
+      [
+        "13e3",
+        "more",
+        "",
+        "mk-more",
+        0.51593
+      ],
+      [
+        "13e3",
+        "than",
+        "",
+        "mk-than",
+        0.56034
+      ],
+      [
+        "13e4",
+        "the most",
+        "",
+        "mk-most",
+        0.69073
+      ],
+      [
+        "13e5",
+        "more",
+        "",
+        "mk-more",
+        0.85537
+      ],
+      [
+        "13e5",
+        "than",
+        "",
+        "mk-than",
+        0.90588
+      ]
+    ]
+  },
+  {
+    "label": "10 · أمثلة محلولة: الطويلة (6–10)",
+    "script": "نكمل الأمثلة المحلولة على الصفات الطويلة.\nIt was the most exciting day of my life!\nالتفضيل: the most exciting.\nA lion is more dangerous than a cat.\ndangerous طويلة: more dangerous than.\nThe shark is the most dangerous fish in the sea.\nالتفضيل: the most dangerous.\nEnglish is more difficult than maths for me.\ndifficult طويلة، ما تنفعش er، نقول more difficult.\nThis is the most difficult exercise in the book.\nالتفضيل: the most difficult.",
+    "duration": 52.65,
+    "audio": "14.mp3",
+    "blocks": [
+      {
+        "id": "14e6",
+        "label": "مثال 6",
+        "kind": "en"
+      },
+      {
+        "id": "14n6",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "14e7",
+        "label": "مثال 7",
+        "kind": "en"
+      },
+      {
+        "id": "14n7",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "14e8",
+        "label": "مثال 8",
+        "kind": "en"
+      },
+      {
+        "id": "14n8",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "14e9",
+        "label": "مثال 9",
+        "kind": "en"
+      },
+      {
+        "id": "14n9",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "14e10",
+        "label": "مثال 10",
+        "kind": "en"
+      },
+      {
+        "id": "14n10",
+        "label": "",
+        "kind": "plain"
+      }
+    ],
+    "cues": [
+      [
+        "14e6",
+        "It was the most exciting day of my life!",
+        0.09382,
+        0.18764
+      ],
+      [
+        "14n6",
+        "التفضيل: the most exciting.",
+        0.18764,
+        0.25172
+      ],
+      [
+        "14e7",
+        "A lion is more dangerous than a cat.",
+        0.25172,
+        0.33638
+      ],
+      [
+        "14n7",
+        "dangerous طويلة: more dangerous than.",
+        0.33638,
+        0.42334
+      ],
+      [
+        "14e8",
+        "The shark is the most dangerous fish in the sea.",
+        0.42334,
+        0.53547
+      ],
+      [
+        "14n8",
+        "التفضيل: the most dangerous.",
+        0.53547,
+        0.60183
+      ],
+      [
+        "14e9",
+        "English is more difficult than maths for me.",
+        0.60183,
+        0.70481
+      ],
+      [
+        "14n9",
+        "difficult طويلة، ما تنفعش er، نقول more difficult.",
+        0.70481,
+        0.82151
+      ],
+      [
+        "14e10",
+        "This is the most difficult exercise in the book.",
+        0.82151,
+        0.93364
+      ],
+      [
+        "14n10",
+        "التفضيل: the most difficult.",
+        0.93364,
+        1
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "14e6",
+        "the most",
+        "",
+        "mk-most",
+        0.11382
+      ],
+      [
+        "14e7",
+        "more",
+        "",
+        "mk-more",
+        0.27172
+      ],
+      [
+        "14e7",
+        "than",
+        "",
+        "mk-than",
+        0.31051
+      ],
+      [
+        "14e8",
+        "the most",
+        "",
+        "mk-most",
+        0.44334
+      ],
+      [
+        "14e9",
+        "more",
+        "",
+        "mk-more",
+        0.62183
+      ],
+      [
+        "14e9",
+        "than",
+        "",
+        "mk-than",
+        0.66268
+      ],
+      [
+        "14e10",
+        "the most",
+        "",
+        "mk-most",
+        0.84151
+      ]
+    ]
+  },
+  {
+    "label": "11 · أمثلة محلولة: الطويلة (11–15)",
+    "script": "نكمل الأمثلة المحلولة على الصفات الطويلة.\nMy drawing is more colourful than yours.\ncolourful طويلة: more colourful.\nHer dress is the most colourful in the show.\nالتفضيل: the most colourful.\nA plane ticket is more expensive than a bus ticket.\nexpensive طويلة: more expensive than.\nThis is the most expensive toy in the shop.\nالتفضيل: the most expensive.\nMy new shoes are more comfortable than the old ones.\ncomfortable طويلة: more comfortable.",
+    "duration": 53.25,
+    "audio": "15.mp3",
+    "blocks": [
+      {
+        "id": "15e11",
+        "label": "مثال 11",
+        "kind": "en"
+      },
+      {
+        "id": "15n11",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "15e12",
+        "label": "مثال 12",
+        "kind": "en"
+      },
+      {
+        "id": "15n12",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "15e13",
+        "label": "مثال 13",
+        "kind": "en"
+      },
+      {
+        "id": "15n13",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "15e14",
+        "label": "مثال 14",
+        "kind": "en"
+      },
+      {
+        "id": "15n14",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "15e15",
+        "label": "مثال 15",
+        "kind": "en"
+      },
+      {
+        "id": "15n15",
+        "label": "",
+        "kind": "plain"
+      }
+    ],
+    "cues": [
+      [
+        "15e11",
+        "My drawing is more colourful than yours.",
+        0.09276,
+        0.18552
+      ],
+      [
+        "15n11",
+        "colourful طويلة: more colourful.",
+        0.18552,
+        0.26018
+      ],
+      [
+        "15e12",
+        "Her dress is the most colourful in the show.",
+        0.26018,
+        0.36199
+      ],
+      [
+        "15n12",
+        "التفضيل: the most colourful.",
+        0.36199,
+        0.4276
+      ],
+      [
+        "15e13",
+        "A plane ticket is more expensive than a bus ticket.",
+        0.4276,
+        0.54525
+      ],
+      [
+        "15n13",
+        "expensive طويلة: more expensive than.",
+        0.54525,
+        0.63122
+      ],
+      [
+        "15e14",
+        "This is the most expensive toy in the shop.",
+        0.63122,
+        0.73077
+      ],
+      [
+        "15n14",
+        "التفضيل: the most expensive.",
+        0.73077,
+        0.79638
+      ],
+      [
+        "15e15",
+        "My new shoes are more comfortable than the old ones.",
+        0.79638,
+        0.91629
+      ],
+      [
+        "15n15",
+        "comfortable طويلة: more comfortable.",
+        0.91629,
+        1
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "15e11",
+        "more",
+        "",
+        "mk-more",
+        0.11276
+      ],
+      [
+        "15e11",
+        "than",
+        "",
+        "mk-than",
+        0.16001
+      ],
+      [
+        "15e12",
+        "the most",
+        "",
+        "mk-most",
+        0.28018
+      ],
+      [
+        "15e13",
+        "more",
+        "",
+        "mk-more",
+        0.4476
+      ],
+      [
+        "15e13",
+        "than",
+        "",
+        "mk-than",
+        0.50373
+      ],
+      [
+        "15e14",
+        "the most",
+        "",
+        "mk-most",
+        0.65122
+      ],
+      [
+        "15e15",
+        "more",
+        "",
+        "mk-more",
+        0.81638
+      ],
+      [
+        "15e15",
+        "than",
+        "",
+        "mk-than",
+        0.87478
+      ]
+    ]
+  },
+  {
+    "label": "12 · أمثلة محلولة: الطويلة (16–20)",
+    "script": "نكمل الأمثلة المحلولة على الصفات الطويلة.\nThis is the most comfortable chair in the house.\nالتفضيل: the most comfortable.\nSalma is more careful than her little brother.\ncareful طويلة: more careful than.\nMy dad is the most careful driver in the family.\nالتفضيل: the most careful.\nFootball is more popular than volleyball in Oman.\npopular طويلة: more popular than.\nMessi is the most famous player in the world.\nالتفضيل: the most famous.",
+    "duration": 52.29,
+    "audio": "16.mp3",
+    "blocks": [
+      {
+        "id": "16e16",
+        "label": "مثال 16",
+        "kind": "en"
+      },
+      {
+        "id": "16n16",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "16e17",
+        "label": "مثال 17",
+        "kind": "en"
+      },
+      {
+        "id": "16n17",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "16e18",
+        "label": "مثال 18",
+        "kind": "en"
+      },
+      {
+        "id": "16n18",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "16e19",
+        "label": "مثال 19",
+        "kind": "en"
+      },
+      {
+        "id": "16n19",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "16e20",
+        "label": "مثال 20",
+        "kind": "en"
+      },
+      {
+        "id": "16n20",
+        "label": "",
+        "kind": "plain"
+      }
+    ],
+    "cues": [
+      [
+        "16e16",
+        "This is the most comfortable chair in the house.",
+        0.09447,
+        0.20737
+      ],
+      [
+        "16n16",
+        "التفضيل: the most comfortable.",
+        0.20737,
+        0.2788
+      ],
+      [
+        "16e17",
+        "Salma is more careful than her little brother.",
+        0.2788,
+        0.3871
+      ],
+      [
+        "16n17",
+        "careful طويلة: more careful than.",
+        0.3871,
+        0.46544
+      ],
+      [
+        "16e18",
+        "My dad is the most careful driver in the family.",
+        0.46544,
+        0.57834
+      ],
+      [
+        "16n18",
+        "التفضيل: the most careful.",
+        0.57834,
+        0.64055
+      ],
+      [
+        "16e19",
+        "Football is more popular than volleyball in Oman.",
+        0.64055,
+        0.75576
+      ],
+      [
+        "16n19",
+        "popular طويلة: more popular than.",
+        0.75576,
+        0.8341
+      ],
+      [
+        "16e20",
+        "Messi is the most famous player in the world.",
+        0.8341,
+        0.94009
+      ],
+      [
+        "16n20",
+        "التفضيل: the most famous.",
+        0.94009,
+        1
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "16e16",
+        "the most",
+        "",
+        "mk-most",
+        0.11447
+      ],
+      [
+        "16e17",
+        "more",
+        "",
+        "mk-more",
+        0.2988
+      ],
+      [
+        "16e17",
+        "than",
+        "",
+        "mk-than",
+        0.3306
+      ],
+      [
+        "16e18",
+        "the most",
+        "",
+        "mk-most",
+        0.48544
+      ],
+      [
+        "16e19",
+        "more",
+        "",
+        "mk-more",
+        0.66055
+      ],
+      [
+        "16e19",
+        "than",
+        "",
+        "mk-than",
+        0.69933
+      ],
+      [
+        "16e20",
+        "the most",
+        "",
+        "mk-most",
+        0.8541
+      ]
+    ]
+  },
+  {
+    "label": "13 · الصفات الشاذة في جدول",
+    "script": "والصفات الشاذة تُحفظ.\ngood يصير better و the best.\nbad يصير worse و the worst.\ntidy يصير tidier و the tidiest.\nbig يصير bigger و the biggest.",
+    "duration": 18.64,
+    "audio": "05.mp3",
+    "blocks": [
+      {
+        "id": "s5p0-t",
+        "label": "احفظ أشكالها",
+        "kind": "trow-head"
+      },
+      {
+        "id": "s5p1-e",
+        "label": "",
+        "kind": "trow"
+      },
+      {
+        "id": "s5p2-e",
+        "label": "",
+        "kind": "trow"
+      },
+      {
+        "id": "s5p3-e",
+        "label": "",
+        "kind": "trow"
+      },
+      {
+        "id": "s5p4-e",
+        "label": "",
+        "kind": "trow"
+      }
+    ],
+    "cues": [
+      [
+        "s5p0-t",
+        "الصفة|المقارنة|التفضيل",
+        0.02,
+        0.1
+      ],
+      [
+        "s5p1-e",
+        "good|better|the best",
+        0.14741,
+        0.30951
+      ],
+      [
+        "s5p2-e",
+        "bad|worse|the worst",
+        0.35,
+        0.50733
+      ],
+      [
+        "s5p3-e",
+        "tidy|tidier|the tidiest",
+        0.55,
+        0.75644
+      ],
+      [
+        "s5p4-e",
+        "big|bigger|the biggest",
+        0.78,
+        1
+      ]
+    ],
+    "wordMarks": []
+  },
+  {
+    "label": "14 · جمل محلولة: الشاذة (1–5)",
+    "script": "دلوقتي نحل عشرين جملة توضح قاعدة الصفات الشاذة، خمسة خمسة.\nThis cake is better than that cake.\ngood في المقارنة تتحول better.\nOmar is the best player in the team.\nوفي التفضيل: the best.\nMy marks are better this term than last term.\nbetter than للمقارنة.\nThis is the best day ever!\nthe best للتفضيل.\nMy cold is worse today than yesterday.\nbad في المقارنة تتحول worse.",
+    "duration": 44.1,
+    "audio": "17.mp3",
+    "blocks": [
+      {
+        "id": "17e1",
+        "label": "مثال 1",
+        "kind": "en"
+      },
+      {
+        "id": "17n1",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "17e2",
+        "label": "مثال 2",
+        "kind": "en"
+      },
+      {
+        "id": "17n2",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "17e3",
+        "label": "مثال 3",
+        "kind": "en"
+      },
+      {
+        "id": "17n3",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "17e4",
+        "label": "مثال 4",
+        "kind": "en"
+      },
+      {
+        "id": "17n4",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "17e5",
+        "label": "مثال 5",
+        "kind": "en"
+      },
+      {
+        "id": "17n5",
+        "label": "",
+        "kind": "plain"
+      }
+    ],
+    "cues": [
+      [
+        "17e1",
+        "This cake is better than that cake.",
+        0.15847,
+        0.25683
+      ],
+      [
+        "17n1",
+        "good في المقارنة تتحول better.",
+        0.25683,
+        0.34153
+      ],
+      [
+        "17e2",
+        "Omar is the best player in the team.",
+        0.34153,
+        0.44262
+      ],
+      [
+        "17n2",
+        "وفي التفضيل: the best.",
+        0.44262,
+        0.50546
+      ],
+      [
+        "17e3",
+        "My marks are better this term than last term.",
+        0.50546,
+        0.63115
+      ],
+      [
+        "17n3",
+        "better than للمقارنة.",
+        0.63115,
+        0.69126
+      ],
+      [
+        "17e4",
+        "This is the best day ever!",
+        0.69126,
+        0.76503
+      ],
+      [
+        "17n4",
+        "the best للتفضيل.",
+        0.76503,
+        0.81421
+      ],
+      [
+        "17e5",
+        "My cold is worse today than yesterday.",
+        0.81421,
+        0.92077
+      ],
+      [
+        "17n5",
+        "bad في المقارنة تتحول worse.",
+        0.92077,
+        1
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "17e1",
+        "better",
+        "",
+        "mk-more",
+        0.195
+      ],
+      [
+        "17e2",
+        "best",
+        "",
+        "mk-most",
+        0.37523
+      ],
+      [
+        "17e3",
+        "better",
+        "",
+        "mk-more",
+        0.54177
+      ],
+      [
+        "17e4",
+        "best",
+        "",
+        "mk-most",
+        0.72531
+      ],
+      [
+        "17e5",
+        "worse",
+        "",
+        "mk-more",
+        0.84506
+      ]
+    ]
+  },
+  {
+    "label": "15 · جمل محلولة: الشاذة (6–10)",
+    "script": "نكمل الجمل المحلولة على الصفات الشاذة.\nThis is the worst day of the week!\nوفي التفضيل: the worst.\nA broken bike is worse than a slow bike.\nworse than للمقارنة.\nIt was the worst match this year.\nthe worst للتفضيل.\nMy room is tidier than my brother's room.\ntidy نقلب الـ y إلى i ونضيف er: tidier.\nSalma's desk is the tidiest in the class.\nالتفضيل: the tidiest.",
+    "duration": 43.13,
+    "audio": "18.mp3",
+    "blocks": [
+      {
+        "id": "18e6",
+        "label": "مثال 6",
+        "kind": "en"
+      },
+      {
+        "id": "18n6",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "18e7",
+        "label": "مثال 7",
+        "kind": "en"
+      },
+      {
+        "id": "18n7",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "18e8",
+        "label": "مثال 8",
+        "kind": "en"
+      },
+      {
+        "id": "18n8",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "18e9",
+        "label": "مثال 9",
+        "kind": "en"
+      },
+      {
+        "id": "18n9",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "18e10",
+        "label": "مثال 10",
+        "kind": "en"
+      },
+      {
+        "id": "18n10",
+        "label": "",
+        "kind": "plain"
+      }
+    ],
+    "cues": [
+      [
+        "18e6",
+        "This is the worst day of the week!",
+        0.10615,
+        0.20391
+      ],
+      [
+        "18n6",
+        "وفي التفضيل: the worst.",
+        0.20391,
+        0.27095
+      ],
+      [
+        "18e7",
+        "A broken bike is worse than a slow bike.",
+        0.27095,
+        0.38547
+      ],
+      [
+        "18n7",
+        "worse than للمقارنة.",
+        0.38547,
+        0.44413
+      ],
+      [
+        "18e8",
+        "It was the worst match this year.",
+        0.44413,
+        0.53911
+      ],
+      [
+        "18n8",
+        "the worst للتفضيل.",
+        0.53911,
+        0.59218
+      ],
+      [
+        "18e9",
+        "My room is tidier than my brother's room.",
+        0.59218,
+        0.7095
+      ],
+      [
+        "18n9",
+        "tidy نقلب الـ y إلى i ونضيف er: tidier.",
+        0.7095,
+        0.82123
+      ],
+      [
+        "18e10",
+        "Salma's desk is the tidiest in the class.",
+        0.82123,
+        0.93855
+      ],
+      [
+        "18n10",
+        "التفضيل: the tidiest.",
+        0.93855,
+        1
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "18e6",
+        "worst",
+        "",
+        "mk-most",
+        0.14065
+      ],
+      [
+        "18e7",
+        "worse",
+        "",
+        "mk-more",
+        0.31962
+      ],
+      [
+        "18e8",
+        "worst",
+        "",
+        "mk-most",
+        0.47579
+      ],
+      [
+        "18e9",
+        "tidier",
+        "er",
+        "mk-er",
+        0.62366
+      ],
+      [
+        "18e10",
+        "tidiest",
+        "est",
+        "mk-est",
+        0.87846
+      ]
+    ]
+  },
+  {
+    "label": "16 · جمل محلولة: الشاذة (11–15)",
+    "script": "نكمل الجمل المحلولة على الصفات الشاذة.\nOur school is bigger than the old school.\nbig نضاعف الـ g ونضيف er: bigger.\nThe elephant is the biggest animal on land.\nالتفضيل: the biggest.\nHis bag is bigger than mine.\nbigger than للمقارنة.\nThis is the biggest pizza in the shop!\nthe biggest للتفضيل.\nReading is better than watching TV for me.\ngood ما نقولش gooder أبدًا، نقول better.",
+    "duration": 45.18,
+    "audio": "19.mp3",
+    "blocks": [
+      {
+        "id": "19e11",
+        "label": "مثال 11",
+        "kind": "en"
+      },
+      {
+        "id": "19n11",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "19e12",
+        "label": "مثال 12",
+        "kind": "en"
+      },
+      {
+        "id": "19n12",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "19e13",
+        "label": "مثال 13",
+        "kind": "en"
+      },
+      {
+        "id": "19n13",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "19e14",
+        "label": "مثال 14",
+        "kind": "en"
+      },
+      {
+        "id": "19n14",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "19e15",
+        "label": "مثال 15",
+        "kind": "en"
+      },
+      {
+        "id": "19n15",
+        "label": "",
+        "kind": "plain"
+      }
+    ],
+    "cues": [
+      [
+        "19e11",
+        "Our school is bigger than the old school.",
+        0.10133,
+        0.21333
+      ],
+      [
+        "19n11",
+        "big نضاعف الـ g ونضيف er: bigger.",
+        0.21333,
+        0.304
+      ],
+      [
+        "19e12",
+        "The elephant is the biggest animal on land.",
+        0.304,
+        0.42133
+      ],
+      [
+        "19n12",
+        "التفضيل: the biggest.",
+        0.42133,
+        0.48
+      ],
+      [
+        "19e13",
+        "His bag is bigger than mine.",
+        0.48,
+        0.55733
+      ],
+      [
+        "19n13",
+        "bigger than للمقارنة.",
+        0.55733,
+        0.616
+      ],
+      [
+        "19e14",
+        "This is the biggest pizza in the shop!",
+        0.616,
+        0.72
+      ],
+      [
+        "19n14",
+        "the biggest للتفضيل.",
+        0.72,
+        0.776
+      ],
+      [
+        "19e15",
+        "Reading is better than watching TV for me.",
+        0.776,
+        0.89067
+      ],
+      [
+        "19n15",
+        "good ما نقولش gooder أبدًا، نقول better.",
+        0.89067,
+        1
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "19e11",
+        "bigger",
+        "er",
+        "mk-er",
+        0.13957
+      ],
+      [
+        "19e12",
+        "biggest",
+        "est",
+        "mk-est",
+        0.35857
+      ],
+      [
+        "19e13",
+        "bigger",
+        "er",
+        "mk-er",
+        0.51038
+      ],
+      [
+        "19e14",
+        "biggest",
+        "est",
+        "mk-est",
+        0.64884
+      ],
+      [
+        "19e15",
+        "better",
+        "",
+        "mk-more",
+        0.80603
+      ]
+    ]
+  },
+  {
+    "label": "17 · جمل محلولة: الشاذة (16–20)",
+    "script": "نكمل الجمل المحلولة على الصفات الشاذة.\nShe is the best singer in the talent show.\nthe best للتفضيل.\nMy handwriting is better now than before.\nbetter than للمقارنة.\nThat was the worst idea!\nbad تتحول worst في التفضيل، مش baddest.\nThis park is bigger than that one.\nbig تتحول bigger في المقارنة.\nMuscat is the biggest city in Oman.\nthe biggest للتفضيل.",
+    "duration": 42.17,
+    "audio": "20.mp3",
+    "blocks": [
+      {
+        "id": "20e16",
+        "label": "مثال 16",
+        "kind": "en"
+      },
+      {
+        "id": "20n16",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "20e17",
+        "label": "مثال 17",
+        "kind": "en"
+      },
+      {
+        "id": "20n17",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "20e18",
+        "label": "مثال 18",
+        "kind": "en"
+      },
+      {
+        "id": "20n18",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "20e19",
+        "label": "مثال 19",
+        "kind": "en"
+      },
+      {
+        "id": "20n19",
+        "label": "",
+        "kind": "plain"
+      },
+      {
+        "id": "20e20",
+        "label": "مثال 20",
+        "kind": "en"
+      },
+      {
+        "id": "20n20",
+        "label": "",
+        "kind": "plain"
+      }
+    ],
+    "cues": [
+      [
+        "20e16",
+        "She is the best singer in the talent show.",
+        0.10857,
+        0.23143
+      ],
+      [
+        "20n16",
+        "the best للتفضيل.",
+        0.23143,
+        0.28286
+      ],
+      [
+        "20e17",
+        "My handwriting is better now than before.",
+        0.28286,
+        0.40286
+      ],
+      [
+        "20n17",
+        "better than للمقارنة.",
+        0.40286,
+        0.46571
+      ],
+      [
+        "20e18",
+        "That was the worst idea!",
+        0.46571,
+        0.53714
+      ],
+      [
+        "20n18",
+        "bad تتحول worst في التفضيل، مش baddest.",
+        0.53714,
+        0.65143
+      ],
+      [
+        "20e19",
+        "This park is bigger than that one.",
+        0.65143,
+        0.75143
+      ],
+      [
+        "20n19",
+        "big تتحول bigger في المقارنة.",
+        0.75143,
+        0.83714
+      ],
+      [
+        "20e20",
+        "Muscat is the biggest city in Oman.",
+        0.83714,
+        0.94
+      ],
+      [
+        "20n20",
+        "the biggest للتفضيل.",
+        0.94,
+        1
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "20e16",
+        "best",
+        "",
+        "mk-most",
+        0.14075
+      ],
+      [
+        "20e17",
+        "better",
+        "",
+        "mk-more",
+        0.33554
+      ],
+      [
+        "20e18",
+        "worst",
+        "",
+        "mk-most",
+        0.5044
+      ],
+      [
+        "20e19",
+        "bigger",
+        "er",
+        "mk-er",
+        0.68966
+      ],
+      [
+        "20e20",
+        "biggest",
+        "est",
+        "mk-est",
+        0.87828
+      ]
+    ]
+  },
+  {
+    "label": "18 · خطأ شائع",
+    "script": "خطأ شائع: more مع القصيرة.\nMy mum is more short than me.\nغلط! قولوا:\nMy mum is shorter than me.\nوأنا كتبت more short في الواجب مرة، والصف ما رحمني من الضحك.",
+    "duration": 18.36,
+    "audio": "06.mp3",
+    "blocks": [
+      {
+        "id": "s6p1-e",
+        "label": "",
+        "kind": "en",
+        "wrong": true
+      },
+      {
+        "id": "s6p3-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s6p4-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s6p1-e",
+        "My mum is more short than me.",
+        0.09907,
+        0.35769
+      ],
+      [
+        "s6p3-e",
+        "My mum is shorter than me.",
+        0.48851,
+        0.64922
+      ],
+      [
+        "s6p4-e",
+        "more short",
+        0.72186,
+        0.80624
+      ]
+    ],
+    "wordMarks": [
+      [
+        "s6p3-e",
+        "shorter",
+        0.57196
+      ]
+    ]
+  },
+  {
+    "label": "19 · تدريب محلول: الشاذة (1–5)",
+    "script": "ونختم بعشرين تمرين محلول على الصفات الشاذة، خمسة خمسة.\nالتمرين الأول: This sandwich is ___ than that one.\nالاختيارات: best, good, better.\nالإجابة: better. good شاذة: في المقارنة نقول better.\nالتمرين الثاني: He is the ___ singer in the show.\nالاختيارات: best, better, good.\nالإجابة: best. التفضيل من good هو the best.\nالتمرين الثالث: My drawing is ___ than before.\nالاختيارات: gooder, better, best.\nالإجابة: better. مفيش كلمة gooder! good تتحول better.\nالتمرين الرابع: She is the ___ student in maths.\nالاختيارات: better, most good, best.\nالإجابة: best. most good غلط: التفضيل من good هو the best.\nالتمرين الخامس: My headache is ___ today.\nالاختيارات: worse, worst, badder.\nالإجابة: worse. bad شاذة: في المقارنة worse، ومفيش badder.",
+    "duration": 112.992,
+    "audio": "21.mp3",
+    "blocks": [
+      {
+        "id": "21q1",
+        "label": "تمرين 1",
+        "kind": "en"
+      },
+      {
+        "id": "21o1",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1614274,
+        "answer": "better"
+      },
+      {
+        "id": "21a1",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "21q2",
+        "label": "تمرين 2",
+        "kind": "en"
+      },
+      {
+        "id": "21o2",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3517063,
+        "answer": "best"
+      },
+      {
+        "id": "21a2",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "21q3",
+        "label": "تمرين 3",
+        "kind": "en"
+      },
+      {
+        "id": "21o3",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5359671,
+        "answer": "better"
+      },
+      {
+        "id": "21a3",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "21q4",
+        "label": "تمرين 4",
+        "kind": "en"
+      },
+      {
+        "id": "21o4",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7255381,
+        "answer": "best"
+      },
+      {
+        "id": "21a4",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "21q5",
+        "label": "تمرين 5",
+        "kind": "en"
+      },
+      {
+        "id": "21o5",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9328094,
+        "answer": "worse"
+      },
+      {
+        "id": "21a5",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "21q1",
+        "This sandwich is ___ than that one.",
+        0.0461865,
+        0.0898097
+      ],
+      [
+        "21o1",
+        "best  good  better",
+        0.0898097,
+        0.1171764
+      ],
+      [
+        "21a1",
+        "better. good شاذة: في المقارنة نقول better.",
+        0.1614274,
+        0.2180685
+      ],
+      [
+        "21q2",
+        "He is the ___ singer in the show.",
+        0.2224936,
+        0.2743024
+      ],
+      [
+        "21o2",
+        "best  better  good",
+        0.2743024,
+        0.3074554
+      ],
+      [
+        "21a2",
+        "best. التفضيل من good هو the best.",
+        0.3517063,
+        0.4023294
+      ],
+      [
+        "21q3",
+        "My drawing is ___ than before.",
+        0.4067545,
+        0.4560555
+      ],
+      [
+        "21o3",
+        "gooder  better  best",
+        0.4560555,
+        0.4917162
+      ],
+      [
+        "21a3",
+        "better. مفيش كلمة gooder! good تتحول better.",
+        0.5359671,
+        0.5915463
+      ],
+      [
+        "21q4",
+        "She is the ___ student in maths.",
+        0.5959714,
+        0.6445792
+      ],
+      [
+        "21o4",
+        "better  most good  best",
+        0.6445792,
+        0.6812872
+      ],
+      [
+        "21a4",
+        "best. most good غلط: التفضيل من good هو the best.",
+        0.7255381,
+        0.7927995
+      ],
+      [
+        "21q5",
+        "My headache is ___ today.",
+        0.7972246,
+        0.8477011
+      ],
+      [
+        "21o5",
+        "worse  worst  badder",
+        0.8477011,
+        0.8885585
+      ],
+      [
+        "21a5",
+        "worse. bad شاذة: في المقارنة worse، ومفيش badder.",
+        0.9328094,
+        0.9951147
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "21a1",
+        "better",
+        "",
+        "mk-ans",
+        0.1770503
+      ],
+      [
+        "21a2",
+        "best",
+        "",
+        "mk-ans",
+        0.3685274
+      ],
+      [
+        "21a3",
+        "better",
+        "",
+        "mk-ans",
+        0.551015
+      ],
+      [
+        "21a4",
+        "best",
+        "",
+        "mk-ans",
+        0.7422055
+      ],
+      [
+        "21a5",
+        "worse",
+        "",
+        "mk-ans",
+        0.9482487
+      ]
+    ]
+  },
+  {
+    "label": "20 · تدريب محلول: الشاذة (6–10)",
+    "script": "نكمل التدريب المحلول على الصفات الشاذة.\nالتمرين السادس: That was the ___ day of the week!\nالاختيارات: worse, worst, baddest.\nالإجابة: worst. التفضيل من bad هو the worst.\nالتمرين السابع: His handwriting is ___ than mine.\nالاختيارات: worst, bad, worse.\nالإجابة: worse. مع than نستخدم المقارنة: worse.\nالتمرين الثامن: It is the ___ film this year.\nالاختيارات: worst, worse, more bad.\nالإجابة: worst. more bad غلط: التفضيل هو the worst.\nالتمرين التاسع: My room is ___ than my sister's room.\nالاختيارات: tidiest, tidier, tidy.\nالإجابة: tidier. tidy نقلب الـ y إلى i ونضيف er.\nالتمرين العاشر: This is the ___ classroom in the school.\nالاختيارات: tidier, tidy, tidiest.\nالإجابة: tidiest. التفضيل: the tidiest مع the.",
+    "duration": 117.12,
+    "audio": "22.mp3",
+    "blocks": [
+      {
+        "id": "22q6",
+        "label": "تمرين 6",
+        "kind": "en"
+      },
+      {
+        "id": "22o6",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1612022,
+        "answer": "worst"
+      },
+      {
+        "id": "22a6",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "22q7",
+        "label": "تمرين 7",
+        "kind": "en"
+      },
+      {
+        "id": "22o7",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3457992,
+        "answer": "worse"
+      },
+      {
+        "id": "22a7",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "22q8",
+        "label": "تمرين 8",
+        "kind": "en"
+      },
+      {
+        "id": "22o8",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5385929,
+        "answer": "worst"
+      },
+      {
+        "id": "22a8",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "22q9",
+        "label": "تمرين 9",
+        "kind": "en"
+      },
+      {
+        "id": "22o9",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7334358,
+        "answer": "tidier"
+      },
+      {
+        "id": "22a9",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "22q10",
+        "label": "تمرين 10",
+        "kind": "en"
+      },
+      {
+        "id": "22o10",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9450137,
+        "answer": "tidiest"
+      },
+      {
+        "id": "22a10",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "22q6",
+        "That was the ___ day of the week!",
+        0.0372765,
+        0.085063
+      ],
+      [
+        "22o6",
+        "worse  worst  baddest",
+        0.085063,
+        0.1185109
+      ],
+      [
+        "22a6",
+        "worst. التفضيل من bad هو the worst.",
+        0.1612022,
+        0.2052596
+      ],
+      [
+        "22q7",
+        "His handwriting is ___ than mine.",
+        0.2095287,
+        0.267298
+      ],
+      [
+        "22o7",
+        "worst  bad  worse",
+        0.267298,
+        0.3031079
+      ],
+      [
+        "22a7",
+        "worse. مع than نستخدم المقارنة: worse.",
+        0.3457992,
+        0.3936134
+      ],
+      [
+        "22q8",
+        "It is the ___ film this year.",
+        0.3978825,
+        0.4528667
+      ],
+      [
+        "22o8",
+        "worst  worse  more bad",
+        0.4528667,
+        0.4959016
+      ],
+      [
+        "22a8",
+        "worst. more bad غلط: التفضيل هو the worst.",
+        0.5385929,
+        0.5905055
+      ],
+      [
+        "22q9",
+        "My room is ___ than my sister's room.",
+        0.5947746,
+        0.6530003
+      ],
+      [
+        "22o9",
+        "tidiest  tidier  tidy",
+        0.6530003,
+        0.6907445
+      ],
+      [
+        "22a9",
+        "tidier. tidy نقلب الـ y إلى i ونضيف er.",
+        0.7334358,
+        0.7945697
+      ],
+      [
+        "22q10",
+        "This is the ___ classroom in the school.",
+        0.7988388,
+        0.8629498
+      ],
+      [
+        "22o10",
+        "tidier  tidy  tidiest",
+        0.8629498,
+        0.9023224
+      ],
+      [
+        "22a10",
+        "tidiest. التفضيل: the tidiest مع the.",
+        0.9450137,
+        0.9952186
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "22a6",
+        "worst",
+        "",
+        "mk-ans",
+        0.1750851
+      ],
+      [
+        "22a7",
+        "worse",
+        "",
+        "mk-ans",
+        0.3599245
+      ],
+      [
+        "22a8",
+        "worst",
+        "",
+        "mk-ans",
+        0.5527496
+      ],
+      [
+        "22a9",
+        "tidier",
+        "",
+        "mk-ans",
+        0.7511276
+      ],
+      [
+        "22a10",
+        "tidiest",
+        "",
+        "mk-ans",
+        0.9601607
+      ]
+    ]
+  },
+  {
+    "label": "21 · تدريب محلول: الشاذة (11–15)",
+    "script": "نكمل التدريب المحلول على الصفات الشاذة.\nالحادي عشر: This bag is ___ than that bag.\nالاختيارات: bigger, biggest, big.\nالإجابة: bigger. big نضاعف الـ g ونضيف er.\nالثاني عشر: The blue whale is the ___ animal on Earth.\nالاختيارات: bigger, biggest, most big.\nالإجابة: biggest. most big غلط: التفضيل هو the biggest.\nالثالث عشر: My house is ___ than yours.\nالاختيارات: biggest, big, bigger.\nالإجابة: bigger. مقارنة بين اثنين: bigger than.\nالرابع عشر: This is the ___ burger in town!\nالاختيارات: biggest, bigger, big.\nالإجابة: biggest. التفضيل على الكل: the biggest.\nالخامس عشر: Her cooking is ___ than my cooking.\nالاختيارات: best, better, good.\nالإجابة: better. good في المقارنة: better than.",
+    "duration": 109.152,
+    "audio": "23.mp3",
+    "blocks": [
+      {
+        "id": "23q11",
+        "label": "تمرين 11",
+        "kind": "en"
+      },
+      {
+        "id": "23o11",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1813984,
+        "answer": "bigger"
+      },
+      {
+        "id": "23a11",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "23q12",
+        "label": "تمرين 12",
+        "kind": "en"
+      },
+      {
+        "id": "23o12",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3809367,
+        "answer": "biggest"
+      },
+      {
+        "id": "23a12",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "23q13",
+        "label": "تمرين 13",
+        "kind": "en"
+      },
+      {
+        "id": "23o13",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5775432,
+        "answer": "bigger"
+      },
+      {
+        "id": "23a13",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "23q14",
+        "label": "تمرين 14",
+        "kind": "en"
+      },
+      {
+        "id": "23o14",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7642554,
+        "answer": "biggest"
+      },
+      {
+        "id": "23a14",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "23q15",
+        "label": "تمرين 15",
+        "kind": "en"
+      },
+      {
+        "id": "23o15",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9502345,
+        "answer": "better"
+      },
+      {
+        "id": "23a15",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "23q11",
+        "This bag is ___ than that bag.",
+        0.0455845,
+        0.0958436
+      ],
+      [
+        "23o11",
+        "bigger  biggest  big",
+        0.0958436,
+        0.1355907
+      ],
+      [
+        "23a11",
+        "bigger. big نضاعف الـ g ونضيف er.",
+        0.1813984,
+        0.2323366
+      ],
+      [
+        "23q12",
+        "The blue whale is the ___ animal on Earth.",
+        0.2369173,
+        0.2943806
+      ],
+      [
+        "23o12",
+        "bigger  biggest  most big",
+        0.2943806,
+        0.335129
+      ],
+      [
+        "23a12",
+        "biggest. most big غلط: التفضيل هو the biggest.",
+        0.3809367,
+        0.4395705
+      ],
+      [
+        "23q13",
+        "My house is ___ than yours.",
+        0.4441513,
+        0.4914957
+      ],
+      [
+        "23o13",
+        "biggest  big  bigger",
+        0.4914957,
+        0.5317356
+      ],
+      [
+        "23a13",
+        "bigger. مقارنة بين اثنين: bigger than.",
+        0.5775432,
+        0.6240838
+      ],
+      [
+        "23q14",
+        "This is the ___ burger in town!",
+        0.6286646,
+        0.6793127
+      ],
+      [
+        "23o14",
+        "biggest  bigger  big",
+        0.6793127,
+        0.7184477
+      ],
+      [
+        "23a14",
+        "biggest. التفضيل على الكل: the biggest.",
+        0.7642554,
+        0.8181252
+      ],
+      [
+        "23q15",
+        "Her cooking is ___ than my cooking.",
+        0.822706,
+        0.8717371
+      ],
+      [
+        "23o15",
+        "best  better  good",
+        0.8717371,
+        0.9044269
+      ],
+      [
+        "23a15",
+        "better. good في المقارنة: better than.",
+        0.9502345,
+        0.9949428
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "23a11",
+        "bigger",
+        "",
+        "mk-ans",
+        0.1976518
+      ],
+      [
+        "23a12",
+        "biggest",
+        "",
+        "mk-ans",
+        0.3953006
+      ],
+      [
+        "23a13",
+        "bigger",
+        "",
+        "mk-ans",
+        0.5908462
+      ],
+      [
+        "23a14",
+        "biggest",
+        "",
+        "mk-ans",
+        0.7793385
+      ],
+      [
+        "23a15",
+        "better",
+        "",
+        "mk-ans",
+        0.9630138
+      ]
+    ]
+  },
+  {
+    "label": "22 · تدريب محلول: الشاذة (16–20)",
+    "script": "نكمل التدريب المحلول على الصفات الشاذة.\nالسادس عشر: Friday is the ___ day for our family.\nالاختيارات: better, good, best.\nالإجابة: best. التفضيل: the best.\nالسابع عشر: The traffic today is ___ than yesterday.\nالاختيارات: worse, worst, bad.\nالإجابة: worse. bad في المقارنة: worse than.\nالثامن عشر: That was the ___ mistake in the test.\nالاختيارات: worse, worst, bad.\nالإجابة: worst. التفضيل من bad: the worst.\nالتاسع عشر: My notebook is ___ than his.\nالاختيارات: tidiest, more tidy, tidier.\nالإجابة: tidier. more tidy غلط: tidy تتحول tidier.\nالعشرون: Our garden is the ___ on our street.\nالاختيارات: biggest, bigger, most big.\nالإجابة: biggest. التفضيل من big: the biggest.",
+    "duration": 109.512,
+    "audio": "24.mp3",
+    "blocks": [
+      {
+        "id": "24q16",
+        "label": "تمرين 16",
+        "kind": "en"
+      },
+      {
+        "id": "24o16",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1713054,
+        "answer": "best"
+      },
+      {
+        "id": "24a16",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "24q17",
+        "label": "تمرين 17",
+        "kind": "en"
+      },
+      {
+        "id": "24o17",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3647089,
+        "answer": "worse"
+      },
+      {
+        "id": "24a17",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "24q18",
+        "label": "تمرين 18",
+        "kind": "en"
+      },
+      {
+        "id": "24o18",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5482504,
+        "answer": "worst"
+      },
+      {
+        "id": "24a18",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "24q19",
+        "label": "تمرين 19",
+        "kind": "en"
+      },
+      {
+        "id": "24o19",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7584557,
+        "answer": "tidier"
+      },
+      {
+        "id": "24a19",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "24q20",
+        "label": "تمرين 20",
+        "kind": "en"
+      },
+      {
+        "id": "24o20",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9496676,
+        "answer": "biggest"
+      },
+      {
+        "id": "24a20",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "24q16",
+        "Friday is the ___ day for our family.",
+        0.0405011,
+        0.0924185
+      ],
+      [
+        "24o16",
+        "better  good  best",
+        0.0924185,
+        0.1256483
+      ],
+      [
+        "24a16",
+        "best. التفضيل: the best.",
+        0.1713054,
+        0.2217109
+      ],
+      [
+        "24q17",
+        "The traffic today is ___ than yesterday.",
+        0.2262766,
+        0.284814
+      ],
+      [
+        "24o17",
+        "worse  worst  bad",
+        0.284814,
+        0.3190518
+      ],
+      [
+        "24a17",
+        "worse. bad في المقارنة: worse than.",
+        0.3647089,
+        0.4143838
+      ],
+      [
+        "24q18",
+        "That was the ___ mistake in the test.",
+        0.4189495,
+        0.4705806
+      ],
+      [
+        "24o18",
+        "worse  worst  bad",
+        0.4705806,
+        0.5025933
+      ],
+      [
+        "24a18",
+        "worst. التفضيل من bad: the worst.",
+        0.5482504,
+        0.5982906
+      ],
+      [
+        "24q19",
+        "My notebook is ___ than his.",
+        0.6028563,
+        0.6585024
+      ],
+      [
+        "24o19",
+        "tidiest  more tidy  tidier",
+        0.6585024,
+        0.7127986
+      ],
+      [
+        "24a19",
+        "tidier. more tidy غلط: tidy تتحول tidier.",
+        0.7584557,
+        0.8201841
+      ],
+      [
+        "24q20",
+        "Our garden is the ___ on our street.",
+        0.8247498,
+        0.8676417
+      ],
+      [
+        "24o20",
+        "biggest  bigger  most big",
+        0.8676417,
+        0.9040105
+      ],
+      [
+        "24a20",
+        "biggest. التفضيل من big: the biggest.",
+        0.9496676,
+        0.9949595
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "24a16",
+        "best",
+        "",
+        "mk-ans",
+        0.1912325
+      ],
+      [
+        "24a17",
+        "worse",
+        "",
+        "mk-ans",
+        0.3795439
+      ],
+      [
+        "24a18",
+        "worst",
+        "",
+        "mk-ans",
+        0.5638904
+      ],
+      [
+        "24a19",
+        "tidier",
+        "",
+        "mk-ans",
+        0.7747236
+      ],
+      [
+        "24a20",
+        "biggest",
+        "",
+        "mk-ans",
+        0.9626193
+      ]
+    ]
+  },
+  {
+    "label": "23 · الخلاصة",
+    "script": "نلخص درس اليوم.\nالقصيرة تاخذ er و est، والطويلة تاخذ more و most.\nMy mum is shorter than me.\nShe's the shortest person in our family!\nمع السلامة.",
+    "duration": 19.24,
+    "audio": "08.mp3",
+    "blocks": [
+      {
+        "id": "s8p2-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s8p3-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s8p2-e",
+        "My mum is shorter than me.",
+        0.36382,
+        0.54561
+      ],
+      [
+        "s8p3-e",
+        "She's the shortest person in our family!",
+        0.59379,
+        0.89803
+      ]
+    ],
+    "wordMarks": [
+      [
+        "s8p2-e",
+        "shorter",
+        0.45821
+      ],
+      [
+        "s8p3-e",
+        "shortest",
+        0.70027
+      ]
+    ]
+  }
 ]

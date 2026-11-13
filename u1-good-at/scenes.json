@@ -1,42 +1,1424 @@
 [
- {
-  "script": "أهلًا بكم، أنا شموسة. درسنا اليوم: be good at.\nbe good at.\nنعبر عن الشي اللي نتقنه ونزين فيه.\nبالبلدي: شنو تزين فيه.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "good at وبعدها فعل بـ ing.\nI'm good at baking cakes.\nأزين خبز الكيك.\nبعد at يجي فعل بـ ing دائمًا.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "والنفي بـ not.\nI'm not very good at making pizza.\nما أزين صنع البيتزا وايد.\nI'm not good at baking!\nما أزين الخبز!",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "والسؤال بنقل be للأول.\nAre you good at washing a car?\nهل تزين غسل السيارة؟\nAre you good at counting cats?\nهل تزين عدّ القطط؟",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "ومع he و she نستخدم is.\nHe's really good at hockey.\nهو وايد زين في الهوكي.\nShe's good at painting.\nهي تزين الرسم.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "خطأ شائع: الفعل بدون ing.\nI'm good at bake cakes.\nغلط! بعد at فعل بـ ing:\nI'm good at baking cakes.\nوأنا كنت أنسى الـ ing لين كتبتها غلط في بطاقة معايدة.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "تدريب: كوّنوا الجملة.\nHe's really good at hockey.\nزين + هوكي.\nI'm not very good at making pizza.\nمو زين + بيتزا.",
-  "wordMarks": [],
-  "duration": 30
- },
- {
-  "script": "نلخص درس اليوم.\nbe good at مع ing للأشياء اللي نتقنها.\nI'm good at baking cakes.\nEveryone's good at something!\nكل واحد يزين في شي!\nمع السلامة.",
-  "wordMarks": [],
-  "duration": 30
- }
+  {
+    "label": "1 · الفكرة: إيه اللي إنت جيد فيه؟",
+    "script": "أهلًا بكم، أنا شموسة. درسنا اليوم: be good at.\nbe good at.\nنعبّر عن الشيء اللي نتقنه ونكون جيدين فيه.\nببساطة: إيه اللي إنت جيد فيه؟",
+    "duration": 14.256,
+    "audio": "01.mp3",
+    "blocks": [
+      {
+        "id": "s1p0-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s1p1-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s1p0-e",
+        "be good at.",
+        0.3219,
+        0.40069
+      ],
+      [
+        "s1p1-e",
+        "be good at.",
+        0.43437,
+        0.54205
+      ]
+    ],
+    "wordMarks": []
+  },
+  {
+    "label": "2 · أولًا: فعل be — am / is / are",
+    "script": "قبل ما نبدأ، نفتكر فعل be.\nمع I بنقول am.\nI am.\nومع he و she و it بنقول is.\nHe is, she is, it is.\nومع you و we و they بنقول are.\nYou are, we are, they are.\nنشوفهم في جمل من درسنا:\nI am good at drawing.\nHe is good at swimming.\nThey are good at football.\nيللا نكمل.",
+    "duration": 36.7,
+    "audio": "00.mp3",
+    "blocks": [
+      {
+        "id": "be1",
+        "label": "مع I",
+        "kind": "en"
+      },
+      {
+        "id": "be2",
+        "label": "مع he / she / it",
+        "kind": "en"
+      },
+      {
+        "id": "be3",
+        "label": "مع you / we / they",
+        "kind": "en"
+      },
+      {
+        "id": "be4",
+        "label": "أمثلة من الدرس",
+        "kind": "en"
+      },
+      {
+        "id": "be5",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "be6",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "be1",
+        "I am",
+        0.16351,
+        0.20438
+      ],
+      [
+        "be2",
+        "He is · She is · It is",
+        0.32701,
+        0.43601
+      ],
+      [
+        "be3",
+        "You are · We are · They are",
+        0.51777,
+        0.62677
+      ],
+      [
+        "be4",
+        "I am good at drawing.",
+        0.70852,
+        0.80935
+      ],
+      [
+        "be5",
+        "He is good at swimming.",
+        0.81753,
+        0.88566
+      ],
+      [
+        "be6",
+        "They are good at football.",
+        0.89928,
+        0.97286
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "be1",
+        "am",
+        "",
+        "mk-be",
+        0.17986
+      ],
+      [
+        "be2",
+        "is",
+        "",
+        "mk-be",
+        0.37061
+      ],
+      [
+        "be3",
+        "are",
+        "",
+        "mk-be",
+        0.56137
+      ],
+      [
+        "be4",
+        "am",
+        "",
+        "mk-be",
+        0.74885
+      ],
+      [
+        "be4",
+        "good at",
+        "",
+        "mk-than",
+        0.74885
+      ],
+      [
+        "be5",
+        "is",
+        "",
+        "mk-be",
+        0.84478
+      ],
+      [
+        "be5",
+        "good at",
+        "",
+        "mk-than",
+        0.84478
+      ],
+      [
+        "be6",
+        "are",
+        "",
+        "mk-be",
+        0.92871
+      ],
+      [
+        "be6",
+        "good at",
+        "",
+        "mk-than",
+        0.92871
+      ]
+    ]
+  },
+  {
+    "label": "3 · good at مع ing",
+    "script": "good at وبعدها فعل بـ ing.\nI'm good at baking cakes.\nأنا جيد في خَبز الكيك.\nبعد at يجي فعل بـ ing دائمًا.",
+    "duration": 15.56,
+    "audio": "02.mp3",
+    "blocks": [
+      {
+        "id": "s2p0-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s2p1-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s2p0-e",
+        "good at",
+        0.02375,
+        0.05554
+      ],
+      [
+        "s2p1-e",
+        "I'm good at baking cakes.",
+        0.13376,
+        0.28116
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s2p0-e",
+        "good at",
+        "",
+        "mk-than",
+        0.02
+      ],
+      [
+        "s2p1-e",
+        "good at",
+        "",
+        "mk-than",
+        0.35
+      ],
+      [
+        "s2p1-e",
+        "baking",
+        "ing",
+        "mk-er",
+        0.45
+      ]
+    ]
+  },
+  {
+    "label": "4 · النفي",
+    "script": "والنفي بـ not.\nI'm not very good at making pizza.\nمش جيد في عمل البيتزا قوي.\nI'm not good at baking!\nمش جيد في الخَبز!",
+    "duration": 13.32,
+    "audio": "03.mp3",
+    "blocks": [
+      {
+        "id": "s3p1-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s3p3-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s3p1-e",
+        "I'm not very good at making pizza.",
+        0.18988,
+        0.39441
+      ],
+      [
+        "s3p3-e",
+        "I'm not good at baking!",
+        0.68951,
+        0.83031
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s3p1-e",
+        "good at",
+        "",
+        "mk-than",
+        0.25
+      ],
+      [
+        "s3p1-e",
+        "making",
+        "ing",
+        "mk-er",
+        0.4
+      ],
+      [
+        "s3p3-e",
+        "good at",
+        "",
+        "mk-than",
+        0.6
+      ],
+      [
+        "s3p3-e",
+        "baking",
+        "ing",
+        "mk-er",
+        0.75
+      ]
+    ]
+  },
+  {
+    "label": "5 · السؤال",
+    "script": "والسؤال بنقل be للأول.\nAre you good at washing a car?\nهل أنت جيد في غسل السيارة؟\nAre you good at counting cats?\nهل أنت جيد في عدّ القطط؟",
+    "duration": 15.68,
+    "audio": "04.mp3",
+    "blocks": [
+      {
+        "id": "s4p1-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s4p3-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s4p1-e",
+        "Are you good at washing a car?",
+        0.26648,
+        0.40855
+      ],
+      [
+        "s4p3-e",
+        "Are you good at counting cats?",
+        0.6574,
+        0.8053
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s4p1-e",
+        "good at",
+        "",
+        "mk-than",
+        0.2
+      ],
+      [
+        "s4p1-e",
+        "washing",
+        "ing",
+        "mk-er",
+        0.35
+      ],
+      [
+        "s4p3-e",
+        "good at",
+        "",
+        "mk-than",
+        0.65
+      ],
+      [
+        "s4p3-e",
+        "counting",
+        "ing",
+        "mk-er",
+        0.8
+      ]
+    ]
+  },
+  {
+    "label": "6 · he و she مع is",
+    "script": "ومع he و she نستخدم is.\nHe's really good at hockey.\nهو جيد جدًا في الهوكي.\nShe's good at painting.\nهي جيدة في الرسم.",
+    "duration": 13.52,
+    "audio": "05.mp3",
+    "blocks": [
+      {
+        "id": "s5p1-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s5p3-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s5p1-e",
+        "He's really good at hockey.",
+        0.33157,
+        0.47549
+      ],
+      [
+        "s5p3-e",
+        "She's good at painting.",
+        0.70807,
+        0.83018
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s5p1-e",
+        "good at",
+        "",
+        "mk-than",
+        0.3
+      ],
+      [
+        "s5p3-e",
+        "good at",
+        "",
+        "mk-than",
+        0.65
+      ],
+      [
+        "s5p3-e",
+        "painting",
+        "ing",
+        "mk-er",
+        0.8
+      ]
+    ]
+  },
+  {
+    "label": "7 · خطأ شائع",
+    "script": "خطأ شائع: الفعل بدون ing.\nI'm good at bake cakes.\nغلط! بعد at فعل بـ ing:\nI'm good at baking cakes.\nوأنا كنت أنسى الـ ing لحد ما كتبتها غلط في بطاقة معايدة.",
+    "duration": 19.48,
+    "audio": "06.mp3",
+    "blocks": [
+      {
+        "id": "s6p1-e",
+        "label": "",
+        "kind": "en",
+        "wrong": true
+      },
+      {
+        "id": "s6p3-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s6p1-e",
+        "I'm good at bake cakes.",
+        0.2226,
+        0.41756
+      ],
+      [
+        "s6p3-e",
+        "I'm good at baking cakes.",
+        0.527,
+        0.75287
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s6p3-e",
+        "good at",
+        "",
+        "mk-than",
+        0.55
+      ],
+      [
+        "s6p3-e",
+        "baking",
+        "ing",
+        "mk-er",
+        0.65
+      ]
+    ]
+  },
+  {
+    "label": "8 · تدريب محلول: be good at (1–5)",
+    "script": "دلوقتي نحل عشرة تمارين اختيارية على be good at مع الفعل بـ ing، خمسة خمسة.\nالتمرين الأول: I'm good at ___ cakes.\nالاختيارات: baking, bake, baked.\nالإجابة: baking. بعد at لازم فعل بـ ing.\nالتمرين الثاني: She is good at ___.\nالاختيارات: paint, painting, paints.\nالإجابة: painting. بعد at فعل بـ ing: painting.\nالتمرين الثالث: He's really good at ___ hockey.\nالاختيارات: play, played, playing.\nالإجابة: playing. بعد at فعل بـ ing: playing.\nالتمرين الرابع: Are you good at ___ a car?\nالاختيارات: washing, wash, washed.\nالإجابة: washing. في السؤال be الأول، وبرضه بعد at فعل بـ ing.\nالتمرين الخامس: I'm not good at ___ pizza.\nالاختيارات: make, making, made.\nالإجابة: making. النفي بـ not، والقاعدة ثابتة: بعد at فعل بـ ing.",
+    "duration": 114.6,
+    "audio": "09.mp3",
+    "blocks": [
+      {
+        "id": "09q1",
+        "label": "تمرين 1",
+        "kind": "en"
+      },
+      {
+        "id": "09o1",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.2020942,
+        "answer": "baking"
+      },
+      {
+        "id": "09a1",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "09q2",
+        "label": "تمرين 2",
+        "kind": "en"
+      },
+      {
+        "id": "09o2",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3771379,
+        "answer": "painting"
+      },
+      {
+        "id": "09a2",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "09q3",
+        "label": "تمرين 3",
+        "kind": "en"
+      },
+      {
+        "id": "09o3",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5633508,
+        "answer": "playing"
+      },
+      {
+        "id": "09a3",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "09q4",
+        "label": "تمرين 4",
+        "kind": "en"
+      },
+      {
+        "id": "09o4",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7411867,
+        "answer": "washing"
+      },
+      {
+        "id": "09a4",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "09q5",
+        "label": "تمرين 5",
+        "kind": "en"
+      },
+      {
+        "id": "09o5",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9253054,
+        "answer": "making"
+      },
+      {
+        "id": "09a5",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "09q1",
+        "I'm good at ___ cakes.",
+        0.0808682,
+        0.1224008
+      ],
+      [
+        "09o1",
+        "baking  bake  baked",
+        0.1224008,
+        0.1584642
+      ],
+      [
+        "09a1",
+        "baking. بعد at لازم فعل بـ ing.",
+        0.2020942,
+        0.2457243
+      ],
+      [
+        "09q2",
+        "She is good at ___.",
+        0.2500873,
+        0.2912272
+      ],
+      [
+        "09o2",
+        "paint  painting  paints",
+        0.2912272,
+        0.3335079
+      ],
+      [
+        "09a2",
+        "painting. بعد at فعل بـ ing: painting.",
+        0.3771379,
+        0.4333333
+      ],
+      [
+        "09q3",
+        "He's really good at ___ hockey.",
+        0.4376963,
+        0.48513
+      ],
+      [
+        "09o3",
+        "play  played  playing",
+        0.48513,
+        0.5197208
+      ],
+      [
+        "09a3",
+        "playing. بعد at فعل بـ ing: playing.",
+        0.5633508,
+        0.6111693
+      ],
+      [
+        "09q4",
+        "Are you good at ___ a car?",
+        0.6155323,
+        0.6607499
+      ],
+      [
+        "09o4",
+        "washing  wash  washed",
+        0.6607499,
+        0.6975567
+      ],
+      [
+        "09a4",
+        "washing. في السؤال be الأول، وبرضه بعد at فعل بـ ing.",
+        0.7411867,
+        0.7984293
+      ],
+      [
+        "09q5",
+        "I'm not good at ___ pizza.",
+        0.8027923,
+        0.8480183
+      ],
+      [
+        "09o5",
+        "make  making  made",
+        0.8480183,
+        0.8816754
+      ],
+      [
+        "09a5",
+        "making. النفي بـ not، والقاعدة ثابتة: بعد at فعل بـ ing.",
+        0.9253054,
+        0.9951134
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "09a1",
+        "baking",
+        "",
+        "mk-ans",
+        0.2173762
+      ],
+      [
+        "09a2",
+        "painting",
+        "",
+        "mk-ans",
+        0.3939477
+      ],
+      [
+        "09a3",
+        "playing",
+        "",
+        "mk-ans",
+        0.57828
+      ],
+      [
+        "09a4",
+        "washing",
+        "",
+        "mk-ans",
+        0.754235
+      ],
+      [
+        "09a5",
+        "making",
+        "",
+        "mk-ans",
+        0.9404942
+      ]
+    ]
+  },
+  {
+    "label": "9 · تدريب محلول: be good at (6–10)",
+    "script": "نكمل التمارين على be good at.\nالتمرين السادس: They are good at ___ football.\nالاختيارات: play, plays, playing.\nالإجابة: playing. بعد at فعل بـ ing: playing.\nالتمرين السابع: We ___ good at drawing.\nالاختيارات: are, is, am.\nالإجابة: are. مع we نستخدم are: We are good at.\nالتمرين الثامن: He ___ good at swimming.\nالاختيارات: are, is, am.\nالإجابة: is. مع he نستخدم is: He is good at.\nالتمرين التاسع: I ___ good at counting.\nالاختيارات: is, are, am.\nالإجابة: am. مع I نستخدم am: I am good at.\nالتمرين العاشر: She ___ not good at running.\nالاختيارات: is, are, am.\nالإجابة: is. مع she نستخدم is، والنفي بـ not بعدها.",
+    "duration": 112.392,
+    "audio": "10.mp3",
+    "blocks": [
+      {
+        "id": "10q6",
+        "label": "تمرين 6",
+        "kind": "en"
+      },
+      {
+        "id": "10o6",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.155883,
+        "answer": "playing"
+      },
+      {
+        "id": "10a6",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "10q7",
+        "label": "تمرين 7",
+        "kind": "en"
+      },
+      {
+        "id": "10o7",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3553634,
+        "answer": "are"
+      },
+      {
+        "id": "10a7",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "10q8",
+        "label": "تمرين 8",
+        "kind": "en"
+      },
+      {
+        "id": "10o8",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5523525,
+        "answer": "is"
+      },
+      {
+        "id": "10a8",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "10q9",
+        "label": "تمرين 9",
+        "kind": "en"
+      },
+      {
+        "id": "10o9",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7472062,
+        "answer": "am"
+      },
+      {
+        "id": "10a9",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "10q10",
+        "label": "تمرين 10",
+        "kind": "en"
+      },
+      {
+        "id": "10o10",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9441953,
+        "answer": "is"
+      },
+      {
+        "id": "10a10",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "10q6",
+        "They are good at ___ football.",
+        0.0293671,
+        0.0769634
+      ],
+      [
+        "10o6",
+        "play  plays  playing",
+        0.0769634,
+        0.1113958
+      ],
+      [
+        "10a6",
+        "playing. بعد at فعل بـ ing: playing.",
+        0.155883,
+        0.2081999
+      ],
+      [
+        "10q7",
+        "We ___ good at drawing.",
+        0.2126486,
+        0.2730914
+      ],
+      [
+        "10o7",
+        "are  is  am",
+        0.2730914,
+        0.3108762
+      ],
+      [
+        "10a7",
+        "are. مع we نستخدم are: We are good at.",
+        0.3553634,
+        0.4073244
+      ],
+      [
+        "10q8",
+        "He ___ good at swimming.",
+        0.4117731,
+        0.471471
+      ],
+      [
+        "10o8",
+        "are  is  am",
+        0.471471,
+        0.5078653
+      ],
+      [
+        "10a8",
+        "is. مع he نستخدم is: He is good at.",
+        0.5523525,
+        0.6021781
+      ],
+      [
+        "10q9",
+        "I ___ good at counting.",
+        0.6066268,
+        0.6657557
+      ],
+      [
+        "10o9",
+        "is  are  am",
+        0.6657557,
+        0.7027191
+      ],
+      [
+        "10a9",
+        "am. مع I نستخدم am: I am good at.",
+        0.7472062,
+        0.8027262
+      ],
+      [
+        "10q10",
+        "She ___ not good at running.",
+        0.8071749,
+        0.8666622
+      ],
+      [
+        "10o10",
+        "is  are  am",
+        0.8666622,
+        0.8997082
+      ],
+      [
+        "10a10",
+        "is. مع she نستخدم is، والنفي بـ not بعدها.",
+        0.9441953,
+        0.9950886
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "10a6",
+        "playing",
+        "",
+        "mk-ans",
+        0.1697583
+      ],
+      [
+        "10a7",
+        "are",
+        "",
+        "mk-ans",
+        0.3685716
+      ],
+      [
+        "10a8",
+        "is",
+        "",
+        "mk-ans",
+        0.5658608
+      ],
+      [
+        "10a9",
+        "am",
+        "",
+        "mk-ans",
+        0.7629588
+      ],
+      [
+        "10a10",
+        "is",
+        "",
+        "mk-ans",
+        0.9561351
+      ]
+    ]
+  },
+  {
+    "label": "10 · تدريب محلول: be good at (11–15)",
+    "script": "نكمل التدريب على be good at، خمسة تمارين جديدة.\nالتمرين الحادي عشر: They ___ good at painting.\nالاختيارات: is, are, am.\nالإجابة: are. مع they نستخدم are: They are good at.\nالتمرين الثاني عشر: She is good at ___ pictures.\nالاختيارات: draw, drew, drawing.\nالإجابة: drawing. بعد at فعل بـ ing: drawing.\nالتمرين الثالث عشر: I ___ not good at swimming.\nالاختيارات: am, is, are.\nالإجابة: am. مع I نستخدم am، والنفي بـ not بعدها.\nالتمرين الرابع عشر: ___ you good at counting?\nالاختيارات: Is, Are, Am.\nالإجابة: Are. في السؤال بنبدأ بـ are مع you.\nالتمرين الخامس عشر: He is good at ___ hockey.\nالاختيارات: play, plays, playing.\nالإجابة: playing. بعد at فعل بـ ing: playing.",
+    "duration": 110.4,
+    "audio": "11.mp3",
+    "blocks": [
+      {
+        "id": "11q0",
+        "label": "تمرين 11",
+        "kind": "en"
+      },
+      {
+        "id": "11o0",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1681159,
+        "answer": "are"
+      },
+      {
+        "id": "11a0",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "11q1",
+        "label": "تمرين 12",
+        "kind": "en"
+      },
+      {
+        "id": "11o1",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.370471,
+        "answer": "drawing"
+      },
+      {
+        "id": "11a1",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "11q2",
+        "label": "تمرين 13",
+        "kind": "en"
+      },
+      {
+        "id": "11o2",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5778986,
+        "answer": "am"
+      },
+      {
+        "id": "11a2",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "11q3",
+        "label": "تمرين 14",
+        "kind": "en"
+      },
+      {
+        "id": "11o3",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7726449,
+        "answer": "Are"
+      },
+      {
+        "id": "11a3",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "11q4",
+        "label": "تمرين 15",
+        "kind": "en"
+      },
+      {
+        "id": "11o4",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.942029,
+        "answer": "playing"
+      },
+      {
+        "id": "11a4",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "11q0",
+        "They ___ good at painting.",
+        0.0495554,
+        0.0970545
+      ],
+      [
+        "11o0",
+        "is  are  am",
+        0.0980826,
+        0.1228261
+      ],
+      [
+        "11a0",
+        "are. مع they نستخدم are: They are good at.",
+        0.1681159,
+        0.2297101
+      ],
+      [
+        "11q1",
+        "She is good at ___ pictures.",
+        0.2342391,
+        0.2881335
+      ],
+      [
+        "11o1",
+        "draw  drew  drawing",
+        0.2892516,
+        0.3251812
+      ],
+      [
+        "11a1",
+        "drawing. بعد at فعل بـ ing: drawing.",
+        0.370471,
+        0.4291667
+      ],
+      [
+        "11q2",
+        "I ___ not good at swimming.",
+        0.4336957,
+        0.4982994
+      ],
+      [
+        "11o2",
+        "am  is  are",
+        0.4996681,
+        0.5326087
+      ],
+      [
+        "11a2",
+        "am. مع I نستخدم am، والنفي بـ not بعدها.",
+        0.5778986,
+        0.6384058
+      ],
+      [
+        "11q3",
+        "___ you good at counting?",
+        0.6429348,
+        0.6971878
+      ],
+      [
+        "11o3",
+        "Is  Are  Am",
+        0.6983881,
+        0.7273551
+      ],
+      [
+        "11a3",
+        "Are. في السؤال بنبدأ بـ are مع you.",
+        0.7726449,
+        0.8077899
+      ],
+      [
+        "11q4",
+        "He is good at ___ hockey.",
+        0.8123188,
+        0.8604171
+      ],
+      [
+        "11o4",
+        "play  plays  playing",
+        0.8614812,
+        0.8967391
+      ],
+      [
+        "11a4",
+        "playing. بعد at فعل بـ ing: playing.",
+        0.942029,
+        0.9949275
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "11a0",
+        "are",
+        "",
+        "mk-ans",
+        0.1835145
+      ],
+      [
+        "11a1",
+        "drawing",
+        "",
+        "mk-ans",
+        0.3851016
+      ],
+      [
+        "11a2",
+        "am",
+        "",
+        "mk-ans",
+        0.5929844
+      ],
+      [
+        "11a3",
+        "Are",
+        "",
+        "mk-ans",
+        0.7814577
+      ],
+      [
+        "11a4",
+        "playing",
+        "",
+        "mk-ans",
+        0.9552926
+      ]
+    ]
+  },
+  {
+    "label": "11 · تدريب محلول: be good at (16–20)",
+    "script": "وآخر خمسة تمارين.\nالتمرين السادس عشر: We ___ good at baking cakes.\nالاختيارات: are, is, am.\nالإجابة: are. مع we نستخدم are: We are good at.\nالتمرين السابع عشر: My brother is good at ___ cars.\nالاختيارات: wash, washing, washed.\nالإجابة: washing. بعد at فعل بـ ing: washing.\nالتمرين الثامن عشر: ___ she good at running?\nالاختيارات: Are, Am, Is.\nالإجابة: Is. مع she نستخدم is، وفي السؤال نبدأ بـ is.\nالتمرين التاسع عشر: They are not good at ___ pizza.\nالاختيارات: making, make, made.\nالإجابة: making. النفي بـ not، وبعد at فعل بـ ing.\nالتمرين العشرون: I am good at ___ cats.\nالاختيارات: count, counting, counts.\nالإجابة: counting. بعد at فعل بـ ing: counting.\nوبكده خلصنا عشرين تمرين على be good at.",
+    "duration": 111.84,
+    "audio": "12.mp3",
+    "blocks": [
+      {
+        "id": "12q0",
+        "label": "تمرين 16",
+        "kind": "en"
+      },
+      {
+        "id": "12o0",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.1423462,
+        "answer": "are"
+      },
+      {
+        "id": "12a0",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "12q1",
+        "label": "تمرين 17",
+        "kind": "en"
+      },
+      {
+        "id": "12o1",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.3445994,
+        "answer": "washing"
+      },
+      {
+        "id": "12a1",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "12q2",
+        "label": "تمرين 18",
+        "kind": "en"
+      },
+      {
+        "id": "12o2",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.5189557,
+        "answer": "Is"
+      },
+      {
+        "id": "12a2",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "12q3",
+        "label": "تمرين 19",
+        "kind": "en"
+      },
+      {
+        "id": "12o3",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.7265737,
+        "answer": "making"
+      },
+      {
+        "id": "12a3",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      },
+      {
+        "id": "12q4",
+        "label": "تمرين 20",
+        "kind": "en"
+      },
+      {
+        "id": "12o4",
+        "label": "",
+        "kind": "options",
+        "revealAt": 0.9152361,
+        "answer": "counting"
+      },
+      {
+        "id": "12a4",
+        "label": "الإجابة والسبب",
+        "kind": "answer"
+      }
+    ],
+    "cues": [
+      [
+        "12q0",
+        "We ___ good at baking cakes.",
+        0.0193486,
+        0.0708204
+      ],
+      [
+        "12o0",
+        "are  is  am",
+        0.0719409,
+        0.0976395
+      ],
+      [
+        "12a0",
+        "are. مع we نستخدم are: We are good at.",
+        0.1423462,
+        0.204578
+      ],
+      [
+        "12q1",
+        "My brother is good at ___ cars.",
+        0.2090486,
+        0.2629229
+      ],
+      [
+        "12o1",
+        "wash  washing  washed",
+        0.2640255,
+        0.2998927
+      ],
+      [
+        "12a1",
+        "washing. بعد at فعل بـ ing: washing.",
+        0.3445994,
+        0.3907368
+      ],
+      [
+        "12q2",
+        "___ she good at running?",
+        0.3952074,
+        0.4456441
+      ],
+      [
+        "12o2",
+        "Are  Am  Is",
+        0.4467596,
+        0.4742489
+      ],
+      [
+        "12a2",
+        "Is. مع she نستخدم is، وفي السؤال نبدأ بـ is.",
+        0.5189557,
+        0.5854793
+      ],
+      [
+        "12q3",
+        "They are not good at ___ pizza.",
+        0.5899499,
+        0.6464254
+      ],
+      [
+        "12o3",
+        "making  make  made",
+        0.6475041,
+        0.681867
+      ],
+      [
+        "12a3",
+        "making. النفي بـ not، وبعد at فعل بـ ing.",
+        0.7265737,
+        0.7841559
+      ],
+      [
+        "12q4",
+        "I am good at ___ cats.",
+        0.7886266,
+        0.830628
+      ],
+      [
+        "12o4",
+        "count  counting  counts",
+        0.8316781,
+        0.8705293
+      ],
+      [
+        "12a4",
+        "counting. بعد at فعل بـ ing: counting.",
+        0.9152361,
+        0.9949928
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "12a0",
+        "are",
+        "",
+        "mk-ans",
+        0.1579272
+      ],
+      [
+        "12a1",
+        "washing",
+        "",
+        "mk-ans",
+        0.3561516
+      ],
+      [
+        "12a2",
+        "Is",
+        "",
+        "mk-ans",
+        0.5356301
+      ],
+      [
+        "12a3",
+        "making",
+        "",
+        "mk-ans",
+        0.7410094
+      ],
+      [
+        "12a4",
+        "counting",
+        "",
+        "mk-ans",
+        0.9352048
+      ]
+    ]
+  },
+  {
+    "label": "12 · الخلاصة",
+    "script": "نلخص درس اليوم.\nbe good at مع ing للأشياء اللي نتقنها.\nI'm good at baking cakes.\nEveryone's good at something!\nكل واحد جيد في حاجة!\nمع السلامة.",
+    "duration": 16.92,
+    "audio": "08.mp3",
+    "blocks": [
+      {
+        "id": "s8p1-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s8p2-e",
+        "label": "",
+        "kind": "en"
+      },
+      {
+        "id": "s8p3-e",
+        "label": "",
+        "kind": "en"
+      }
+    ],
+    "cues": [
+      [
+        "s8p1-e",
+        "be good at",
+        0.3406,
+        0.37198
+      ],
+      [
+        "s8p2-e",
+        "I'm good at baking cakes.",
+        0.47082,
+        0.62238
+      ],
+      [
+        "s8p3-e",
+        "Everyone's good at something!",
+        0.68239,
+        0.77089
+      ]
+    ],
+    "wordMarks": [],
+    "colorMarks": [
+      [
+        "s8p2-e",
+        "good at",
+        "",
+        "mk-than",
+        0.35
+      ],
+      [
+        "s8p2-e",
+        "baking",
+        "ing",
+        "mk-er",
+        0.5
+      ],
+      [
+        "s8p3-e",
+        "good at",
+        "",
+        "mk-than",
+        0.75
+      ]
+    ]
+  }
 ]
