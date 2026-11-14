@@ -3,6 +3,7 @@
   var VIDEO = "https://youtu.be/bceKEeW0B_Y"; // Part 1 (final)
   var PARTS = [
     ["المواصفات", "https://youtu.be/zNuVLQyXtCE"],
+    ["الجزء 1", "https://youtu.be/bceKEeW0B_Y"],
     ["الجزء 2", "https://youtu.be/gzHRWOAM7_8"],
     ["الجزء 3", "https://youtu.be/uq6_nptEFwM"],
     ["الجزء 4", "https://youtu.be/SlQuniEdnrM"]
