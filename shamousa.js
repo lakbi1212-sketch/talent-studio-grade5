@@ -16,7 +16,9 @@
   btn.rel = "noopener";
   btn.setAttribute("aria-label", "Grade 5 exam solution video");
   btn.innerHTML = "\ud83c\udfac \u062d\u0644 \u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u062e\u0627\u0645\u0633<small dir=\"ltr\">Grade 5 exam solution \u00b7 Shamousa</small>";
-  document.body.appendChild(btn);
+  var homeHeader = document.querySelector(".tiles") && document.querySelector("header");
+  if (homeHeader && homeHeader.parentNode) { homeHeader.parentNode.insertBefore(btn, homeHeader.nextSibling); }
+  else { document.body.appendChild(btn); }
 })();
 
 // © 2026 Mohamed Mostafa Al Shorbagy — Shamousa · SHM-2026-ITQAN-90f132
