@@ -28,6 +28,7 @@ function revClass(ok){return ok?'ok':'no'}
 function render(){var i=step,s=STEPS[i];var d=E('<div></div>');var bk=E('<button class="back">&larr; Home</button>');bk.onclick=function(){window.home()};d.appendChild(bk);
 if(s==='end'){return end(d)}
 d.appendChild(E('<div>'+head(i)+'</div>'));
+d.appendChild(E('<a href="https://youtu.be/Y1jQ5NcwUeE" target="_blank" rel="noopener" lang="ar" dir="rtl" style="display:block;text-align:center;background:linear-gradient(135deg,#e84393,#e17055);color:#fff;font-weight:800;font-size:16px;padding:10px 14px;border-radius:999px;border:3px solid #fff;box-shadow:0 4px 0 #b03060,0 6px 12px rgba(0,0,0,.25);text-decoration:none;margin:10px 0">\ud83c\udfac \u062d\u0644 \u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u062e\u0627\u0645\u0633<small dir="ltr" style="display:block;font-size:11px;font-weight:700">Grade 5 exam solution \u00b7 Shamousa</small></a>'));
 if(s==='l1'){d.appendChild(E('<div class="sm">You will hear five short dialogues about a school talent show. For each one, tap the picture that matches. Listen as many times as you need. Take your time.</div>'));
  var intro=E('<div></div>');aud('ex_l1_intro',intro);d.appendChild(intro);
  var L=['A','B','C','D','E','F'];for(var k=0;k<5;k++)(function(k){var q=E('<div class="xq"><b>'+(k+1)+'. '+L1T[k]+'</b></div>');var a=E('<div style="margin:8px 0"></div>');aud('ex_l1_'+(k+1),a);q.appendChild(a);q.appendChild(pickRow('l1'+k,L.map(function(l){return {v:l,i:'L1'+l}}),1));d.appendChild(q)})(k)}
