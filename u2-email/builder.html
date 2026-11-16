@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ابنِ إيميلك | درس كتابة الإيميل | الصف الخامس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Naskh Arabic',Tahoma,sans-serif;background:#f4f8fa;color:#17324f;line-height:1.8;min-height:100vh}
+.wrap{max-width:760px;margin:0 auto;padding:16px}
+.lesson-nav{display:flex;justify-content:space-between;gap:10px;max-width:760px;margin:14px auto 0;padding:0 16px;flex-wrap:wrap}
+.lesson-nav a{display:inline-block;padding:12px;background:#e3f2f4;border-radius:8px;color:#17324f;text-decoration:none;font-weight:700;min-height:44px}
+h1{font-size:24px;color:#1b3866;margin:14px 0 4px}
+.sub{color:#4a6076;font-size:16px;margin-bottom:16px}
+.card{background:#fff;border-radius:16px;padding:18px;margin:14px 0;border:2px solid #d5e2eb}
+.row{margin:12px 0}
+.row label{display:block;font-weight:800;color:#1b3866;font-size:17px;margin-bottom:6px}
+.row .en-hint{display:block;direction:ltr;text-align:left;font-weight:400;font-size:14px;color:#4a6076}
+select{width:100%;font-family:'Patrick Hand',cursive;font-size:19px;direction:ltr;text-align:left;padding:12px;border:2px solid #b8cdd8;border-radius:10px;background:#fbfdfe;color:#17324f;min-height:48px}
+select:focus{outline:3px solid #098391;outline-offset:2px}
+.preview{background:#fffef7;border:2px dashed #c9b458;border-radius:14px;padding:20px;direction:ltr;text-align:left;font-family:'Patrick Hand',cursive;font-size:21px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;min-height:200px}
+.counter{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:17px;font-weight:700}
+.counter .bar{flex:1;height:14px;background:#e3eef3;border-radius:8px;overflow:hidden}
+.counter .fill{height:100%;background:#098391;width:0%;transition:width .3s}
+.counter .fill.done{background:#2e9e5b}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.actions button{flex:1;min-width:150px;font:inherit;font-weight:800;font-size:18px;padding:14px;border:none;border-radius:12px;cursor:pointer;min-height:54px}
+.btn-save{background:#098391;color:#fff}
+.btn-print{background:#1b3866;color:#fff}
+.btn-save:hover,.btn-print:hover{filter:brightness(1.1)}
+.credit{max-width:760px;margin:18px auto;padding:0 16px;font-size:13px;color:#6a7f8f;text-align:center;direction:ltr}
+canvas{display:none}
+@media(max-width:400px){h1{font-size:21px}.actions button{font-size:16px;min-height:50px}.preview{font-size:19px}}
+@media print{body{background:#fff}.lesson-nav,.card.pick,.actions,.counter,.credit{display:none}.preview{border:none;font-size:22px}}
+</style>
+</head>
+<body>
+<nav class="lesson-nav"><a href="./">← درس كتابة الإيميل</a><a href="../unit2.html">الوحدة الثانية</a></nav>
+<main class="wrap">
+<h1>✍️ ابنِ إيميلك</h1>
+<p class="sub">اختر جملة لكل جزء، وشاهد إيميلك يكتمل أمامك. المطلوب في الاختبار: 40 كلمة على الأقل.</p>
+
+<div class="card pick">
+<div class="row"><label>١ · التحية<span class="en-hint">greeting</span></label>
+<select id="greet">
+<option>Dear Ali,</option>
+<option>Dear Alia,</option>
+<option>Hi Ali,</option>
+<option>Hello Alia,</option>
+</select></div>
+
+<div class="row"><label>٢ · جملة البداية<span class="en-hint">opening sentence</span></label>
+<select id="open">
+<option>How are you? I hope you are fine. I want to tell you about my trip.</option>
+<option>I hope you are well. Last week, I went on a great trip.</option>
+<option>Thank you for your email. I want to tell you about a wonderful trip.</option>
+<option>Guess what! I went on an amazing trip last Friday.</option>
+</select></div>
+
+<div class="row"><label>٣ · متى وأين ذهبت؟<span class="en-hint">when and where did you go?</span></label>
+<select id="b1">
+<option>Last Friday, I went to the National Museum in Muscat with my class.</option>
+<option>On Thursday morning, I visited the Natural History Museum with my family.</option>
+<option>Yesterday, my class went on a school trip to a big museum in the city.</option>
+</select></div>
+
+<div class="row"><label>٤ · ما المميز في المكان؟<span class="en-hint">what was special about it?</span></label>
+<select id="b2">
+<option>The museum was very big and full of interesting things.</option>
+<option>It was a beautiful place with many old and rare objects.</option>
+<option>The building was amazing, and everything inside was special.</option>
+</select></div>
+
+<div class="row"><label>٥ · ماذا رأيت وفعلت هناك؟<span class="en-hint">what could you see and do there?</span></label>
+<select id="b3">
+<option>I could see old boats, swords and traditional clothes. I also watched a short film about the sea.</option>
+<option>We saw gold jewellery and old coins. Then we drew pictures of our favourite things.</option>
+<option>There were rooms about Omani life in the past. I took many photos with my friends.</option>
+</select></div>
+
+<div class="row"><label>٦ · ماذا تعلمت؟<span class="en-hint">what did you learn?</span></label>
+<select id="b4">
+<option>I learned a lot about the history of my country.</option>
+<option>I learned how people lived many years ago.</option>
+<option>I learned many new things about ships and fishing.</option>
+</select></div>
+
+<div class="row"><label>٧ · الختام<span class="en-hint">closing</span></label>
+<select id="close">
+<option>Love,</option>
+<option>Best wishes,</option>
+<option>Your friend,</option>
+<option>See you soon,</option>
+</select></div>
+
+<div class="row"><label>٨ · اسمك<span class="en-hint">your name (Sami or Asma in the exam)</span></label>
+<select id="name">
+<option>Sami</option>
+<option>Asma</option>
+</select></div>
+</div>
+
+<div class="card">
+<label style="font-weight:800;color:#1b3866;font-size:17px">إيميلك جاهز ✉️</label>
+<div class="preview" id="pv" aria-live="polite"></div>
+<div class="counter"><span id="wc">0 كلمة</span><div class="bar"><div class="fill" id="fill"></div></div><span id="goal">الهدف: 40+</span></div>
+</div>
+
+<div class="actions">
+<button class="btn-save" id="saveBtn">💾 احفظ إيميلي كصورة</button>
+<button class="btn-print" id="printBtn">🖨️ اطبع إيميلي</button>
+</div>
+<canvas id="cv" width="1000" height="1200"></canvas>
+</main>
+<div class="credit">Prepared by: Mohamed Mostafa Al Shorbagy<br>Regional Supervisor, Wusta Governorate</div>
+<script>
+const ids=['greet','open','b1','b2','b3','b4','close','name'];
+const parts=()=>ids.map(i=>document.getElementById(i).value);
+function emailText(){
+  const p=parts();
+  return p[0]+'\n\n'+p[1]+' '+p[2]+' '+p[3]+' '+p[4]+' '+p[5]+'\n\n'+p[6]+'\n'+p[7];
+}
+function words(){return emailText().split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).length}
+function render(){
+  document.getElementById('pv').textContent=emailText();
+  const w=words(),f=document.getElementById('fill');
+  document.getElementById('wc').textContent=w+(w===1?' كلمة':' كلمة');
+  f.style.width=Math.min(100,Math.round(w/40*100))+'%';
+  f.classList.toggle('done',w>=40);
+  document.getElementById('goal').textContent=w>=40?'ممتاز! 40+ ✓':'الهدف: 40+';
+}
+ids.forEach(i=>document.getElementById(i).addEventListener('change',render));
+render();
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+document.getElementById('saveBtn').addEventListener('click',()=>{
+  const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+  ctx.fillStyle='#fffef7';ctx.fillRect(0,0,cv.width,cv.height);
+  ctx.strokeStyle='#c9b458';ctx.lineWidth=4;ctx.strokeRect(20,20,cv.width-40,cv.height-40);
+  ctx.fillStyle='#17324f';ctx.direction='ltr';ctx.textAlign='left';
+  ctx.font='34px "Patrick Hand", cursive';
+  const x=70;let y=110;const maxW=cv.width-140;
+  function wrap(line){
+    if(!line){y+=52;return}
+    const ws=line.split(' ');let cur='';
+    for(const w of ws){
+      const t=cur?cur+' '+w:w;
+      if(ctx.measureText(t).width>maxW&&cur){ctx.fillText(cur,x,y);y+=52;cur=w}
+      else cur=t;
+    }
+    if(cur){ctx.fillText(cur,x,y);y+=52}
+  }
+  emailText().split('\n').forEach(wrap);
+  const a=document.createElement('a');
+  a.download='my-email.png';
+  a.href=cv.toDataURL('image/png');
+  a.click();
+});
+</script>
+</body>
+</html>
