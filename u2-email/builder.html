@@ -32,6 +32,12 @@ select:focus{outline:3px solid #098391;outline-offset:2px}
 .btn-print{background:#1b3866;color:#fff}
 .btn-save:hover,.btn-print:hover{filter:brightness(1.1)}
 .credit{max-width:760px;margin:18px auto;padding:0 16px;font-size:13px;color:#6a7f8f;text-align:center;direction:ltr}
+
+.row.part{border-right:5px solid var(--pc);padding-right:10px}
+.row.part label{color:var(--pc)}
+.pv-greet{color:#0e7c86}.pv-open{color:#1b3866}.pv-body{color:#237a57}.pv-close{color:#c2610a}.pv-name{color:#8e4585}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+.legend span{font-size:13px;font-weight:700;color:#fff;border-radius:8px;padding:3px 10px}
 canvas{display:none}
 @media(max-width:400px){h1{font-size:21px}.actions button{font-size:16px;min-height:50px}.preview{font-size:19px}}
 @media print{body{background:#fff}.lesson-nav,.card.pick,.actions,.counter,.credit{display:none}.preview{border:none;font-size:22px}}
@@ -52,7 +58,7 @@ canvas{display:none}
 </div>
 
 <div class="card pick">
-<div class="row"><label>١ · التحية<span class="en-hint">greeting</span></label>
+<div class="row part" style="--pc:#0e7c86"><label>١ · التحية<span class="en-hint">greeting</span></label>
 <select id="greet">
 <option>Dear Ali,</option>
 <option>Dear Alia,</option>
@@ -60,7 +66,7 @@ canvas{display:none}
 <option>Hello Alia,</option>
 </select></div>
 
-<div class="row"><label>٢ · جملة البداية<span class="en-hint">opening sentence</span></label>
+<div class="row part" style="--pc:#1b3866"><label>٢ · جملة البداية<span class="en-hint">opening sentence</span></label>
 <select id="open">
 <option>How are you? I hope you are fine. I want to tell you about my trip.</option>
 <option>I hope you are well. Last week, I went on a great trip.</option>
@@ -68,12 +74,12 @@ canvas{display:none}
 <option>Guess what! I went on an amazing trip last Friday.</option>
 </select></div>
 
-<div class="row"><label id="lb1">٣</label><select id="b1"></select></div>
-<div class="row"><label id="lb2">٤</label><select id="b2"></select></div>
-<div class="row"><label id="lb3">٥</label><select id="b3"></select></div>
-<div class="row"><label id="lb4">٦</label><select id="b4"></select></div>
+<div class="row part" style="--pc:#237a57"><label id="lb{i}">٣</label><select id="b1"></select></div>
+<div class="row part" style="--pc:#237a57"><label id="lb{i}">٤</label><select id="b2"></select></div>
+<div class="row part" style="--pc:#237a57"><label id="lb{i}">٥</label><select id="b3"></select></div>
+<div class="row part" style="--pc:#237a57"><label id="lb{i}">٦</label><select id="b4"></select></div>
 
-<div class="row"><label>٧ · الختام<span class="en-hint">closing</span></label>
+<div class="row part" style="--pc:#c2610a"><label>٧ · الختام<span class="en-hint">closing</span></label>
 <select id="close">
 <option>Love,</option>
 <option>Best wishes,</option>
@@ -81,7 +87,7 @@ canvas{display:none}
 <option>See you soon,</option>
 </select></div>
 
-<div class="row"><label>٨ · اسمك<span class="en-hint">your name (Sami or Asma in the exam)</span></label>
+<div class="row part" style="--pc:#8e4585"><label>٨ · اسمك<span class="en-hint">your name (Sami or Asma in the exam)</span></label>
 <select id="name">
 <option>Sami</option>
 <option>Asma</option>
@@ -89,7 +95,7 @@ canvas{display:none}
 </div>
 
 <div class="card">
-<label style="font-weight:800;color:#1b3866;font-size:17px">إيميلك جاهز ✉️</label>
+<label style="font-weight:800;color:#1b3866;font-size:17px">إيميلك جاهز ✉️</label><div class="legend"><span style="background:#0e7c86">التحية</span><span style="background:#1b3866">البداية</span><span style="background:#237a57">الجسم</span><span style="background:#c2610a">الختام</span><span style="background:#8e4585">الاسم</span></div>
 <div class="preview" id="pv" aria-live="polite"></div>
 <div class="counter"><span id="wc">0 كلمة</span><div class="bar"><div class="fill" id="fill"></div></div><span id="goal">الهدف: 40+</span></div>
 </div>
@@ -126,7 +132,12 @@ function emailText(){
 }
 function words(){return emailText().split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).length}
 function render(){
-  document.getElementById('pv').textContent=emailText();
+  const p=parts();
+  document.getElementById('pv').innerHTML=
+    '<div class="pv-greet">'+p[0]+'</div><br>'+
+    '<div><span class="pv-open">'+p[1]+'</span> <span class="pv-body">'+p[2]+' '+p[3]+' '+p[4]+' '+p[5]+'</span></div><br>'+
+    '<div class="pv-close">'+p[6]+'</div>'+
+    '<div class="pv-name">'+p[7]+'</div>';
   const w=words(),f=document.getElementById('fill');
   document.getElementById('wc').textContent=w+' كلمة';
   f.style.width=Math.min(100,Math.round(w/40*100))+'%';
@@ -140,20 +151,23 @@ document.getElementById('saveBtn').addEventListener('click',()=>{
   const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
   ctx.fillStyle='#fffef7';ctx.fillRect(0,0,cv.width,cv.height);
   ctx.strokeStyle='#c9b458';ctx.lineWidth=4;ctx.strokeRect(20,20,cv.width-40,cv.height-40);
-  ctx.fillStyle='#17324f';ctx.direction='ltr';ctx.textAlign='left';
+  ctx.direction='ltr';ctx.textAlign='left';
   ctx.font='34px "Patrick Hand", cursive';
   const x=70;let y=110;const maxW=cv.width-140;
-  function wrap(line){
-    if(!line){y+=52;return}
-    const ws=line.split(' ');let cur='';
+  const p=parts();
+  const C={greet:'#0e7c86',open:'#1b3866',body:'#237a57',close:'#c2610a',name:'#8e4585'};
+  const segs=[[p[0],C.greet],[p[1],C.open],[p[2]+' '+p[3]+' '+p[4]+' '+p[5],C.body],[p[6],C.close],[p[7],C.name]];
+  segs.forEach(([txt,color],si)=>{
+    ctx.fillStyle=color;
+    const ws=txt.split(' ');let cur='';
     for(const w of ws){
       const t=cur?cur+' '+w:w;
       if(ctx.measureText(t).width>maxW&&cur){ctx.fillText(cur,x,y);y+=52;cur=w}
       else cur=t;
     }
     if(cur){ctx.fillText(cur,x,y);y+=52}
-  }
-  emailText().split('\n').forEach(wrap);
+    if(si===0||si===2)y+=28; // blank line after greeting and body
+  });
   const a=document.createElement('a');
   a.download='my-email.png';
   a.href=cv.toDataURL('image/png');
