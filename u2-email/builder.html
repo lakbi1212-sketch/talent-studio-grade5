@@ -42,7 +42,7 @@ canvas{display:none}
 @media(max-width:400px){h1{font-size:21px}.actions button{font-size:16px;min-height:50px}.preview{font-size:19px}}
 @media print{body{background:#fff}.lesson-nav,.card.pick,.actions,.counter,.credit{display:none}.preview{border:none;font-size:22px}}
 </style>
-<style>.taskq{color:#b42318;font-style:italic;font-weight:700}</style><style>.topic{background:#ffef9e;color:#7a4d00;font-weight:800;padding:0 3px;border-radius:5px}.topic-note{font-size:13px;color:#7a4d00;margin-top:4px}</style></head>
+<style>.taskq{color:#b42318;font-style:italic;font-weight:700}</style><style>.topic{background:#ffef9e;color:#7a4d00;font-weight:800;padding:0 3px;border-radius:5px}.topic-note{font-size:13px;color:#7a4d00;margin-top:4px}</style><style>select,.preview,#sit,.en-hint{font-style:italic}</style></head>
 <body>
 <nav class="lesson-nav"><a href="./">← درس كتابة الإيميل</a><a href="../unit2.html">الوحدة الثانية</a></nav>
 <main class="wrap">
@@ -152,7 +152,7 @@ document.getElementById('saveBtn').addEventListener('click',()=>{
   ctx.fillStyle='#fffef7';ctx.fillRect(0,0,cv.width,cv.height);
   ctx.strokeStyle='#c9b458';ctx.lineWidth=4;ctx.strokeRect(20,20,cv.width-40,cv.height-40);
   ctx.direction='ltr';ctx.textAlign='left';
-  ctx.font='34px "Patrick Hand", cursive';
+  ctx.font='italic 34px "Patrick Hand", cursive';
   const x=70;let y=110;const maxW=cv.width-140;
   const p=parts();
   const C={greet:'#0e7c86',open:'#1b3866',body:'#237a57',close:'#c2610a',name:'#8e4585'};
