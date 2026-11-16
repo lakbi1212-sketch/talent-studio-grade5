@@ -58,6 +58,22 @@ canvas{display:none}
 @media(max-width:400px){.opt{font-size:17px;line-height:1.5}.st-num{width:40px;height:40px;font-size:21px}.st-name{font-size:17px}}
 @media print{.stations-card{display:none}}
 </style>
+<style>
+.selfrev{background:#fff9e3;border:2px solid #b58900;border-radius:16px;padding:16px;margin:14px 0}
+.selfrev .st-head{margin-bottom:4px}
+.selfrev .st-num{background:#b58900}
+.selfrev .st-name{color:#8a6d00}
+.chk{display:flex;align-items:center;gap:12px;width:100%;text-align:right;background:#fff;border:2px solid #e3d489;border-radius:12px;padding:12px 14px;margin:8px 0;cursor:pointer;font-family:inherit;font-size:17px;font-weight:700;color:#17324f;line-height:1.6;min-height:48px}
+.chk .box{flex:0 0 auto;width:26px;height:26px;border:3px solid #c9b458;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;transition:all .15s}
+.chk.on{border-color:#2e9e5b;background:#eef9f1}
+.chk.on .box{background:#2e9e5b;border-color:#2e9e5b}
+.chk.auto{cursor:default;background:#f7f3e2}
+.chk:focus-visible{outline:3px solid #098391;outline-offset:2px}
+.sr-count{font-weight:800;color:#8a6d00;margin-top:6px}
+.sr-done{display:none;margin-top:8px;background:#2e9e5b;color:#fff;border-radius:10px;padding:10px 14px;font-weight:800;text-align:center}
+.selfrev.alldone .sr-done{display:block}
+@media print{.selfrev{display:none}}
+</style>
 </head>
 <body>
 <nav class="lesson-nav"><a href="./">← درس كتابة الإيميل</a><a href="../unit2.html">الوحدة الثانية</a></nav>
@@ -88,6 +104,19 @@ canvas{display:none}
 <label style="font-weight:800;color:#1b3866;font-size:17px">إيميلك جاهز ✉️</label><div class="legend"><button type="button" class="lpart" data-part="pv-greet" style="background:#0e7c86">التحية</button><button type="button" class="lpart" data-part="pv-open" style="background:#1b3866">البداية</button><button type="button" class="lpart" data-part="pv-body" style="background:#237a57">الجسم</button><button type="button" class="lpart" data-part="pv-close" style="background:#c2610a">الختام</button><button type="button" class="lpart" data-part="pv-name" style="background:#8e4585">الاسم</button></div>
 <div class="preview" id="pv" aria-live="polite"></div>
 <div class="counter"><span id="wc">0 كلمة</span><div class="bar"><div class="fill" id="fill"></div></div><span id="goal">الهدف: 40+</span></div>
+</div>
+
+<div class="card selfrev" id="selfrev">
+<div class="st-head"><span class="st-num">✅</span><span class="st-ic">🔍</span><div><div class="st-name">راجِع بنفسك قبل الحفظ</div><div class="st-en">self review — tap each line when true</div></div></div>
+<button type="button" class="chk" data-k="greet"><span class="box">✓</span>بدأت إيميلي بالتحية: <span dir="ltr">Dear …,</span></button>
+<button type="button" class="chk" data-k="open"><span class="box">✓</span>جملة البداية فيها موضوع الإيميل نفسه (أخذته من عنوان المهمة بعد <span dir="ltr">about</span>)</button>
+<button type="button" class="chk" data-k="points"><span class="box">✓</span>غطّيت النقاط الأربع المطلوبة كلها، بجملة أو جملتين لكل نقطة</button>
+<button type="button" class="chk" data-k="verbs"><span class="box">✓</span>أفعالي في الزمن الصحيح (ماضٍ بسيط لحدث انتهى)</button>
+<button type="button" class="chk" data-k="close"><span class="box">✓</span>ختمت بـ <span dir="ltr">Best wishes,</span> ثم اسمي في سطر لوحده</button>
+<button type="button" class="chk" data-k="punct"><span class="box">✓</span>راجعت الإملاء، وحرفًا كبيرًا في أول كل جملة، ونقطة في آخرها</button>
+<button type="button" class="chk auto" data-k="words" aria-live="polite"><span class="box">✓</span>إيميلي 40 كلمة أو أكثر — العدد الآن: <b id="sr-wc">0</b> كلمة (تُعلَّم تلقائيًا)</button>
+<div class="sr-count" id="sr-count">راجعت 0 من 7</div>
+<div class="sr-done">ممتاز! راجعت كل شيء — إيميلك جاهز للحفظ 🎉</div>
 </div>
 
 <div class="actions">
@@ -171,6 +200,28 @@ document.querySelectorAll('.lpart').forEach(b=>b.addEventListener('click',()=>{
 }));
 buildOpts('greet',GREET);buildOpts('close',CLOSE);buildOpts('name',NAME);
 fillUnits();fillTopics();fillTopic();
+const srBoxes=[...document.querySelectorAll('.chk')];
+const srState={};
+srBoxes.forEach(b=>{
+  if(b.classList.contains('auto'))return;
+  b.addEventListener('click',()=>{
+    const k=b.dataset.k;srState[k]=!srState[k];
+    b.classList.toggle('on',!!srState[k]);
+    srUpdate();
+  });
+});
+function srUpdate(){
+  const w=words();
+  document.getElementById('sr-wc').textContent=w;
+  const auto=document.querySelector('.chk.auto');
+  const autoOn=w>=40;auto.classList.toggle('on',autoOn);
+  const manual=srBoxes.filter(b=>!b.classList.contains('auto'));
+  const done=manual.filter(b=>srState[b.dataset.k]).length+(autoOn?1:0);
+  document.getElementById('sr-count').textContent='راجعت '+done+' من '+srBoxes.length;
+  document.getElementById('selfrev').classList.toggle('alldone',done===srBoxes.length);
+}
+const __origRender=render;
+render=function(){__origRender();srUpdate()};
 document.getElementById('printBtn').addEventListener('click',()=>window.print());
 document.getElementById('saveBtn').addEventListener('click',()=>{
   const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
