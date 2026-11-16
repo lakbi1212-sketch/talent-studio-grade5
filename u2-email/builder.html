@@ -222,6 +222,7 @@ function srUpdate(){
 }
 const __origRender=render;
 render=function(){__origRender();srUpdate()};
+srUpdate();
 document.getElementById('printBtn').addEventListener('click',()=>window.print());
 document.getElementById('saveBtn').addEventListener('click',()=>{
   const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
