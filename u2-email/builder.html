@@ -42,12 +42,28 @@ canvas{display:none}
 @media(max-width:400px){h1{font-size:21px}.actions button{font-size:16px;min-height:50px}.preview{font-size:19px}}
 @media print{body{background:#fff}.lesson-nav,.card.pick,.actions,.counter,.credit{display:none}.preview{border:none;font-size:22px}}
 </style>
-<style>.taskq{color:#b42318;font-style:italic;font-weight:700}</style><style>.topic{background:#ffef9e;color:#7a4d00;font-weight:800;padding:0 3px;border-radius:5px}.topic-note{font-size:13px;color:#7a4d00;margin-top:4px}</style><style>select,.preview,#sit,.en-hint{font-style:italic}</style><style>.legend button{border:0;cursor:pointer;min-height:36px;font-family:inherit}.preview.dim [class^="pv-"]{opacity:.22}.preview .lit{opacity:1!important;background:#fff3c4;border-radius:6px;padding:0 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}</style></head>
+<style>.taskq{color:#b42318;font-style:italic;font-weight:700}</style><style>.topic{background:#ffef9e;color:#7a4d00;font-weight:800;padding:0 3px;border-radius:5px}.topic-note{font-size:13px;color:#7a4d00;margin-top:4px}</style><style>select,.preview,#sit,.en-hint{font-style:italic}</style><style>.legend button{border:0;cursor:pointer;min-height:36px;font-family:inherit}.preview.dim [class^="pv-"]{opacity:.22}.preview .lit{opacity:1!important;background:#fff3c4;border-radius:6px;padding:0 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}</style><style>
+.station{background:var(--pt);border:2px solid var(--pc);border-radius:16px;padding:14px;margin:14px 0}
+.st-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.st-num{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--pc);color:#fff;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.st-ic{font-size:26px}
+.st-name{font-weight:800;color:var(--pc);font-size:18px;line-height:1.4}
+.st-en{direction:ltr;text-align:left;font-size:14px;color:#4a6076}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{position:relative;display:block;width:100%;text-align:left;direction:ltr;font-family:'Patrick Hand',cursive;font-style:italic;font-size:19px;line-height:1.55;background:#fff;border:2px solid #c7d6df;border-radius:12px;padding:12px 14px 12px 48px;cursor:pointer;color:#17324f;white-space:normal;overflow-wrap:anywhere;min-height:48px;font-family:'Patrick Hand',cursive}
+.opt::before{content:"";position:absolute;left:15px;top:16px;width:16px;height:16px;border:3px solid #b8cdd8;border-radius:50%;background:#fff;transition:all .15s}
+.opt.sel{border:3px solid var(--pc);padding:11px 13px 11px 47px}
+.opt.sel::before{background:var(--pc);border-color:var(--pc);box-shadow:inset 0 0 0 3px #fff}
+.opt:focus-visible{outline:3px solid #098391;outline-offset:2px}
+@media(max-width:400px){.opt{font-size:17px;line-height:1.5}.st-num{width:40px;height:40px;font-size:21px}.st-name{font-size:17px}}
+@media print{.stations-card{display:none}}
+</style>
+</head>
 <body>
 <nav class="lesson-nav"><a href="./">← درس كتابة الإيميل</a><a href="../unit2.html">الوحدة الثانية</a></nav>
 <main class="wrap">
 <h1>✍️ ابنِ إيميلك</h1>
-<p class="sub">اختر الوحدة ثم الموضوع المتوقع في الاختبار، وبعدها اختر جملة لكل جزء وشاهد إيميلك يكتمل. المطلوب: 40 كلمة على الأقل.</p>
+<p class="sub">اختر الوحدة ثم الموضوع المتوقع في الاختبار، وبعدها المس الجملة التي تريدها في كل جزء ملوّن وشاهد إيميلك يكتمل. المطلوب: 40 كلمة على الأقل.</p>
 
 <div class="card pick">
 <div class="row"><label>الوحدة<span class="en-hint">unit</span></label>
@@ -57,41 +73,15 @@ canvas{display:none}
 <p id="sit"></p>
 </div>
 
-<div class="card pick">
-<div class="row part" style="--pc:#0e7c86"><label>١ · التحية<span class="en-hint">greeting</span></label>
-<select id="greet">
-<option>Dear Ali,</option>
-<option>Dear Alia,</option>
-<option>Hi Ali,</option>
-<option>Hello Alia,</option>
-</select></div>
-
-<div class="row part" style="--pc:#1b3866"><label>٢ · جملة البداية<span class="en-hint">opening sentence</span></label>
-<select id="open">
-<option>How are you? I hope you and your family are fine. I am happy to write this email to you. I want to tell you about my wonderful trip.</option>
-<option>How are you doing, my dear friend? I am happy to write this email to you. I hope you are well and happy.</option>
-<option>I hope you are well and happy. I want to tell you about a wonderful trip.</option>
-<option>Guess what! I went on an amazing trip last Friday.</option>
-</select></div>
-
-<div class="row part" style="--pc:#237a57"><label id="lb1">٣</label><select id="b1"></select></div>
-<div class="row part" style="--pc:#237a57"><label id="lb2">٤</label><select id="b2"></select></div>
-<div class="row part" style="--pc:#237a57"><label id="lb3">٥</label><select id="b3"></select></div>
-<div class="row part" style="--pc:#237a57"><label id="lb4">٦</label><select id="b4"></select></div>
-
-<div class="row part" style="--pc:#c2610a"><label>٧ · الختام<span class="en-hint">closing</span></label>
-<select id="close">
-<option>Best wishes,</option>
-<option>Love,</option>
-<option>Your friend,</option>
-<option>See you soon,</option>
-</select></div>
-
-<div class="row part" style="--pc:#8e4585"><label>٨ · اسمك<span class="en-hint">your name (Sami or Asma in the exam)</span></label>
-<select id="name">
-<option>Sami</option>
-<option>Asma</option>
-</select></div>
+<div class="card pick stations-card">
+<div class="station" style="--pc:#0e7c86;--pt:#e6f4f5"><div class="st-head"><span class="st-num">١</span><span class="st-ic">👋</span><div><div class="st-name">التحية</div><div class="st-en">greeting</div></div></div><div class="opts" id="greet"></div></div>
+<div class="station" style="--pc:#1b3866;--pt:#e8edf5"><div class="st-head"><span class="st-num">٢</span><span class="st-ic">🌤️</span><div><div class="st-name">جملة البداية</div><div class="st-en">opening sentence</div></div></div><div class="opts" id="open"></div></div>
+<div class="station" style="--pc:#237a57;--pt:#e8f4ee"><div class="st-head"><span class="st-num" id="bn1">٣</span><span class="st-ic">📝</span><div><div class="st-name" id="lb1"></div><div class="st-en taskq" id="lq1"></div></div></div><div class="opts" id="b1"></div></div>
+<div class="station" style="--pc:#237a57;--pt:#e8f4ee"><div class="st-head"><span class="st-num" id="bn2">٤</span><span class="st-ic">📝</span><div><div class="st-name" id="lb2"></div><div class="st-en taskq" id="lq2"></div></div></div><div class="opts" id="b2"></div></div>
+<div class="station" style="--pc:#237a57;--pt:#e8f4ee"><div class="st-head"><span class="st-num" id="bn3">٥</span><span class="st-ic">📝</span><div><div class="st-name" id="lb3"></div><div class="st-en taskq" id="lq3"></div></div></div><div class="opts" id="b3"></div></div>
+<div class="station" style="--pc:#237a57;--pt:#e8f4ee"><div class="st-head"><span class="st-num" id="bn4">٦</span><span class="st-ic">📝</span><div><div class="st-name" id="lb4"></div><div class="st-en taskq" id="lq4"></div></div></div><div class="opts" id="b4"></div></div>
+<div class="station" style="--pc:#c2610a;--pt:#fdf1e3"><div class="st-head"><span class="st-num">٧</span><span class="st-ic">🤝</span><div><div class="st-name">الختام</div><div class="st-en">closing</div></div></div><div class="opts" id="close"></div></div>
+<div class="station" style="--pc:#8e4585;--pt:#f5e9f3"><div class="st-head"><span class="st-num">٨</span><span class="st-ic">✍️</span><div><div class="st-name">اسمك</div><div class="st-en">your name (Sami or Asma in the exam)</div></div></div><div class="opts" id="name"></div></div>
 </div>
 
 <div class="card">
@@ -111,22 +101,46 @@ canvas{display:none}
 const TOPICS={"1": {"name": "الوحدة الأولى · Talent show", "topics": [{"t": "عرض المواهب في المدرسة", "o": ["How are you? I hope you and your family are fine. I am happy to write this email to you. I want to tell you about our school talent show.", "How are you doing, my dear friend? I am happy to write this email to you. You missed a great show at school!"], "en": "A talent show at school", "sit": "Your friend could not come to the school talent show. Write an email to your friend and tell him/her about the show.", "p": [["متى كان العرض؟", "When was the show?"], ["ما المميز فيه؟", "What was special about it?"], ["ماذا رأيت وفعلت؟", "What could you see and do?"], ["ماذا تعلمت؟", "What did you learn?"]], "b": [["Last Friday, our school had a big talent show.", "On Thursday, we had a talent show in the school hall."], ["Many talented students were there. My friend Salim sang a beautiful song.", "The show was full of amazing acts."], ["I could see singers, dancers and a short play. I took many photos.", "One girl played the piano, and two boys told funny jokes."], ["I learned that everyone has a special talent. I had a great time.", "It was a wonderful day. I really enjoyed the show."]]}, {"t": "مسابقة الموسيقى", "o": ["How are you? I hope you are well and happy. I am happy to write this email to you. I want to tell you about the school music competition.", "How are you doing, my dear friend? I am happy to write this email to you. I have great news about the music competition."], "en": "A music competition", "sit": "Your friend was sick and missed the school music competition. Write an email to your friend and tell him/her about it.", "p": [["متى كانت المسابقة؟", "When was the competition?"], ["ما المميز فيها؟", "What was special about it?"], ["ماذا سمعت ورأيت؟", "What could you hear and see?"], ["ماذا تعلمت؟", "What did you learn?"]], "b": [["Yesterday, our school had a music competition.", "Last week, we had a big music competition at school."], ["Many students played music and sang. The hall was full of parents and teachers.", "It was a beautiful event with many talented students."], ["I could hear the oud, the piano and the guitar. Our class sang two songs.", "We watched ten students play different instruments."], ["I learned that practice makes talent grow. I had a great time.", "I really enjoyed the music and learned a lot."]]}, {"t": "يوم مميز في المدرسة", "o": ["How are you? I hope you and your family are fine. I am happy to write this email to you. I want to tell you about a special day at my school.", "How are you doing, my dear friend? I am happy to write this email to you. Wait till you hear about our school festival!"], "en": "A special school day", "sit": "Your school had a festival or a special day. Write an email to your pen friend in another country and tell him/her about it.", "p": [["متى كان اليوم المميز؟", "When was the special day?"], ["ما المميز فيه؟", "What was special about it?"], ["ماذا رأيت وفعلت؟", "What could you see and do?"], ["ماذا تعلمت؟", "What did you learn?"]], "b": [["Last Wednesday, our school had a wonderful festival.", "On Tuesday, we had a special day at school."], ["The school was full of colours, food and games. Everyone was happy.", "There were games, food stalls and music everywhere."], ["I could play games, eat traditional food and watch shows.", "We sang the national anthem and watched a play."], ["I learned a lot about working together. It was a day to remember.", "I will never forget this day."]]}]}, "2": {"name": "الوحدة الثانية · Then and now", "topics": [{"t": "رحلة إلى متحف", "o": ["How are you? I hope you and your family are fine. I am happy to write this email to you. I want to tell you about my wonderful trip to the museum.", "How are you doing, my dear friend? I am happy to write this email to you. I hope you are well and happy."], "en": "A trip to a museum", "sit": "Your name is Sami. Write an email to your friend Ali about a trip to a museum.", "p": [["متى وأين ذهبت؟", "When and where did you go?"], ["ما المميز في المكان؟", "What was special about it?"], ["ماذا رأيت وفعلت هناك؟", "What could you see and do there?"], ["ماذا تعلمت؟", "What did you learn?"]], "b": [["Last Friday, I went to the National Museum in Muscat with my class.", "On Thursday morning, I visited the Natural History Museum with my family.", "Yesterday, my class went on a school trip to a big museum in the city."], ["The museum was very big and full of interesting things.", "It was a beautiful place with many old and rare objects.", "The building was amazing, and everything inside was special."], ["I could see old boats, swords and traditional clothes. I also watched a short film about the sea.", "We saw gold jewellery and old coins. Then we drew pictures of our favourite things.", "There were rooms about Omani life in the past. I took many photos with my friends."], ["I learned a lot about the history of my country.", "I learned how people lived many years ago.", "I learned many new things about ships and fishing."]]}, {"t": "الحياة في الماضي", "o": ["How are you? I hope you and your family are fine. I am happy to write this email to you. I want to tell you about life in Oman in the past.", "How are you doing, my dear friend? I am happy to write this email to you. You asked about the past, so here it is!"], "en": "Life in Oman in the past", "sit": "Your cousin wants to know about life in Oman in the past. Write an email to him/her and describe how people lived then.", "p": [["كيف عاش الناس؟", "How did people live?"], ["ماذا كان عملهم؟", "What did they do?"], ["ماذا استخدموا؟", "What did they use?"], ["ماذا تعلمت؟", "What did you learn?"]], "b": [["Long ago, people in Oman lived in small villages near the sea or the mountains.", "In the past, people lived in simple houses made of mud and palm leaves."], ["Life was hard, but people worked together.", "People were farmers, fishermen and sailors."], ["They used dhows to travel and trade with other countries. They could fish, farm and make boats.", "They cooked on fire and carried water from wells."], ["I learned that our grandparents had a simple and strong life.", "Now I understand how life changed in Oman."]]}, {"t": "زيارة قرية تراثية", "o": ["How are you? I hope you are well and happy. I am happy to write this email to you. I want to tell you about my visit to a heritage village.", "How are you doing, my dear friend? I am happy to write this email to you. Last Friday was a very special day!"], "en": "A heritage village visit", "sit": "Your class visited a heritage village or a museum. Write an email to your cousin and tell him/her about the visit.", "p": [["متى وأين ذهبتم؟", "When and where did you go?"], ["ما المميز في المكان؟", "What was special about it?"], ["ماذا رأيت وفعلت؟", "What could you see and do?"], ["ماذا تعلمت؟", "What did you learn?"]], "b": [["Last Friday, my class visited a heritage village.", "On Thursday, we went on a school trip to an old village."], ["The village was old and beautiful, with small mud houses.", "It was a special place that shows life in the past."], ["I could see old tools, pots and clothes. We watched people make bread.", "There were small shops selling old crafts."], ["I learned how people lived many years ago. I had a great time.", "I learned a lot about our history."]]}]}, "3": {"name": "الوحدة الثالثة · Let's explore!", "topics": [{"t": "مكان جميل في بلادي", "o": ["How are you? I hope you and your family are fine. I am happy to write this email to you. I want to invite you on a wonderful trip.", "How are you doing, my dear friend? I am happy to write this email to you. I have an exciting plan for you!"], "en": "A beautiful place to explore", "sit": "Your class is planning a trip to explore a new place. Write an email to your friend inviting him/her to come with you.", "p": [["إلى أين ستذهبون؟", "Where will you go?"], ["ما المميز في المكان؟", "What is special about it?"], ["ماذا ستفعلون؟", "What will you see and do?"], ["ادعُ صديقك", "Invite your friend"]], "b": [["Next Friday, my class is going to Wadi Shab.", "We are going to visit Jebel Akhdar next week."], ["It is a beautiful place with green water and high mountains.", "The place is famous for its wonderful views."], ["We will swim, walk and take many photos.", "We are going to explore the valley and have a picnic."], ["I hope you can come with us. It will be a great day!", "Please join us. We will have a wonderful time together."]]}, {"t": "مغامرة في الطبيعة", "o": ["How are you? I hope you are well and happy. I am happy to write this email to you. I want to invite you on a fun trip in nature.", "How are you doing, my dear friend? I am happy to write this email to you. Let's do something fun this weekend!"], "en": "An adventure in nature", "sit": "Your friend wants to do something fun at the weekend. Write an email to your friend and invite him/her on a trip to a beautiful place.", "p": [["إلى أين ستذهبون؟", "Where will you go?"], ["ما المميز في المكان؟", "What is special about it?"], ["ماذا ستفعلون؟", "What will you do?"], ["ادعُ صديقك", "Invite your friend"]], "b": [["This weekend, my family is going to the desert.", "On Friday, we are going camping near the sea."], ["The desert is quiet and full of golden sand.", "The beach is clean and the water is blue."], ["We will ride camels, play on the dunes and watch the stars.", "We will swim, play ball games and collect shells."], ["Come with us! We will have a great time together.", "I hope you join us. It will be fun!"]]}, {"t": "عطلة نهاية أسبوع مثالية", "o": ["How are you? I hope you and your family are fine. I am happy to write this email to you. I am so happy you are coming next month!", "How are you doing, my dear friend? I am happy to write this email to you. Get ready for a perfect weekend!"], "en": "A perfect weekend", "sit": "Your cousin is coming to visit Oman next month. Write an email to your cousin and tell him/her what you are going to do.", "p": [["ما خطتك؟", "What is your plan?"], ["ما المميز في الوقت؟", "What is special about the time?"], ["ماذا ستفعلون؟", "What will you do?"], ["ختم بدعوة", "End with a warm note"]], "b": [["I am so happy you are coming next month! We have many plans.", "Next month, when you arrive, we will do many fun things."], ["The weather is nice in this season.", "My family and I are preparing a great programme for you."], ["We are going to visit the Grand Mosque, the souq and the beach.", "We will go to the mountains and try Omani food."], ["I can't wait to see you. It will be the perfect weekend!", "Get ready for a wonderful time!"]]}]}, "4": {"name": "الوحدة الرابعة · Off to the shops", "topics": [{"t": "متجري المفضل", "o": ["How are you? I hope you and your family are fine. I am happy to write this email to you. I want to tell you about a good shop in my town.", "How are you doing, my dear friend? I am happy to write this email to you. I have the perfect shop for your mother's gift."], "en": "A good shop in my town", "sit": "Your friend wants to buy a gift for his/her mother. Write an email to him/her about a good shop in your town.", "p": [["ما المتجر؟", "What is the shop?"], ["ما المميز فيه؟", "What is special about it?"], ["ماذا يمكن أن يشتري؟", "What can your friend buy there?"], ["نصيحة أخيرة", "A final tip"]], "b": [["There is a nice shop in our town called Al Baraka Gifts.", "My favourite shop is the big bookshop near the market."], ["It is clean and the people there are friendly.", "The shop has many beautiful things at good prices."], ["You can buy flowers, cards, toys and pretty boxes there.", "They sell books, pens and lovely gift bags."], ["I am sure you will find a wonderful gift for your mother there.", "Go there on Friday. You will find the perfect gift!"]]}, {"t": "أفكار لهدية", "o": ["How are you? I hope you are well and happy. I am happy to write this email to you. I have some good ideas for your mother's gift.", "How are you doing, my dear friend? I am happy to write this email to you. Don't worry, I will help you choose a gift."], "en": "Gift ideas for a special day", "sit": "Your friend needs to buy a gift for his/her mother but does not know what to buy. Write an email to your friend and give him/her some ideas.", "p": [["ما فكرتك الأولى؟", "What is your first idea?"], ["ما نصيحتك؟", "What is your advice?"], ["ماذا يمكن أن يشتري؟", "What could your friend buy?"], ["ختم بتشجيع", "End with encouragement"]], "b": [["I have some good ideas for your mother's gift.", "Buying a gift for your mum is easy if you plan well."], ["First, think about what she likes.", "A good gift shows love, not money."], ["You could buy her a nice scarf, a flower pot or a photo frame.", "You could make a card and buy her favourite sweets."], ["I am sure she will love your gift. Good luck!", "Whatever you choose, she will be happy because it is from you."]]}]}};
 const unitSel=document.getElementById('unit'),topicSel=document.getElementById('topic');
 const nums=['٣','٤','٥','٦'];
+const GREET=["Dear Ali,","Dear Alia,","Hi Ali,","Hello Alia,"];
+const CLOSE=["Best wishes,","Love,","Your friend,","See you soon,"];
+const NAME=["Sami","Asma"];
+const OPTDATA={},SEL={};
+function buildOpts(id,arr){
+  OPTDATA[id]=arr;SEL[id]=0;
+  const box=document.getElementById(id);
+  box.innerHTML='';
+  arr.forEach((t,i)=>{
+    const b=document.createElement('button');
+    b.type='button';b.className='opt'+(i===0?' sel':'');b.textContent=t;
+    b.setAttribute('role','radio');b.setAttribute('aria-checked',i===0?'true':'false');
+    b.addEventListener('click',()=>{
+      SEL[id]=i;
+      box.querySelectorAll('.opt').forEach(x=>{x.classList.remove('sel');x.setAttribute('aria-checked','false')});
+      b.classList.add('sel');b.setAttribute('aria-checked','true');
+      render();
+    });
+    box.appendChild(b);
+  });
+}
+function optVal(id){return OPTDATA[id][SEL[id]]}
 function fillUnits(){unitSel.innerHTML=Object.keys(TOPICS).map(k=>'<option value="'+k+'">'+TOPICS[k].name+'</option>').join('')}
 function fillTopics(){const u=TOPICS[unitSel.value];topicSel.innerHTML=u.topics.map((t,i)=>'<option value="'+i+'">'+t.t+' · '+t.en+'</option>').join('')}
 function fillTopic(){
   const t=TOPICS[unitSel.value].topics[+topicSel.value];
   document.getElementById('sit').innerHTML='Situation: '+t.sit.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/(about )(.+)/,'$1<span class="topic">$2</span>')+'<div class="topic-note" dir="rtl">الموضوع الملوّن بعد about هو نفسه موضوع جملة البداية — نأخذه من عنوان المهمة.</div>';
   t.p.forEach((p,i)=>{
-    document.getElementById('lb'+(i+1)).innerHTML=nums[i]+' · '+p[0]+'<span class="en-hint taskq">'+p[1]+'</span>';
-    document.getElementById('b'+(i+1)).innerHTML=t.b[i].map(o=>'<option>'+o+'</option>').join('');
-  document.getElementById('open').innerHTML=t.o.map(o=>'<option>'+o+'</option>').join('');
+    document.getElementById('bn'+(i+1)).textContent=nums[i];
+    document.getElementById('lb'+(i+1)).textContent=p[0];
+    document.getElementById('lq'+(i+1)).textContent=p[1];
+    buildOpts('b'+(i+1),t.b[i]);
   });
+  buildOpts('open',t.o);
   render();
 }
 unitSel.addEventListener('change',()=>{fillTopics();fillTopic()});
 topicSel.addEventListener('change',fillTopic);
 const ids=['greet','open','b1','b2','b3','b4','close','name'];
-const parts=()=>ids.map(i=>document.getElementById(i).value);
+const parts=()=>ids.map(optVal);
 function emailText(){
   const p=parts();
   return p[0]+'\n\n'+p[1]+' '+p[2]+' '+p[3]+' '+p[4]+' '+p[5]+'\n\n'+p[6]+'\n'+p[7];
@@ -155,7 +169,7 @@ document.querySelectorAll('.lpart').forEach(b=>b.addEventListener('click',()=>{
  document.querySelectorAll('.lpart').forEach(x=>x.style.outline='');
  if(!on){pv.classList.add('dim');pv.dataset.lit=part;const el=pv.querySelector('.'+part);if(el)el.classList.add('lit');b.style.outline='3px solid #17324f'}
 }));
-ids.forEach(i=>document.getElementById(i).addEventListener('change',render));
+buildOpts('greet',GREET);buildOpts('close',CLOSE);buildOpts('name',NAME);
 fillUnits();fillTopics();fillTopic();
 document.getElementById('printBtn').addEventListener('click',()=>window.print());
 document.getElementById('saveBtn').addEventListener('click',()=>{
