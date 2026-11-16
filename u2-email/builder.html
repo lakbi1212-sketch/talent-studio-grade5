@@ -42,7 +42,7 @@ canvas{display:none}
 @media(max-width:400px){h1{font-size:21px}.actions button{font-size:16px;min-height:50px}.preview{font-size:19px}}
 @media print{body{background:#fff}.lesson-nav,.card.pick,.actions,.counter,.credit{display:none}.preview{border:none;font-size:22px}}
 </style>
-<style>.taskq{color:#b42318;font-style:italic;font-weight:700}</style></head>
+<style>.taskq{color:#b42318;font-style:italic;font-weight:700}</style><style>.topic{background:#ffef9e;color:#7a4d00;font-weight:800;padding:0 3px;border-radius:5px}.topic-note{font-size:13px;color:#7a4d00;margin-top:4px}</style></head>
 <body>
 <nav class="lesson-nav"><a href="./">← درس كتابة الإيميل</a><a href="../unit2.html">الوحدة الثانية</a></nav>
 <main class="wrap">
@@ -115,7 +115,7 @@ function fillUnits(){unitSel.innerHTML=Object.keys(TOPICS).map(k=>'<option value
 function fillTopics(){const u=TOPICS[unitSel.value];topicSel.innerHTML=u.topics.map((t,i)=>'<option value="'+i+'">'+t.t+' · '+t.en+'</option>').join('')}
 function fillTopic(){
   const t=TOPICS[unitSel.value].topics[+topicSel.value];
-  document.getElementById('sit').textContent='Situation: '+t.sit;
+  document.getElementById('sit').innerHTML='Situation: '+t.sit.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/(about )(.+)/,'$1<span class="topic">$2</span>')+'<div class="topic-note" dir="rtl">الموضوع الملوّن بعد about هو نفسه موضوع جملة البداية — نأخذه من عنوان المهمة.</div>';
   t.p.forEach((p,i)=>{
     document.getElementById('lb'+(i+1)).innerHTML=nums[i]+' · '+p[0]+'<span class="en-hint taskq">'+p[1]+'</span>';
     document.getElementById('b'+(i+1)).innerHTML=t.b[i].map(o=>'<option>'+o+'</option>').join('');
@@ -135,7 +135,7 @@ function render(){
   const p=parts();
   document.getElementById('pv').innerHTML=
     '<div class="pv-greet">'+p[0]+'</div><br>'+
-    '<div><span class="pv-open">'+p[1]+'</span> <span class="pv-body">'+p[2]+' '+p[3]+' '+p[4]+' '+p[5]+'</span></div><br>'+
+    '<div><span class="pv-open">'+p[1].replace(/(about )(.+)/,'$1<span class="topic">$2</span>')+'</span> <span class="pv-body">'+p[2]+' '+p[3]+' '+p[4]+' '+p[5]+'</span></div><br>'+
     '<div class="pv-close">'+p[6]+'</div>'+
     '<div class="pv-name">'+p[7]+'</div>';
   const w=words(),f=document.getElementById('fill');
