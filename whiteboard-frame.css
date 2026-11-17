@@ -105,3 +105,10 @@
 .scene-card .options .options-line{display:flex!important;flex-wrap:wrap;gap:10px 18px!important;white-space:normal}
 .scene-card .options .opt{padding:2px 14px!important;border:1.5px solid #cfe0e8;border-radius:12px;background:#fff}
 .scene-card .options .opt.opt-correct{border-color:#e0b800}
+
+/* Keep lesson navigation at the bottom of the viewport, with reserved reading space. */
+body:has(.whiteboard .inline-controls){padding-bottom:calc(158px + env(safe-area-inset-bottom))!important}
+html:has(.whiteboard .inline-controls){scroll-padding-bottom:170px!important}
+.whiteboard .inline-controls{position:fixed!important;bottom:0!important;left:50%!important;transform:translateX(-50%)!important;z-index:9000!important;width:100%!important;max-width:1100px!important;box-sizing:border-box!important;background:#fff!important;border-top:2px solid #c6dce5!important;box-shadow:0 -3px 12px #17344714!important;padding:8px 10px calc(8px + env(safe-area-inset-bottom))!important;margin:0!important;border-radius:12px 12px 0 0!important;gap:6px!important}
+.whiteboard .inline-controls>button{min-height:48px!important;margin:0!important}
+.whiteboard .scene-card{scroll-margin-bottom:170px}
