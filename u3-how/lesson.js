@@ -54,6 +54,7 @@ function markedText(txt,kind,marks,sourceText=txt,cm,hl=''){
 
  const wrap=t=>(cm&&cm.length)?colorize(t,cm):circleText(t,marks);
  if(kind==='options')return '<span class="english-line options-line" dir="ltr">'+optionChips(txt,hl)+'</span>';if((kind.includes('en')||kind==='options')&&!/[؀-ۿ]/.test(sourceText))return '<span class="english-line" dir="ltr">'+wrap(txt)+'</span>';
+ if(kind==='answer'&&!/[؀-ۿ]/.test(sourceText))return '<span class="english-line" dir="ltr">'+wrap(txt)+'</span>';
  if(kind==='answer'){
   const lead=sourceText.match(/^([A-Za-z][A-Za-z0-9 '’-]*[.!?]?)\s*/);
   if(lead){const n=lead[0].length;return '<div class="answer-word" dir="ltr">'+wrap(txt.slice(0,Math.min(txt.length,n)).trim())+'</div>'+(txt.length>n?'<div class="answer-reason" dir="rtl">'+englishRuns(txt.slice(n),wrap,sourceText.slice(n))+'</div>':'');}
